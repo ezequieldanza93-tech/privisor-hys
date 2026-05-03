@@ -44,7 +44,7 @@ const normativaSearchUrl = `https://www.argentina.gob.ar/normativa/nacional?sear
     </nav>
     <div class="page-hero-inner">
       <div class="page-hero-badge">{s.badge}</div>
-      <h1>{s.heroTitle.split('\n').map((line, i) => i === 1 ? <><em>{line}</em></> : line).reduce<(string | any)[]>((acc, part, i) => i === 0 ? [part] : [...acc, <br/>, part], [])}</h1>
+      <h1 set:html={s.heroTitle.split('\n').map((line, i) => i === 1 ? `<em>${line}</em>` : line).join('<br/>')} />
       <p>{s.heroBajada}</p>
     </div>
   </section>
