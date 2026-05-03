@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const items = [
+  { num: '01', title: 'Presentaciones en ART — RAR y RGRL', desc: 'Relevamiento de agentes de riesgo para establecimientos educativos y recreativos. Gestión ante la Aseguradora.' },
+  { num: '02', title: 'Plan de Gestión Anual', desc: 'Plan de Mejoras Anual adaptado a las necesidades de establecimientos educativos y recreativos.' },
+  { num: '03', title: 'Programa de Capacitaciones', desc: 'Capacitación de docentes, no docentes y personal de servicio en seguridad y primeros auxilios.' },
+  { num: '04', title: 'Plan Antisiniestral', desc: 'Plan antisiniestral anual requerido por la ART para establecimientos con personal en relación de dependencia.' },
+  { num: '05', title: 'Ley de Autoprotección 5920 — CABA', desc: 'Gestión completa: plan, planos, capacitación de brigadas, simulacros y certificación ante GCBA.' },
+];
+---
+<BaseLayout
+  title="Gestión Normativa para Colegios y Clubes | SRT ART | Privisor HyS"
+  description="Gestión ante SRT y ART para establecimientos educativos: RAR, RGRL, plan antisiniestral y Ley 5920 CABA. CABA y GBA."
+>
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="/">Inicio</a><span>/</span><a href="/servicios/">Servicios</a><span>/</span>
+        <a href="/servicios/educativo-recreativo/">Educativo & Recreativo</a><span>/</span>
+        <span>Gestión normativa</span>
+      </nav>
+      <div class="page-hero-badge">SRT · ART · Ley 5920</div>
+      <h1>GESTIÓN NORMATIVA<br><em>EDUCATIVO & RECREATIVO</em></h1>
+      <p>Documentación y gestión ante ART para establecimientos educativos y recreativos. Incluye la Ley de Autoprotección 5920 para CABA.</p>
+    </div>
+  </section>
+  <section class="content-section">
+    <div class="content-inner">
+      <div class="items-list">
+        {items.map(it => (
+          <div class="item">
+            <span class="item-num">{it.num}</span>
+            <div><h3>{it.title}</h3><p>{it.desc}</p></div>
+          </div>
+        ))}
+      </div>
+      <div class="cta-banner">
+        <h2>¿TU INSTITUCIÓN ESTÁ <em style="font-style:normal;background:linear-gradient(90deg,#64d2ff,#4dc8f5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">AL DÍA</em>?</h2>
+        <p>Gestionamos toda la documentación para que tu institución cumpla con todos los requisitos legales.</p>
+        <div class="cta-actions">
+          <a href="https://wa.me/5491133572984" class="btn-primary" target="_blank" rel="noopener">💬 Consultanos</a>
+          <a href="/contacto/" class="btn-outline">Formulario</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

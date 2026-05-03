@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// Artículos de ejemplo — próximos a desarrollar
+const articulos = [
+  { slug: '#', titulo: '¿Qué es el RAR y por qué tu empresa lo necesita?', bajada: 'El Relevamiento de Agentes de Riesgo es obligatorio ante la ART. Explicamos qué es, cuándo hay que presentarlo y qué pasa si no lo tenés.', fecha: 'Mayo 2025', tag: 'Gestión normativa' },
+  { slug: '#', titulo: 'Decreto 911/96: guía completa para empresas constructoras', bajada: 'Todo lo que necesita saber una constructora sobre el Decreto 911/96: documentación, plazos y obligaciones del técnico en H&S.', fecha: 'Abril 2025', tag: 'Construcción' },
+  { slug: '#', titulo: 'Ley 5920 CABA: qué establecimientos deben cumplirla', bajada: 'La Ley de Autoprotección es obligatoria para colegios, clubs y locales comerciales en CABA. Qué dice, qué exige y cómo regularizarte.', fecha: 'Abril 2025', tag: 'Ley 5920' },
+  { slug: '#', titulo: 'ISO 45001:2018 vs OHSAS 18001: diferencias clave', bajada: 'Si tu empresa tenía OHSAS 18001 o está pensando en certificar, esta guía explica las diferencias y por qué la ISO 45001 es el estándar actual.', fecha: 'Marzo 2025', tag: 'ISO 45001' },
+];
+---
+
+<BaseLayout
+  title="Blog de Higiene y Seguridad Laboral | Privisor HyS"
+  description="Artículos sobre Higiene y Seguridad Laboral en Argentina: normativa SRT, Decreto 351/79, 911/96, Ley 5920, ISO 45001 y más. Para empresas de CABA y GBA."
+>
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="/">Inicio</a><span>/</span>
+        <span>Blog</span>
+      </nav>
+      <div class="page-hero-badge">Artículos · Normativa · Guías</div>
+      <h1>BLOG DE<br><em>HIGIENE Y SEGURIDAD</em></h1>
+      <p>Guías prácticas, actualizaciones normativas y recursos para que las empresas entiendan sus obligaciones en materia de Higiene y Seguridad Laboral.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="content-inner">
+      <div class="blog-grid">
+        {articulos.map(a => (
+          <article class="blog-card">
+            <div class="blog-tag">{a.tag}</div>
+            <h2 class="blog-title">{a.titulo}</h2>
+            <p class="blog-bajada">{a.bajada}</p>
+            <div class="blog-footer">
+              <span class="blog-fecha">{a.fecha}</span>
+              <a href={a.slug} class="blog-cta">Leer artículo →</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.blog-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.blog-card {
+  background: #001848;
+  border: 2px solid rgba(201,162,39,0.28);
+  border-radius: 12px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all .3s;
+}
+.blog-card:hover { border-color: rgba(100,210,255,0.35); transform: translateY(-3px); box-shadow: 0 16px 40px rgba(0,0,0,0.35); }
+.blog-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .55rem;
+  color: #64d2ff;
+  background: rgba(100,210,255,0.07);
+  border: 1px solid rgba(100,210,255,0.18);
+  padding: 3px 9px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: inline-block;
+  align-self: flex-start;
+}
+.blog-title { font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 700; color: #fff; line-height: 1.45; }
+.blog-bajada { font-size: 13px; font-weight: 300; color: rgba(255,255,255,.42); line-height: 1.7; flex: 1; }
+.blog-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,.06); padding-top: 12px; }
+.blog-fecha { font-family: 'JetBrains Mono', monospace; font-size: .55rem; color: rgba(255,255,255,.25); letter-spacing: 1px; }
+.blog-cta { font-family: 'JetBrains Mono', monospace; font-size: .6rem; color: #64d2ff; text-decoration: none; letter-spacing: 1px; transition: color .2s; }
+.blog-cta:hover { color: #fff; }
+@media (max-width: 700px) { .blog-grid { grid-template-columns: 1fr; } }
+</style>

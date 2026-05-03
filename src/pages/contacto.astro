@@ -1,0 +1,222 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Contacto — Privisor HyS | Consultora de Higiene y Seguridad Laboral"
+  description="Contactate con Privisor HyS para servicios de Higiene y Seguridad Laboral en CABA y GBA. WhatsApp, formulario o teléfono. Respuesta en el día."
+>
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="/">Inicio</a><span>/</span>
+        <span>Contacto</span>
+      </nav>
+      <div class="page-hero-badge">Respuesta en el día</div>
+      <h1>HABLEMOS<br><em>DE TU EMPRESA</em></h1>
+      <p>Contanos en qué rubro trabaja tu empresa y cuántos empleados tiene. Te armamos una propuesta personalizada sin cargo.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="content-inner">
+      <div class="contacto-grid">
+
+        <!-- Formulario -->
+        <div class="form-wrap">
+          <h2 style="font-family:'Bebas Neue',cursive;font-size:1.6rem;letter-spacing:2px;color:#fff;margin-bottom:24px;">FORMULARIO DE CONTACTO</h2>
+          <div id="form-success" class="form-success" style="display:none">
+            <span class="form-success-icon">✅</span>
+            <h3>¡Consulta enviada!</h3>
+            <p>Te respondemos en menos de 24 horas hábiles. Si es urgente, escribinos por WhatsApp.</p>
+            <a href="https://wa.me/5491133572984" class="btn-primary" target="_blank" rel="noopener" style="margin-top:12px;display:inline-flex;">💬 WhatsApp</a>
+          </div>
+
+          <form
+            class="contact-form"
+            action="https://formspree.io/f/TU_FORM_ID"
+            method="POST"
+          >
+            <!-- Formspree: asunto del email recibido -->
+            <input type="hidden" name="_subject" value="Nueva consulta desde Privisor HyS" />
+            <!-- Formspree: redirigir después de enviar -->
+            <input type="hidden" name="_next" value="https://privisor-hys.netlify.app/contacto/?enviado=1" />
+            <!-- Honeypot anti-spam de Formspree -->
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+            <div class="form-group">
+              <label for="nombre">Nombre y apellido *</label>
+              <input type="text" id="nombre" name="nombre" required placeholder="Juan García" />
+            </div>
+            <div class="form-group">
+              <label for="empresa">Empresa *</label>
+              <input type="text" id="empresa" name="empresa" required placeholder="Razón social o nombre comercial" />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="telefono">Teléfono / WhatsApp *</label>
+                <input type="tel" id="telefono" name="telefono" required placeholder="+54 9 11 XXXX-XXXX" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@empresa.com" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="sector">Sector de la empresa *</label>
+              <select id="sector" name="sector" required>
+                <option value="" disabled selected>Seleccioná tu sector</option>
+                <option value="industrial">Empresa industrial / manufactura / logística</option>
+                <option value="construccion">Construcción / obra civil</option>
+                <option value="educativo">Educativo / recreativo / club</option>
+                <option value="comercial">Local comercial / restaurante / oficina</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mensaje">¿Qué necesitás? (opcional)</label>
+              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contanos brevemente qué servicio te interesa o cuál es tu situación actual..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">Enviar consulta</button>
+          </form>
+        </div>
+
+        <!-- Info de contacto -->
+        <div class="contacto-info">
+          <h2 style="font-family:'Bebas Neue',cursive;font-size:1.6rem;letter-spacing:2px;color:#fff;margin-bottom:24px;">OTRAS FORMAS DE CONTACTO</h2>
+
+          <div class="contact-method">
+            <span class="contact-method-icon">💬</span>
+            <div>
+              <h3>WhatsApp</h3>
+              <p>La forma más rápida. Respondemos en menos de 2 horas en horario laboral.</p>
+              <a href="https://wa.me/5491133572984" class="btn-primary" target="_blank" rel="noopener" style="margin-top:12px;display:inline-flex;">Escribinos al WhatsApp</a>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <span class="contact-method-icon">📞</span>
+            <div>
+              <h3>Teléfono</h3>
+              <a href="tel:+5491133572984" style="color:#64d2ff;font-family:'JetBrains Mono',monospace;font-size:.85rem;text-decoration:none;">+54 9 11 3357-2984</a>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <span class="contact-method-icon">📍</span>
+            <div>
+              <h3>Área de cobertura</h3>
+              <address style="font-style:normal;font-size:14px;font-weight:300;color:rgba(255,255,255,.45);line-height:1.65;">
+                Ciudad Autónoma de Buenos Aires (CABA)<br>
+                Gran Buenos Aires (GBA)
+              </address>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <span class="contact-method-icon">🕐</span>
+            <div>
+              <h3>Horario de atención</h3>
+              <p>Lunes a viernes · 8:00 a 18:00 hs</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.contacto-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+/* Formulario */
+.contact-form { display: flex; flex-direction: column; gap: 18px; }
+.form-group  { display: flex; flex-direction: column; gap: 6px; }
+.form-row    { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.form-group label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .58rem;
+  color: rgba(255,255,255,.4);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 6px;
+  padding: 12px 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #e2eeff;
+  outline: none;
+  transition: border-color .2s;
+  width: 100%;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: rgba(255,255,255,.2); }
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { border-color: rgba(100,210,255,0.45); background: rgba(100,210,255,0.03); }
+.form-group select option { background: #001848; color: #e2eeff; }
+.form-group textarea { resize: vertical; min-height: 100px; }
+
+/* Métodos contacto */
+.contacto-info { display: flex; flex-direction: column; gap: 24px; }
+.contact-method { display: flex; gap: 14px; align-items: flex-start; }
+.contact-method-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+.contact-method h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-bottom: 5px;
+}
+.contact-method p { font-size: 13px; font-weight: 300; color: rgba(255,255,255,.4); line-height: 1.6; }
+
+@media (max-width: 900px) {
+  .contacto-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+}
+
+/* Mensaje de éxito */
+.form-success {
+  background: rgba(100,210,255,0.06);
+  border: 1px solid rgba(100,210,255,0.2);
+  border-radius: 10px;
+  padding: 32px 28px;
+  text-align: center;
+  margin-bottom: 0;
+}
+.form-success-icon { font-size: 2.2rem; display: block; margin-bottom: 12px; }
+.form-success h3 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.form-success p {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(255,255,255,.45);
+  line-height: 1.7;
+}
+</style>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('enviado') === '1') {
+    document.getElementById('form-success')?.style.setProperty('display', 'block');
+    document.querySelector('.contact-form')?.style.setProperty('display', 'none');
+  }
+</script>

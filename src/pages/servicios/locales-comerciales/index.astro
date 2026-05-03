@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Higiene y Seguridad para Locales Comerciales",
+  "description": "Servicios de Higiene y Seguridad para comercios, restaurantes y oficinas en CABA y GBA. SRT, ART, Ley 5920 y mediciones técnicas.",
+  "provider": { "@type": "ProfessionalService", "name": "Privisor HyS", "url": "https://privisor-hys.netlify.app" },
+  "areaServed": ["Ciudad Autónoma de Buenos Aires", "Gran Buenos Aires"]
+};
+
+const subcategorias = [
+  { href: '/servicios/locales-comerciales/mediciones/', icon: '📐', title: 'Mediciones', desc: 'Iluminación, ruido, estrés térmico, puesta a tierra y ergonomía en locales, restaurantes y oficinas.' },
+  { href: '/servicios/locales-comerciales/planes-de-emergencia/', icon: '🚨', title: 'Planes de emergencia', desc: 'Plan de emergencia, planos de evacuación y simulacros para locales en CABA (Ley 5920).' },
+  { href: '/servicios/locales-comerciales/gestion-normativa/', icon: '📋', title: 'Gestión normativa', desc: 'RAR, RGRL, plan antisiniestral, capacitaciones y toda la documentación ante SRT y ART.' },
+];
+---
+
+<BaseLayout
+  title="Higiene y Seguridad para Locales Comerciales | Privisor HyS"
+  description="Servicios de Higiene y Seguridad para comercios, restaurantes y oficinas en CABA y GBA. Documentación ante SRT y ART, Ley 5920 y mediciones técnicas."
+  schema={schema}
+>
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="/">Inicio</a><span>/</span>
+        <a href="/servicios/">Servicios</a><span>/</span>
+        <span>Locales Comerciales</span>
+      </nav>
+      <div class="page-hero-badge">SRT · ART · Ley 5920</div>
+      <h1>HIGIENE Y SEGURIDAD<br><em>LOCALES COMERCIALES</em></h1>
+      <p>Comercios, restaurantes, oficinas y atención al público. Documentación siempre al día, sin complicaciones. Un solo proveedor para todo tu cumplimiento normativo.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="content-inner">
+      <div class="subcats-grid">
+        {subcategorias.map(s => (
+          <a href={s.href} class="subcat-card">
+            <span class="subcat-icon" aria-hidden="true">{s.icon}</span>
+            <h2 class="subcat-title">{s.title}</h2>
+            <p class="subcat-desc">{s.desc}</p>
+            <span class="subcat-cta">Ver detalle →</span>
+          </a>
+        ))}
+      </div>
+      <div class="cta-banner">
+        <h2>¿TU LOCAL ESTÁ <em style="font-style:normal;background:linear-gradient(90deg,#64d2ff,#4dc8f5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">EN REGLA</em>?</h2>
+        <p>Evitá multas y sanciones. Consultanos sin cargo y te decimos qué necesita tu local para cumplir con SRT, ART y Ley 5920.</p>
+        <div class="cta-actions">
+          <a href="https://wa.me/5491133572984" class="btn-primary" target="_blank" rel="noopener">💬 Consulta gratuita</a>
+          <a href="/contacto/" class="btn-outline">Formulario de contacto</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.subcats-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:60px; }
+.subcat-card { background:#001848;border:2px solid rgba(201,162,39,0.3);border-radius:12px;padding:32px 26px;display:flex;flex-direction:column;text-decoration:none;transition:all .3s cubic-bezier(.34,1.3,.64,1);position:relative;overflow:hidden; }
+.subcat-card::before { content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#64d2ff,#4dc8f5);transform:scaleX(0);transform-origin:left;transition:transform .35s; }
+.subcat-card:hover { background:#002060;border-color:rgba(100,210,255,0.4);transform:translateY(-5px);box-shadow:0 20px 48px rgba(0,0,0,0.45); }
+.subcat-card:hover::before { transform:scaleX(1); }
+.subcat-icon  { font-size:2.4rem;margin-bottom:16px; }
+.subcat-title { font-family:'Bebas Neue',cursive;font-size:1.5rem;letter-spacing:2px;color:#fff;margin-bottom:10px; }
+.subcat-desc  { font-size:13px;font-weight:300;color:rgba(255,255,255,.45);line-height:1.7;flex:1;margin-bottom:20px; }
+.subcat-cta   { font-family:'JetBrains Mono',monospace;font-size:.6rem;color:#64d2ff;letter-spacing:1px;border-top:1px solid rgba(100,210,255,0.1);padding-top:14px; }
+@media(max-width:800px){ .subcats-grid{grid-template-columns:1fr;} }
+</style>

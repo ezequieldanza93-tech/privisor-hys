@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const fases = [
+  { num: '01', title: 'Diagnóstico inicial', desc: 'Evaluación del nivel de cumplimiento actual frente a los requisitos de la norma ISO 45001:2018. Identificación de brechas.' },
+  { num: '02', title: 'Implementación del sistema', desc: 'Acompañamiento en diseño e implementación. Documentación de procesos, procedimientos y registros requeridos.' },
+  { num: '03', title: 'Asesoría continua', desc: 'Elaboración de políticas, objetivos, indicadores de desempeño y revisiones por la dirección.' },
+  { num: '04', title: 'Auditoría interna', desc: 'Auditorías internas para verificar conformidad y eficacia del sistema previo a la certificación externa.' },
+];
+---
+
+<BaseLayout
+  title="ISO 45001:2018 — Sistema de Gestión SST | Privisor HyS"
+  description="Implementación y asesoría para certificación ISO 45001:2018 en empresas industriales de CABA y GBA. Diagnóstico, implementación, asesoría continua y auditoría interna."
+>
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="/">Inicio</a><span>/</span>
+        <a href="/servicios/">Servicios</a><span>/</span>
+        <a href="/servicios/empresas-industriales/">Empresas Industriales</a><span>/</span>
+        <span>ISO 45001</span>
+      </nav>
+      <div class="page-hero-badge">Norma internacional · 2018</div>
+      <h1>ISO 45001<br><em>:2018</em></h1>
+      <p>Sistema de Gestión de la Seguridad y Salud en el Trabajo. Asesoramos e implementamos el SGS&T para empresas que buscan certificación internacional.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="content-inner">
+      <div class="kicker kicker--left">Proceso de implementación</div>
+      <h2 style="font-size:clamp(28px,4vw,48px);letter-spacing:2px;color:#fff;margin-bottom:40px;">LAS 4 <em style="font-style:normal;background:linear-gradient(90deg,#64d2ff,#4dc8f5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">FASES</em></h2>
+      <div class="items-list">
+        {fases.map(f => (
+          <div class="item">
+            <span class="item-num">{f.num}</span>
+            <div><h3>{f.title}</h3><p>{f.desc}</p></div>
+          </div>
+        ))}
+      </div>
+
+      <div class="iso-beneficios">
+        <div class="kicker kicker--left" style="margin-top:48px;">Por qué certificar</div>
+        <h2 style="font-size:clamp(24px,3.5vw,40px);letter-spacing:2px;color:#fff;margin-bottom:28px;">BENEFICIOS DE <em style="font-style:normal;background:linear-gradient(90deg,#64d2ff,#4dc8f5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">CERTIFICAR</em></h2>
+        <div class="beneficios-grid">
+          <div class="beneficio"><span>🏆</span><p>Reducción de accidentes y enfermedades laborales</p></div>
+          <div class="beneficio"><span>📉</span><p>Disminución de costos por ausentismo y sanciones</p></div>
+          <div class="beneficio"><span>🤝</span><p>Mejora de la reputación ante clientes y licitaciones</p></div>
+          <div class="beneficio"><span>⚖️</span><p>Cumplimiento legal proactivo y sistemático</p></div>
+        </div>
+      </div>
+
+      <div class="cta-banner">
+        <h2>¿TU EMPRESA QUIERE <em style="font-style:normal;background:linear-gradient(90deg,#64d2ff,#4dc8f5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">CERTIFICAR</em>?</h2>
+        <p>Empezamos con un diagnóstico gratuito para evaluar el punto de partida y el esfuerzo necesario.</p>
+        <div class="cta-actions">
+          <a href="https://wa.me/5491133572984" class="btn-primary" target="_blank" rel="noopener">💬 Diagnóstico gratuito</a>
+          <a href="/contacto/" class="btn-outline">Formulario de contacto</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.beneficios-grid { display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:0; }
+.beneficio { display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:8px;padding:20px 18px; }
+.beneficio span { font-size:1.8rem;flex-shrink:0; }
+.beneficio p { font-size:13px;font-weight:300;color:rgba(255,255,255,.5);line-height:1.65; }
+@media(max-width:600px){ .beneficios-grid{grid-template-columns:1fr;} }
+</style>

@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const items = [
+  { num: '01', title: 'RAR y RGRL ante ART', desc: 'Relevamiento de Agentes de Riesgo y Relevamiento General de Riesgos Laborales. Gestión completa ante la Aseguradora.' },
+  { num: '02', title: 'Plan de Gestión Anual', desc: 'Plan de Mejoras Anual. Cronograma de actividades preventivas y seguimiento de cumplimiento a lo largo del año.' },
+  { num: '03', title: 'Programa de Capacitaciones', desc: 'Diseño e implementación del programa anual. Cursos presenciales con constancias certificadas.' },
+  { num: '04', title: 'Plan Antisiniestral', desc: 'Plan antisiniestral anual exigido por la ART. Objetivos, metas e indicadores de gestión preventiva.' },
+  { num: '05', title: 'Plan de Emergencia y Evacuación', desc: 'Planes de emergencia, planos de evacuación y organización de brigadas. Ley 5920 para CABA cuando aplica.' },
+  { num: '06', title: 'Simulacros de Emergencia', desc: 'Organización, conducción y registro de simulacros. Capacitación a brigadistas y jefes de evacuación.' },
+];
+---
+
+<BaseLayout
+  title="Gestión Normativa SRT y ART para Industrias | Privisor HyS"
+  description="Gestión normativa ante SRT y ART para empresas industriales: RAR, RGRL, plan antisiniestral, capacitaciones y plan de emergencia. CABA y GBA."
+>
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="/">Inicio</a><span>/</span>
+        <a href="/servicios/">Servicios</a><span>/</span>
+        <a href="/servicios/empresas-industriales/">Empresas Industriales</a><span>/</span>
+        <span>Gestión normativa</span>
+      </nav>
+      <div class="page-hero-badge">SRT · ART · Decreto 351/79</div>
+      <h1>GESTIÓN<br><em>NORMATIVA</em></h1>
+      <p>Toda la documentación y gestión ante SRT y ART para tu empresa industrial. Presentaciones en tiempo, sin pendientes y con seguimiento continuo.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="content-inner">
+      <div class="items-list">
+        {items.map(it => (
+          <div class="item">
+            <span class="item-num">{it.num}</span>
+            <div>
+              <h3>{it.title}</h3>
+              <p>{it.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class="cta-banner">
+        <h2>DOCUMENTACIÓN <em style="font-style:normal;background:linear-gradient(90deg,#64d2ff,#4dc8f5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">SIEMPRE AL DÍA</em></h2>
+        <p>Nos hacemos cargo de toda la gestión para que vos puedas concentrarte en tu negocio. Sin vencimientos, sin multas.</p>
+        <div class="cta-actions">
+          <a href="https://wa.me/5491133572984" class="btn-primary" target="_blank" rel="noopener">💬 Consultanos</a>
+          <a href="/contacto/" class="btn-outline">Formulario de contacto</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

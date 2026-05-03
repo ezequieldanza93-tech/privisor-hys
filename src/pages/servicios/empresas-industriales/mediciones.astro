@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Mediciones Técnicas de Higiene y Seguridad para Industrias",
+  "description": "Mediciones de iluminación, ruido, vibraciones, estrés térmico, contaminantes, puesta a tierra y ergonomía para empresas industriales en CABA y GBA.",
+  "provider": { "@type": "ProfessionalService", "name": "Privisor HyS", "url": "https://privisor-hys.netlify.app" }
+};
+
+const mediciones = [
+  { icon: '💡', title: 'Iluminación', desc: 'Niveles en puestos de trabajo, planta, depósito y oficinas. Deslumbramiento y uniformidad según Res. SRT 84/85.', res: 'Res. SRT 84 / 85' },
+  { icon: '🔊', title: 'Ruido', desc: 'Dosimetría de ruido ocupacional. Niveles sonoros continuos e impulsivos. Dosis diaria de exposición.', res: 'Res. SRT 85 / 960' },
+  { icon: '📳', title: 'Vibraciones', desc: 'Vibraciones mano-brazo y cuerpo entero en maquinaria y herramientas industriales.', res: 'Protocolo vigente' },
+  { icon: '🌡️', title: 'Estrés Térmico', desc: 'Índice WBGT. Estudio de carga térmica completo. Hornos, fundiciones y ambientes calurosos.', res: 'Res. SRT 30/23' },
+  { icon: '🧪', title: 'Contaminantes ambientales', desc: 'Polvos, gases, vapores y aerosoles. Muestreo y análisis certificado en laboratorio acreditado.', res: 'TLV–ACGIH / MTSS' },
+  { icon: '⚡', title: 'Puesta a tierra y disyuntores', desc: 'Resistencia de puesta a tierra. Continuidad de masas. Tiempo de respuesta de disyuntores diferenciales y termomagnéticos.', res: 'AEA / IRAM' },
+  { icon: '🧍', title: 'Ergonomía', desc: 'Posturas, movimientos repetitivos y manejo manual de cargas. Métodos REBA / RULA / NIOSH.', res: 'Protocolo 886 · Res. SRT' },
+];
+---
+
+<BaseLayout
+  title="Mediciones de Higiene y Seguridad para Industrias | Privisor HyS"
+  description="Mediciones técnicas para empresas industriales: iluminación, ruido, vibraciones, estrés térmico WBGT, contaminantes, puesta a tierra y ergonomía. CABA y GBA."
+  schema={schema}
+>
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="/">Inicio</a><span>/</span>
+        <a href="/servicios/">Servicios</a><span>/</span>
+        <a href="/servicios/empresas-industriales/">Empresas Industriales</a><span>/</span>
+        <span>Mediciones</span>
+      </nav>
+      <div class="page-hero-badge">Resoluciones SRT · Protocolo 886</div>
+      <h1>MEDICIONES TÉCNICAS<br><em>INDUSTRIALES</em></h1>
+      <p>Todos los relevamientos técnicos exigidos en establecimientos industriales por SRT y ART. Instrumentos calibrados, protocolos firmados y entrega en tiempo.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="content-inner">
+      <div class="kicker kicker--left">7 tipos de mediciones</div>
+      <h2 style="font-size:clamp(28px,4vw,48px);letter-spacing:2px;color:#fff;margin-bottom:40px;">MEDICIONES QUE <em style="font-style:normal;background:linear-gradient(90deg,#64d2ff,#4dc8f5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">REALIZAMOS</em></h2>
+
+      <div class="cards-grid">
+        {mediciones.map(m => (
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">{m.icon}</div>
+            <h3>{m.title}</h3>
+            <p>{m.desc}</p>
+            <div class="card-res">{m.res}</div>
+          </article>
+        ))}
+      </div>
+
+      <div class="info-box">
+        <h3>¿Qué incluye el servicio?</h3>
+        <ul>
+          <li>Visita técnica al establecimiento con instrumentos calibrados y certificados.</li>
+          <li>Relevamiento completo en todos los puestos y áreas requeridas.</li>
+          <li>Informe técnico firmado por profesional matriculado ante SRT.</li>
+          <li>Protocolo en el formato exigido por la resolución correspondiente.</li>
+          <li>Gestión ante ART para presentación de resultados.</li>
+        </ul>
+      </div>
+
+      <div class="cta-banner">
+        <h2>SOLICITÁ TUS <em style="font-style:normal;background:linear-gradient(90deg,#64d2ff,#4dc8f5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">MEDICIONES</em></h2>
+        <p>Coordinamos la visita técnica en el horario que mejor te convenga, incluso fuera de hora si tu proceso productivo lo requiere.</p>
+        <div class="cta-actions">
+          <a href="https://wa.me/5491133572984" class="btn-primary" target="_blank" rel="noopener">💬 Pedir cotización</a>
+          <a href="/contacto/" class="btn-outline">Formulario de contacto</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.info-box {
+  background: rgba(100,210,255,0.04);
+  border: 1px solid rgba(100,210,255,0.12);
+  border-left: 3px solid #64d2ff;
+  border-radius: 8px;
+  padding: 28px 32px;
+  margin-top: 40px;
+}
+.info-box h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+.info-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.info-box li {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(255,255,255,.5);
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.55;
+}
+.info-box li::before { content: '✓'; position: absolute; left: 0; color: #64d2ff; font-size: .7rem; }
+</style>

@@ -1,0 +1,541 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Privisor HyS",
+  "description": "Consultora de Higiene y Seguridad Laboral en CABA y GBA. Profesionales matriculados ante SRT y ART. Cumplimiento normativo integral.",
+  "url": "https://privisor-hys.netlify.app",
+  "telephone": "+5491133572984",
+  "areaServed": ["Ciudad Autónoma de Buenos Aires", "Gran Buenos Aires"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "Ciudad Autónoma de Buenos Aires",
+    "addressCountry": "AR"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios de Higiene y Seguridad Laboral",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Higiene y Seguridad para Empresas Industriales" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Higiene y Seguridad para Construcción" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Higiene y Seguridad para Establecimientos Educativos" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Higiene y Seguridad para Locales Comerciales" } }
+    ]
+  },
+  "sameAs": []
+};
+
+const sectores = [
+  {
+    id: 'empresas-industriales',
+    icon: '🏭',
+    badge: 'Decreto 351/79 · SRT',
+    name: 'Empresas Industriales',
+    desc: 'Plantas de producción, manufactura, logística y depósitos. Cobertura completa de mediciones, documentación y gestión normativa.',
+    servicios: ['Iluminación, ruido, vibraciones, ergonomía', 'Estrés térmico e índice WBGT', 'Puesta a tierra y continuidad de masas', 'RAR, RGRL, plan antisiniestral', 'ISO 45001:2018'],
+  },
+  {
+    id: 'construccion',
+    icon: '🏗️',
+    badge: 'Decreto 911/96',
+    name: 'Construcción',
+    desc: 'Obras civiles, constructoras e infraestructura. Técnico en obra con visitas semanales y legajo completo.',
+    servicios: ['Programa de seguridad con aviso de obra', 'Visitas semanales de técnico en campo', 'Legajo técnico de seguridad', 'Mediciones: ruido, iluminación, vibraciones', 'Plan antisiniestral y simulacros'],
+  },
+  {
+    id: 'educativo-recreativo',
+    icon: '🏫',
+    badge: 'Ley 5920 CABA',
+    name: 'Educativo & Recreativo',
+    desc: 'Colegios, universidades, clubes y centros culturales. Cumplimiento de la Ley de Autoprotección 5920.',
+    servicios: ['Plan de emergencia y evacuación', 'Planos de evacuación por planta', 'Formación y capacitación de brigadas', 'Simulacros con informe y certificación', 'RAR, RGRL y plan antisiniestral'],
+  },
+  {
+    id: 'locales-comerciales',
+    icon: '🏪',
+    badge: 'SRT · ART · Ley 5920',
+    name: 'Locales Comerciales',
+    desc: 'Comercios, restaurantes, oficinas y atención al público. Documentación siempre al día, sin complicaciones.',
+    servicios: ['Mediciones: iluminación, ruido, estrés térmico', 'Puesta a tierra y continuidad de masas', 'Ergonomía en puestos de trabajo', 'Plan de emergencia para CABA (Ley 5920)', 'Capacitaciones y simulacros'],
+  },
+];
+---
+
+<BaseLayout
+  title="Privisor HyS — Consultora de Higiene y Seguridad Laboral | CABA y GBA"
+  description="Consultora de Higiene y Seguridad Laboral en CABA y GBA. Profesionales matriculados ante SRT y ART. Mediciones, gestión normativa, ISO 45001 y planes de emergencia para empresas."
+  schema={schema}
+>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-vline"></div>
+    <div class="hero-layout">
+
+      <div class="hero-inner">
+        <div class="hero-kicker">CABA · GBA</div>
+        <h1 class="hero-title">HIGIENE Y<br>SEGURIDAD<br><em>LABORAL</em></h1>
+        <p class="hero-sub">Tu empresa cumpliendo la normativa vigente, sin complicaciones. Profesionales matriculados ante SRT y ART que van a tu establecimiento, con documentación completa y a tiempo.</p>
+        <div class="hero-badges">
+          <span class="hero-badge">Cumplimiento SRT / ART</span>
+          <span class="hero-badge">Presencia en campo</span>
+          <span class="hero-badge">Profesionales matriculados</span>
+          <span class="hero-badge">ISO 45001:2018</span>
+        </div>
+        <div class="hero-actions">
+          <a href="/contacto/" class="btn-primary">Consultanos ahora</a>
+          <a href="/servicios/" class="btn-outline">Ver servicios</a>
+        </div>
+      </div>
+
+      <div class="hero-logo-wrap">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" class="hero-logo-svg" aria-label="Logo Privisor HyS">
+          <defs>
+            <path id="rv7t" d="M 20,110 A 90,90 0 0,1 200,110"/>
+            <path id="rv7b" d="M 26,124 A 86,86 0 0,0 194,124"/>
+            <linearGradient id="rv7g" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#f0d060"/><stop offset="100%" stop-color="#c9a227"/>
+            </linearGradient>
+            <clipPath id="rv7cL"><rect x="0" y="0" width="110" height="220"/></clipPath>
+            <clipPath id="rv7cR"><rect x="110" y="0" width="110" height="220"/></clipPath>
+          </defs>
+          <circle cx="110" cy="110" r="108" fill="#001848"/>
+          <circle cx="110" cy="110" r="108" fill="#1565a8" clip-path="url(#rv7cL)"/>
+          <circle cx="110" cy="110" r="107" fill="none" stroke="url(#rv7g)" stroke-width="3.5"/>
+          <text font-family="'Montserrat',sans-serif" font-size="8.8" font-weight="700" fill="#fff" letter-spacing="2.2" clip-path="url(#rv7cL)"><textPath href="#rv7t" startOffset="9%">PRIVISOR · HIGIENE Y SEGURIDAD</textPath></text>
+          <text font-family="'Montserrat',sans-serif" font-size="8.8" font-weight="700" fill="#c9a227" letter-spacing="2.2" clip-path="url(#rv7cR)"><textPath href="#rv7t" startOffset="9%">PRIVISOR · HIGIENE Y SEGURIDAD</textPath></text>
+          <text font-family="'Montserrat',sans-serif" font-size="8.2" font-weight="600" fill="rgba(255,255,255,.5)" letter-spacing="4.5" clip-path="url(#rv7cL)"><textPath href="#rv7b" startOffset="23%">LABORAL</textPath></text>
+          <text font-family="'Montserrat',sans-serif" font-size="8.2" font-weight="600" fill="rgba(255,255,255,.4)" letter-spacing="4.5" clip-path="url(#rv7cR)"><textPath href="#rv7b" startOffset="23%">LABORAL</textPath></text>
+          <text x="52" y="132" font-family="'Oswald',sans-serif" font-size="76" font-weight="300" fill="#fff" clip-path="url(#rv7cL)">H</text>
+          <line x1="113" y1="58" x2="113" y2="148" stroke="url(#rv7g)" stroke-width="3"/>
+          <text x="116" y="132" font-family="'Oswald',sans-serif" font-size="76" font-weight="300" fill="url(#rv7g)" clip-path="url(#rv7cR)">S</text>
+          <circle cx="166" cy="68" r="2.5" fill="url(#rv7g)"/>
+        </svg>
+      </div>
+
+    </div>
+    <div class="hero-scroll">
+      <div class="hero-scroll-line"></div>
+      <div class="hero-scroll-dot"></div>
+      SCROLL
+    </div>
+  </section>
+
+  <!-- SECTORES -->
+  <section class="sectores-section" id="sectores" aria-label="Servicios por sector">
+    <div class="sectores-inner">
+      <header class="sectores-header">
+        <div class="kicker">Cobertura completa</div>
+        <h2 class="sectores-title">SERVICIOS POR <em>SECTOR</em></h2>
+        <p class="sectores-sub">Cada industria tiene su normativa específica. Seleccioná tu sector y conocé exactamente qué servicios de H&S aplican a tu empresa.</p>
+      </header>
+      <div class="sectores-grid">
+        {sectores.map(s => (
+          <article class="sector-card">
+            <div class="sector-card-top">
+              <span class="sector-icon" aria-hidden="true">{s.icon}</span>
+              <div class="sector-badge">{s.badge}</div>
+            </div>
+            <h3 class="sector-name">{s.name}</h3>
+            <p class="sector-desc">{s.desc}</p>
+            <ul class="sector-list" aria-label={`Servicios para ${s.name}`}>
+              {s.servicios.map(sv => <li>{sv}</li>)}
+            </ul>
+            <a href={`/servicios/${s.id}/`} class="sector-cta">Ver todos los servicios →</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- POR QUÉ PRIVISOR -->
+  <section class="porque-section" aria-label="Por qué elegirnos">
+    <div class="porque-inner">
+      <div class="porque-header">
+        <div class="kicker">Nuestra diferencia</div>
+        <h2 class="porque-title">¿POR QUÉ <em>PRIVISOR</em>?</h2>
+      </div>
+      <div class="porque-grid">
+        <div class="porque-item">
+          <div class="porque-num">01</div>
+          <h3>Profesionales matriculados</h3>
+          <p>Técnicos y licenciados en Higiene y Seguridad Laboral, matriculados ante SRT. Cada servicio firmado con responsabilidad profesional.</p>
+        </div>
+        <div class="porque-item">
+          <div class="porque-num">02</div>
+          <h3>Presencia en campo</h3>
+          <p>Vamos a tu establecimiento. No tercerizamos ni hacemos gestión remota. El profesional está en tu empresa cuando lo necesitás.</p>
+        </div>
+        <div class="porque-item">
+          <div class="porque-num">03</div>
+          <h3>Documentación completa y a tiempo</h3>
+          <p>Cumplimos con todos los plazos ante SRT y ART. Informes, protocolos y presentaciones entregados sin retrasos ni excusas.</p>
+        </div>
+        <div class="porque-item">
+          <div class="porque-num">04</div>
+          <h3>Cobertura CABA y GBA</h3>
+          <p>Atendemos en toda la Ciudad Autónoma de Buenos Aires y el Gran Buenos Aires. Un solo proveedor para todas tus sedes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+/* HERO */
+.hero {
+  position: relative;
+  z-index: 1;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 60px 60px;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 60% 55% at 0% 100%, rgba(100,210,255,0.08) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 100% 0%, rgba(77,200,245,0.05) 0%, transparent 70%),
+    linear-gradient(160deg, #001030 0%, #001848 50%, #00091f 100%);
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(100,210,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(100,210,255,0.025) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+.hero-vline {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, transparent, #c9a227, transparent);
+  opacity: .35;
+  z-index: 1;
+}
+.hero-layout {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.hero-inner { display: flex; flex-direction: column; }
+.hero-kicker {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .68rem;
+  color: #64d2ff;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: 0;
+  animation: fadeUp .5s ease .1s both;
+}
+.hero-kicker::before, .hero-kicker::after { content: ''; height: 1px; width: 22px; background: #64d2ff; opacity: .5; }
+.hero-title {
+  font-size: clamp(56px, 7vw, 88px);
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeUp .6s ease .25s both;
+}
+.hero-title em {
+  font-style: normal;
+  background: linear-gradient(90deg, #64d2ff, #4dc8f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+}
+.hero-sub {
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(255,255,255,.5);
+  line-height: 1.75;
+  margin-bottom: 24px;
+  opacity: 0;
+  animation: fadeUp .6s ease .4s both;
+}
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+  opacity: 0;
+  animation: fadeUp .6s ease .55s both;
+}
+.hero-badge {
+  background: rgba(100,210,255,0.06);
+  border: 1px solid rgba(100,210,255,0.2);
+  color: #64d2ff;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .6rem;
+  letter-spacing: 1.2px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.hero-badge::before { content: '✓'; font-weight: 700; }
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp .6s ease .7s both;
+}
+.hero-logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  animation: fadeUp .7s ease .6s both;
+}
+.hero-logo-svg {
+  width: 300px;
+  height: 300px;
+  filter: drop-shadow(0 0 36px rgba(100,210,255,0.12));
+}
+.hero-scroll {
+  position: absolute;
+  bottom: 24px;
+  left: 60px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .56rem;
+  color: rgba(255,255,255,.15);
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1;
+  opacity: 0;
+  animation: fadeUp .5s ease 1.1s both;
+}
+.hero-scroll-line { width: 32px; height: 1px; background: rgba(255,255,255,.1); }
+.hero-scroll-dot  { width: 4px; height: 4px; border-radius: 50%; background: #64d2ff; opacity: .4; animation: scrollBounce 1.8s ease infinite; }
+
+/* SECTORES */
+.sectores-section {
+  position: relative;
+  z-index: 1;
+  padding: 90px 60px;
+  background: #000d2a;
+}
+.sectores-inner { max-width: 1200px; margin: 0 auto; }
+.sectores-header { text-align: center; margin-bottom: 52px; }
+.sectores-title {
+  font-size: clamp(40px, 5.5vw, 64px);
+  letter-spacing: 2px;
+  color: #fff;
+  margin-bottom: 14px;
+}
+.sectores-title em {
+  font-style: normal;
+  background: linear-gradient(90deg, #64d2ff, #4dc8f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.sectores-sub {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(255,255,255,.4);
+  max-width: 460px;
+  line-height: 1.7;
+  margin: 0 auto;
+}
+.sectores-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.sector-card {
+  background: #001848;
+  border: 2px solid rgba(201,162,39,0.35);
+  border-radius: 12px;
+  padding: 26px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  transition: all .3s cubic-bezier(.34,1.3,.64,1);
+  position: relative;
+  overflow: hidden;
+}
+.sector-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #64d2ff, #4dc8f5);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .35s;
+}
+.sector-card:hover {
+  background: #002060;
+  border-color: rgba(100,210,255,0.4);
+  transform: translateY(-5px);
+  box-shadow: 0 18px 44px rgba(0,0,0,0.4);
+}
+.sector-card:hover::before { transform: scaleX(1); }
+.sector-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.sector-icon { font-size: 2rem; }
+.sector-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .5rem;
+  color: rgba(201,162,39,.8);
+  background: rgba(201,162,39,0.07);
+  border: 1px solid rgba(201,162,39,0.2);
+  padding: 3px 7px;
+  border-radius: 3px;
+  letter-spacing: .5px;
+  text-align: right;
+  line-height: 1.5;
+}
+.sector-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-bottom: 9px;
+  text-transform: uppercase;
+}
+.sector-desc {
+  font-size: 13.5px;
+  font-weight: 300;
+  color: #a8c4e8;
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+.sector-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+  flex: 1;
+}
+.sector-list li {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(255,255,255,.4);
+  padding-left: 14px;
+  position: relative;
+  line-height: 1.45;
+}
+.sector-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: #64d2ff;
+  opacity: .4;
+  font-size: .65rem;
+}
+.sector-cta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .6rem;
+  color: #64d2ff;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-top: 1px solid rgba(100,210,255,0.1);
+  padding-top: 14px;
+  margin-top: auto;
+  transition: all .2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.sector-cta:hover { color: #fff; gap: 9px; }
+
+/* POR QUÉ */
+.porque-section {
+  position: relative;
+  z-index: 1;
+  padding: 90px 60px;
+}
+.porque-inner { max-width: 1200px; margin: 0 auto; }
+.porque-header { text-align: center; margin-bottom: 52px; }
+.porque-title {
+  font-size: clamp(36px, 5vw, 60px);
+  letter-spacing: 2px;
+  color: #fff;
+}
+.porque-title em {
+  font-style: normal;
+  background: linear-gradient(90deg, #64d2ff, #4dc8f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.porque-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.porque-item {
+  padding: 28px 24px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 8px;
+  transition: border-color .2s;
+}
+.porque-item:hover { border-color: rgba(100,210,255,0.2); }
+.porque-num {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2.5rem;
+  color: rgba(100,210,255,0.15);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.porque-item h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.porque-item p {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(255,255,255,.4);
+  line-height: 1.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .sectores-grid { grid-template-columns: repeat(2, 1fr); }
+  .porque-grid   { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 900px) {
+  .hero { padding: 90px 28px 52px; }
+  .hero-layout { grid-template-columns: 1fr; gap: 40px; }
+  .hero-scroll, .hero-logo-wrap { display: none; }
+  .sectores-section { padding: 64px 24px; }
+  .porque-section { padding: 64px 24px; }
+}
+@media (max-width: 600px) {
+  .sectores-grid { grid-template-columns: 1fr; }
+  .porque-grid   { grid-template-columns: 1fr; }
+}
+</style>

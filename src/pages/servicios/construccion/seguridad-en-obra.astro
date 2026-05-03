@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const servicios = [
+  { icon: '📋', title: 'Programa de seguridad con aviso de obra', desc: 'Elaboración del Programa de Seguridad por obra. Presentación ante la ART. Identificación de riesgos según Decreto 911/96.', res: 'Decreto 911/96' },
+  { icon: '👷', title: 'Visitas semanales en obra', desc: 'Visitas a cargo de técnico o licenciado en H&S. Relevamiento de condiciones, informes técnicos y registro con firma responsable.', res: 'Presencia en campo' },
+  { icon: '📁', title: 'Legajo técnico de seguridad', desc: 'Armado y mantenimiento del legajo de seguridad en obra. Documentación de subcontratistas, trabajadores y habilitaciones.', res: 'SRT' },
+  { icon: '🦺', title: 'Capacitación al personal de obra', desc: 'Inducción al ingreso, uso de EPP, riesgos específicos y procedimientos de emergencia. Constancias certificadas.', res: 'Decreto 911/96' },
+  { icon: '🚨', title: 'Plan de emergencia en obra', desc: 'Plan de emergencia, evacuación, primeros auxilios y organización de brigadas para el personal de obra.', res: 'SRT' },
+];
+---
+
+<BaseLayout
+  title="Seguridad en Obras de Construcción | Decreto 911/96 | Privisor HyS"
+  description="Programa de seguridad, visitas semanales y legajo técnico para obras de construcción en CABA y GBA. Decreto 911/96. Profesionales matriculados ante SRT."
+>
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="/">Inicio</a><span>/</span>
+        <a href="/servicios/">Servicios</a><span>/</span>
+        <a href="/servicios/construccion/">Construcción</a><span>/</span>
+        <span>Seguridad en obra</span>
+      </nav>
+      <div class="page-hero-badge">Decreto 911/96 · SRT</div>
+      <h1>SEGURIDAD<br><em>EN OBRA</em></h1>
+      <p>Servicio especializado para el sector de la construcción. Presencia semanal del técnico en obra, programa de seguridad completo y legajo siempre actualizado.</p>
+    </div>
+  </section>
+  <section class="content-section">
+    <div class="content-inner">
+      <div class="cards-grid">
+        {servicios.map(s => (
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">{s.icon}</div>
+            <div class="card-badge">{s.res}</div>
+            <h3>{s.title}</h3>
+            <p>{s.desc}</p>
+          </article>
+        ))}
+      </div>
+      <div class="cta-banner">
+        <h2>¿NECESITÁS UN TÉCNICO <em style="font-style:normal;background:linear-gradient(90deg,#64d2ff,#4dc8f5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">EN OBRA</em>?</h2>
+        <p>Podemos incorporarnos a tu obra de forma inmediata. Coordinamos la primera visita en menos de 48 horas.</p>
+        <div class="cta-actions">
+          <a href="https://wa.me/5491133572984" class="btn-primary" target="_blank" rel="noopener">💬 Contacto urgente</a>
+          <a href="/contacto/" class="btn-outline">Formulario</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

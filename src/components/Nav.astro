@@ -1,0 +1,170 @@
+---
+const links = [
+  { href: '/servicios/', label: 'Servicios' },
+  { href: '/nosotros/', label: 'Nosotros' },
+  { href: '/contacto/',  label: 'Contacto' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<nav id="main-nav">
+  <a href="/" class="nav-logo" aria-label="Privisor HyS — Inicio">
+    <svg width="200" height="36" viewBox="0 0 700 120" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="ng" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#f0d060"/><stop offset="100%" stop-color="#c9a227"/>
+        </linearGradient>
+        <clipPath id="nL"><rect x="0" y="0" width="60" height="120"/></clipPath>
+        <clipPath id="nR"><rect x="60" y="0" width="60" height="120"/></clipPath>
+      </defs>
+      <rect x="0" y="0" width="60" height="120" fill="#1565a8"/>
+      <text x="4" y="90" font-family="'Oswald',sans-serif" font-size="82" font-weight="300" fill="#fff" clip-path="url(#nL)">H</text>
+      <line x1="61" y1="16" x2="61" y2="104" stroke="url(#ng)" stroke-width="2.5"/>
+      <text x="63" y="90" font-family="'Oswald',sans-serif" font-size="82" font-weight="300" fill="url(#ng)" clip-path="url(#nR)">S</text>
+      <line x1="132" y1="14" x2="132" y2="106" stroke="url(#ng)" stroke-width="1.5" opacity=".4"/>
+      <text x="150" y="60" font-family="'Bebas Neue',cursive" font-size="52" fill="#fff" letter-spacing="6">PRIVISOR</text>
+      <line x1="150" y1="68" x2="688" y2="68" stroke="url(#ng)" stroke-width="1" opacity=".3"/>
+      <text x="150" y="84" font-family="'Montserrat',sans-serif" font-size="10" font-weight="700" fill="#c9a227" letter-spacing="2.5">HIGIENE Y SEGURIDAD LABORAL</text>
+    </svg>
+  </a>
+
+  <div class="nav-right">
+    {links.map(link => (
+      <a
+        href={link.href}
+        class={`nav-link ${currentPath.startsWith(link.href) ? 'active' : ''}`}
+      >
+        {link.label}
+      </a>
+    ))}
+    <a href="/contacto/" class="nav-cta">Consultanos</a>
+  </div>
+
+  <!-- Hamburger mobile -->
+  <button class="nav-hamburger" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile menu -->
+<div class="nav-mobile" id="nav-mobile">
+  {links.map(link => (
+    <a href={link.href} class="nav-mobile-link">{link.label}</a>
+  ))}
+  <a href="/contacto/" class="btn-primary" style="margin-top: 8px;">Consultanos</a>
+</div>
+
+<style>
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  height: 68px;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: all .4s ease;
+}
+nav.scrolled {
+  background: rgba(0,9,31,0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(100,210,255,0.1);
+}
+.nav-logo { display: flex; align-items: center; text-decoration: none; }
+.nav-right { display: flex; align-items: center; gap: 24px; }
+
+.nav-link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,.55);
+  text-decoration: none;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  transition: color .2s;
+}
+.nav-link:hover, .nav-link.active { color: #64d2ff; }
+
+.nav-cta {
+  background: #64d2ff;
+  color: #00091f;
+  padding: 9px 22px;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: .75rem;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all .2s;
+}
+.nav-cta:hover { background: #fff; }
+
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.nav-hamburger span {
+  width: 24px;
+  height: 2px;
+  background: rgba(255,255,255,.7);
+  border-radius: 2px;
+  transition: all .2s;
+}
+
+/* Mobile menu */
+.nav-mobile {
+  position: fixed;
+  top: 68px;
+  left: 0; right: 0;
+  z-index: 199;
+  background: rgba(0,9,31,0.97);
+  backdrop-filter: blur(20px);
+  padding: 20px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transform: translateY(-110%);
+  transition: transform .3s ease;
+  border-bottom: 1px solid rgba(100,210,255,0.1);
+}
+.nav-mobile.open { transform: translateY(0); }
+.nav-mobile-link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .9rem;
+  font-weight: 600;
+  color: rgba(255,255,255,.7);
+  text-decoration: none;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  transition: color .2s;
+}
+.nav-mobile-link:hover { color: #64d2ff; }
+
+@media (max-width: 900px) {
+  nav { padding: 0 24px; }
+  .nav-right { display: none; }
+  .nav-hamburger { display: flex; }
+}
+</style>
+
+<script>
+const toggle = document.getElementById('nav-toggle');
+const mobileMenu = document.getElementById('nav-mobile');
+toggle?.addEventListener('click', () => {
+  const isOpen = mobileMenu?.classList.toggle('open');
+  toggle.setAttribute('aria-expanded', String(isOpen));
+});
+</script>

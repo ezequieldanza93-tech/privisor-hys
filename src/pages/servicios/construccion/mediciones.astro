@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const mediciones = [
+  { icon: '💡', title: 'Iluminación', desc: 'Niveles en frentes de obra, obrador e instalaciones provisorias de trabajo nocturno.', res: 'Res. SRT 84 / 85' },
+  { icon: '🔊', title: 'Ruido', desc: 'Dosimetría en maquinaria pesada, martillos neumáticos, compresores y demolición.', res: 'Res. SRT 85 / 960' },
+  { icon: '📳', title: 'Vibraciones', desc: 'Evaluación en equipos de demolición, compactadoras y maquinaria de obra vial.', res: 'Protocolo vigente' },
+  { icon: '⚡', title: 'Puesta a tierra y disyuntores', desc: 'Instalaciones provisorias de obra. Tableros de distribución. Tiempo de respuesta de disyuntores diferenciales.', res: 'AEA 90364 / IRAM' },
+  { icon: '🧪', title: 'Contaminantes en obra', desc: 'Sílice, humos de soldadura, pinturas y otros contaminantes presentes en obra.', res: 'TLV–ACGIH' },
+];
+---
+
+<BaseLayout
+  title="Mediciones de HyS en Obras de Construcción | Privisor HyS"
+  description="Mediciones de iluminación, ruido, vibraciones, puesta a tierra y contaminantes en obras de construcción. CABA y GBA. Decreto 911/96."
+>
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="/">Inicio</a><span>/</span>
+        <a href="/servicios/">Servicios</a><span>/</span>
+        <a href="/servicios/construccion/">Construcción</a><span>/</span>
+        <span>Mediciones</span>
+      </nav>
+      <div class="page-hero-badge">Resoluciones SRT · AEA</div>
+      <h1>MEDICIONES<br><em>EN OBRA</em></h1>
+      <p>Mediciones técnicas aplicables al sector de la construcción según normativa vigente. Instrumentos calibrados y protocolos firmados.</p>
+    </div>
+  </section>
+  <section class="content-section">
+    <div class="content-inner">
+      <div class="cards-grid">
+        {mediciones.map(m => (
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">{m.icon}</div>
+            <h3>{m.title}</h3>
+            <p>{m.desc}</p>
+            <div class="card-res">{m.res}</div>
+          </article>
+        ))}
+      </div>
+      <div class="cta-banner">
+        <h2>MEDICIONES PARA <em style="font-style:normal;background:linear-gradient(90deg,#64d2ff,#4dc8f5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">TU OBRA</em></h2>
+        <p>Coordinamos la visita técnica en el momento que mejor se adapte al cronograma de tu obra.</p>
+        <div class="cta-actions">
+          <a href="https://wa.me/5491133572984" class="btn-primary" target="_blank" rel="noopener">💬 Pedir cotización</a>
+          <a href="/contacto/" class="btn-outline">Formulario</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

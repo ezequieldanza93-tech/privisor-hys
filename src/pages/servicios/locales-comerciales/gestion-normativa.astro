@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const items = [
+  { num: '01', title: 'Presentaciones en ART — RAR y RGRL', desc: 'Relevamiento de agentes de riesgo para comercios y locales. Gestión completa ante la Aseguradora.' },
+  { num: '02', title: 'Plan de Gestión Anual', desc: 'Plan de Mejoras Anual con cronograma de actividades preventivas y seguimiento continuo.' },
+  { num: '03', title: 'Programa de Capacitaciones', desc: 'Capacitación en seguridad, uso de extintores, primeros auxilios y evacuación para el personal.' },
+  { num: '04', title: 'Plan Antisiniestral', desc: 'Plan antisiniestral anual requerido por la ART para locales con personal en relación de dependencia.' },
+  { num: '05', title: 'Ley de Autoprotección 5920 — CABA', desc: 'Plan, planos, capacitación y simulacros para locales comerciales en la Ciudad de Buenos Aires.' },
+];
+---
+<BaseLayout
+  title="Gestión Normativa para Locales Comerciales | Privisor HyS"
+  description="Documentación ante SRT y ART para locales comerciales: RAR, RGRL, plan antisiniestral y Ley 5920 CABA. Sin vencimientos ni multas."
+>
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="/">Inicio</a><span>/</span><a href="/servicios/">Servicios</a><span>/</span>
+        <a href="/servicios/locales-comerciales/">Locales Comerciales</a><span>/</span>
+        <span>Gestión normativa</span>
+      </nav>
+      <div class="page-hero-badge">SRT · ART · Ley 5920</div>
+      <h1>GESTIÓN NORMATIVA<br><em>LOCALES COMERCIALES</em></h1>
+      <p>Toda la documentación legal y ante ART para que tu local esté siempre en regla. Sin vencimientos, sin multas.</p>
+    </div>
+  </section>
+  <section class="content-section">
+    <div class="content-inner">
+      <div class="items-list">
+        {items.map(it => (
+          <div class="item">
+            <span class="item-num">{it.num}</span>
+            <div><h3>{it.title}</h3><p>{it.desc}</p></div>
+          </div>
+        ))}
+      </div>
+      <div class="cta-banner">
+        <h2>TU LOCAL, <em style="font-style:normal;background:linear-gradient(90deg,#64d2ff,#4dc8f5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">SIEMPRE EN REGLA</em></h2>
+        <p>Asumimos toda la gestión para que no tengas que preocuparte por vencimientos ni inspecciones.</p>
+        <div class="cta-actions">
+          <a href="https://wa.me/5491133572984" class="btn-primary" target="_blank" rel="noopener">💬 Consultanos</a>
+          <a href="/contacto/" class="btn-outline">Formulario</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

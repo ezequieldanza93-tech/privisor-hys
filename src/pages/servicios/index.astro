@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const sectores = [
+  {
+    href: '/servicios/empresas-industriales/',
+    icon: '🏭',
+    badge: 'Decreto 351/79 · SRT',
+    name: 'Empresas Industriales',
+    desc: 'Plantas de producción, manufactura, logística y depósitos.',
+    subs: ['Mediciones', 'Gestión normativa', 'ISO 45001:2018'],
+  },
+  {
+    href: '/servicios/construccion/',
+    icon: '🏗️',
+    badge: 'Decreto 911/96',
+    name: 'Construcción',
+    desc: 'Obras civiles, constructoras e infraestructura vial.',
+    subs: ['Seguridad en obra', 'Mediciones', 'Gestión normativa'],
+  },
+  {
+    href: '/servicios/educativo-recreativo/',
+    icon: '🏫',
+    badge: 'Ley 5920 CABA',
+    name: 'Educativo & Recreativo',
+    desc: 'Colegios, universidades, clubes y centros culturales.',
+    subs: ['Planes de emergencia', 'Mediciones', 'Gestión normativa'],
+  },
+  {
+    href: '/servicios/locales-comerciales/',
+    icon: '🏪',
+    badge: 'SRT · ART · Ley 5920',
+    name: 'Locales Comerciales',
+    desc: 'Comercios, restaurantes, oficinas y atención al público.',
+    subs: ['Mediciones', 'Planes de emergencia', 'Gestión normativa'],
+  },
+];
+---
+
+<BaseLayout
+  title="Servicios de Higiene y Seguridad Laboral | Privisor HyS"
+  description="Servicios de Higiene y Seguridad Laboral para empresas industriales, construcción, locales comerciales y establecimientos educativos en CABA y GBA."
+>
+
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="/">Inicio</a>
+        <span>/</span>
+        <span>Servicios</span>
+      </nav>
+      <div class="page-hero-badge">Cobertura completa · CABA y GBA</div>
+      <h1>SERVICIOS DE <em>H&S</em></h1>
+      <p>Seleccioná el sector de tu empresa y conocé exactamente qué servicios de Higiene y Seguridad Laboral aplicamos.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="content-inner">
+      <div class="sectores-full-grid">
+        {sectores.map(s => (
+          <article class="sector-full-card">
+            <div class="sfc-header">
+              <span class="sfc-icon" aria-hidden="true">{s.icon}</span>
+              <span class="sfc-badge">{s.badge}</span>
+            </div>
+            <h2 class="sfc-title">{s.name}</h2>
+            <p class="sfc-desc">{s.desc}</p>
+            <div class="sfc-subs">
+              <p class="sfc-subs-label">Subcategorías</p>
+              <ul>
+                {s.subs.map(sub => <li>{sub}</li>)}
+              </ul>
+            </div>
+            <a href={s.href} class="btn-primary">Ver servicios →</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+.sectores-full-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.sector-full-card {
+  background: #001848;
+  border: 2px solid rgba(201,162,39,0.3);
+  border-radius: 12px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: all .3s;
+}
+.sector-full-card:hover {
+  border-color: rgba(100,210,255,0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+}
+.sfc-header { display: flex; align-items: center; gap: 12px; }
+.sfc-icon { font-size: 2.2rem; }
+.sfc-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .52rem;
+  color: rgba(201,162,39,.85);
+  background: rgba(201,162,39,0.07);
+  border: 1px solid rgba(201,162,39,0.22);
+  padding: 4px 9px;
+  border-radius: 3px;
+  letter-spacing: .5px;
+}
+.sfc-title {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  color: #fff;
+  line-height: .95;
+}
+.sfc-desc {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(255,255,255,.45);
+  line-height: 1.7;
+}
+.sfc-subs-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .55rem;
+  color: rgba(100,210,255,.6);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.sfc-subs ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.sfc-subs li {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .58rem;
+  color: rgba(255,255,255,.45);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: .5px;
+}
+@media (max-width: 700px) {
+  .sectores-full-grid { grid-template-columns: 1fr; }
+}
+</style>
