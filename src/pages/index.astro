@@ -5,7 +5,7 @@ const schema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "Privisor HyS",
-  "description": "Consultora de Higiene y Seguridad Laboral en CABA y GBA. Profesionales matriculados ante SRT y ART. Cumplimiento normativo integral.",
+  "description": "Consultora de Higiene y Seguridad Laboral en CABA y provincia de Buenos Aires. Matriculados en COPIME, CPSH y Colegio de Ingeniería Industrial. Cumplimiento normativo integral.",
   "url": "https://privisor-hys.netlify.app",
   "telephone": "+5491133572984",
   "areaServed": ["Ciudad Autónoma de Buenos Aires", "Gran Buenos Aires"],
@@ -64,8 +64,8 @@ const sectores = [
 ---
 
 <BaseLayout
-  title="Privisor HyS — Consultora de Higiene y Seguridad Laboral | CABA y GBA"
-  description="Consultora de Higiene y Seguridad Laboral en CABA y GBA. Profesionales matriculados ante SRT y ART. Mediciones, gestión normativa, ISO 45001 y planes de emergencia para empresas."
+  title="Privisor HyS — Consultora de Higiene y Seguridad Laboral | CABA y Provincia de Buenos Aires"
+  description="Consultora de Higiene y Seguridad Laboral en CABA y provincia de Buenos Aires. Matriculados en COPIME, CPSH y Colegio de Ingeniería Industrial. Mediciones, gestión normativa, ISO 45001 y planes de emergencia."
   schema={schema}
 >
 
@@ -76,12 +76,12 @@ const sectores = [
 
       <div class="hero-inner">
         <div class="hero-kicker">CABA · GBA</div>
-        <h1 class="hero-title">HIGIENE Y<br>SEGURIDAD<br><em>LABORAL</em></h1>
-        <p class="hero-sub">Tu empresa cumpliendo la normativa vigente, sin complicaciones. Profesionales matriculados ante SRT y ART que van a tu establecimiento, con documentación completa y a tiempo.</p>
+        <h1 class="hero-title">HIGIENE Y SEGURIDAD <em>LABORAL</em></h1>
+        <p class="hero-sub">Tu empresa cumpliendo la normativa vigente, sin complicaciones. Matriculados en COPIME, CPSH y el Colegio de Ingeniería Industrial — con cobertura legal en CABA y toda la provincia de Buenos Aires.</p>
         <div class="hero-badges">
           <span class="hero-badge">Cumplimiento SRT / ART</span>
           <span class="hero-badge">Presencia en campo</span>
-          <span class="hero-badge">Profesionales matriculados</span>
+          <span class="hero-badge">COPIME · CPSH · Ing. Industrial</span>
           <span class="hero-badge">ISO 45001:2018</span>
         </div>
         <div class="hero-actions">
@@ -160,8 +160,8 @@ const sectores = [
       <div class="porque-grid">
         <div class="porque-item">
           <div class="porque-num">01</div>
-          <h3>Profesionales matriculados</h3>
-          <p>Técnicos y licenciados en Higiene y Seguridad Laboral, matriculados ante SRT. Cada servicio firmado con responsabilidad profesional.</p>
+          <h3>Matriculados en COPIME, CPSH e Ing. Industrial</h3>
+          <p>Profesionales matriculados en COPIME, CPSH y el Colegio de Ingeniería Industrial. Cobertura legal en CABA y toda la provincia de Buenos Aires.</p>
         </div>
         <div class="porque-item">
           <div class="porque-num">02</div>
@@ -248,18 +248,18 @@ const sectores = [
 }
 .hero-kicker::before, .hero-kicker::after { content: ''; height: 1px; width: 22px; background: #64d2ff; opacity: .5; }
 .hero-title {
-  font-size: clamp(30px, 3.5vw, 46px);
+  font-size: clamp(34px, 4.2vw, 53px);
   letter-spacing: 3px;
   margin-bottom: 14px;
   opacity: 0;
   animation: fadeUp .6s ease .25s both;
+  white-space: nowrap;
 }
 .hero-title em {
   font-style: normal;
   background: linear-gradient(90deg, #64d2ff, #4dc8f5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: block;
 }
 .hero-sub {
   font-size: 15px;
