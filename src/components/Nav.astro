@@ -1,11 +1,44 @@
 ---
-const links = [
-  { href: '/servicios/', label: 'Servicios' },
-  { href: '/nosotros/', label: 'Nosotros' },
-  { href: '/contacto/',  label: 'Contacto' },
-];
-
 const currentPath = Astro.url.pathname;
+
+const sectors = [
+  {
+    label: 'Empresas Industriales',
+    href: '/servicios/empresas-industriales/',
+    subs: [
+      { label: 'Mediciones',        href: '/servicios/empresas-industriales/mediciones/' },
+      { label: 'Gestión normativa', href: '/servicios/empresas-industriales/gestion-normativa/' },
+      { label: 'ISO 45001',         href: '/servicios/empresas-industriales/iso-45001/' },
+    ],
+  },
+  {
+    label: 'Construcción',
+    href: '/servicios/construccion/',
+    subs: [
+      { label: 'Seguridad en obra', href: '/servicios/construccion/seguridad-en-obra/' },
+      { label: 'Mediciones',        href: '/servicios/construccion/mediciones/' },
+      { label: 'Gestión normativa', href: '/servicios/construccion/gestion-normativa/' },
+    ],
+  },
+  {
+    label: 'Educativo & Recreativo',
+    href: '/servicios/educativo-recreativo/',
+    subs: [
+      { label: 'Planes de emergencia', href: '/servicios/educativo-recreativo/planes-de-emergencia/' },
+      { label: 'Mediciones',           href: '/servicios/educativo-recreativo/mediciones/' },
+      { label: 'Gestión normativa',    href: '/servicios/educativo-recreativo/gestion-normativa/' },
+    ],
+  },
+  {
+    label: 'Locales Comerciales',
+    href: '/servicios/locales-comerciales/',
+    subs: [
+      { label: 'Mediciones',           href: '/servicios/locales-comerciales/mediciones/' },
+      { label: 'Planes de emergencia', href: '/servicios/locales-comerciales/planes-de-emergencia/' },
+      { label: 'Gestión normativa',    href: '/servicios/locales-comerciales/gestion-normativa/' },
+    ],
+  },
+];
 ---
 
 <nav id="main-nav">
@@ -30,32 +63,82 @@ const currentPath = Astro.url.pathname;
   </a>
 
   <div class="nav-right">
-    {links.map(link => (
+
+    <!-- SERVICIOS con flyout dropdown -->
+    <div class="nav-item nav-has-dropdown">
       <a
-        href={link.href}
-        class={`nav-link ${currentPath.startsWith(link.href) ? 'active' : ''}`}
+        href="/servicios/"
+        class={`nav-link ${currentPath.startsWith('/servicios/') ? 'active' : ''}`}
+        aria-haspopup="true"
+        aria-expanded="false"
       >
-        {link.label}
+        Servicios <span class="nav-arrow">▾</span>
       </a>
-    ))}
+
+      <!-- Dropdown nivel 1 -->
+      <div class="nav-dropdown" role="menu">
+        {sectors.map(sector => (
+          <div class="nav-subitem">
+            <a href={sector.href} class="nav-dropdown-link" role="menuitem">
+              {sector.label}
+              <span class="nav-sub-arrow">›</span>
+            </a>
+            <!-- Submenu nivel 2 -->
+            <div class="nav-submenu" role="menu">
+              <a href={sector.href} class="nav-submenu-header" role="menuitem">
+                Ver todo — {sector.label}
+              </a>
+              <div class="nav-submenu-divider"></div>
+              {sector.subs.map(sub => (
+                <a href={sub.href} class="nav-submenu-link" role="menuitem">
+                  {sub.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <a href="/nosotros/" class={`nav-link ${currentPath === '/nosotros/' ? 'active' : ''}`}>Nosotros</a>
+    <a href="/contacto/"  class={`nav-link ${currentPath === '/contacto/'  ? 'active' : ''}`}>Contacto</a>
     <a href="/contacto/" class="nav-cta">Consultanos</a>
   </div>
 
-  <!-- Hamburger mobile -->
   <button class="nav-hamburger" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
 <!-- Mobile menu -->
-<div class="nav-mobile" id="nav-mobile">
-  {links.map(link => (
-    <a href={link.href} class="nav-mobile-link">{link.label}</a>
-  ))}
-  <a href="/contacto/" class="btn-primary" style="margin-top: 8px;">Consultanos</a>
+<div class="nav-mobile" id="nav-mobile" role="navigation" aria-label="Menú mobile">
+  <div class="nav-mobile-item">
+    <button class="nav-mobile-toggle" id="mobile-servicios-toggle" aria-expanded="false">
+      Servicios <span class="mobile-arrow">▾</span>
+    </button>
+    <div class="nav-mobile-sub" id="mobile-servicios-sub">
+      {sectors.map(sector => (
+        <div class="nav-mobile-sector">
+          <button class={`nav-mobile-sector-toggle`} aria-expanded="false">
+            {sector.label} <span class="mobile-arrow">›</span>
+          </button>
+          <div class="nav-mobile-sector-links">
+            <a href={sector.href} class="nav-mobile-link">Ver todo</a>
+            {sector.subs.map(sub => (
+              <a href={sub.href} class="nav-mobile-link">{sub.label}</a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+  <a href="/nosotros/" class="nav-mobile-link nav-mobile-root">Nosotros</a>
+  <a href="/contacto/"  class="nav-mobile-link nav-mobile-root">Contacto</a>
+  <a href="/contacto/" class="btn-primary" style="margin-top:8px;">Consultanos</a>
 </div>
 
 <style>
+/* ---- NAV BASE ---- */
 nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -70,14 +153,15 @@ nav {
   transition: all .4s ease;
 }
 nav.scrolled {
-  background: rgba(0,9,31,0.94);
+  background: rgba(0,9,31,0.96);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(100,210,255,0.1);
 }
 .nav-logo { display: flex; align-items: center; text-decoration: none; }
-.nav-right { display: flex; align-items: center; gap: 24px; }
+.nav-right { display: flex; align-items: center; gap: 6px; }
 
+/* ---- LINKS BASE ---- */
 .nav-link {
   font-family: 'Montserrat', sans-serif;
   font-size: .78rem;
@@ -87,8 +171,15 @@ nav.scrolled {
   letter-spacing: .8px;
   text-transform: uppercase;
   transition: color .2s;
+  padding: 8px 12px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
 }
 .nav-link:hover, .nav-link.active { color: #64d2ff; }
+.nav-arrow { font-size: .6rem; opacity: .7; transition: transform .2s; }
 
 .nav-cta {
   background: #64d2ff;
@@ -102,9 +193,128 @@ nav.scrolled {
   text-transform: uppercase;
   text-decoration: none;
   transition: all .2s;
+  margin-left: 8px;
 }
 .nav-cta:hover { background: #fff; }
 
+/* ---- DROPDOWN NIVEL 1 ---- */
+.nav-item { position: relative; }
+
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 220px;
+  background: rgba(0, 10, 28, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(100,210,255,0.12);
+  border-radius: 8px;
+  padding: 6px 0;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.55);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-6px);
+  transition: opacity .18s ease, transform .18s ease;
+  z-index: 300;
+}
+
+.nav-has-dropdown:hover .nav-dropdown,
+.nav-has-dropdown:focus-within .nav-dropdown {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+.nav-has-dropdown:hover .nav-arrow { transform: rotate(180deg); }
+
+/* ---- ITEMS NIVEL 1 ---- */
+.nav-subitem { position: relative; }
+
+.nav-dropdown-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .78rem;
+  font-weight: 500;
+  color: rgba(255,255,255,.65);
+  text-decoration: none;
+  letter-spacing: .4px;
+  transition: all .15s;
+  white-space: nowrap;
+  gap: 8px;
+}
+.nav-dropdown-link:hover { color: #fff; background: rgba(100,210,255,0.07); }
+.nav-sub-arrow {
+  font-size: .9rem;
+  color: rgba(100,210,255,.5);
+  flex-shrink: 0;
+  transition: transform .15s;
+}
+.nav-subitem:hover .nav-sub-arrow { transform: translateX(3px); }
+
+/* ---- SUBMENU NIVEL 2 ---- */
+.nav-submenu {
+  position: absolute;
+  top: -6px;
+  left: calc(100% + 2px);
+  min-width: 210px;
+  background: rgba(0, 10, 28, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(100,210,255,0.12);
+  border-radius: 8px;
+  padding: 6px 0;
+  box-shadow: 8px 16px 48px rgba(0,0,0,0.55);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-6px);
+  transition: opacity .15s ease, transform .15s ease;
+  z-index: 310;
+}
+.nav-subitem:hover .nav-submenu,
+.nav-subitem:focus-within .nav-submenu {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateX(0);
+}
+.nav-subitem:hover .nav-dropdown-link { color: #fff; background: rgba(100,210,255,0.07); }
+
+.nav-submenu-header {
+  display: block;
+  padding: 8px 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .58rem;
+  color: rgba(201,162,39,.8);
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color .15s;
+}
+.nav-submenu-header:hover { color: #c9a227; }
+
+.nav-submenu-divider {
+  height: 1px;
+  background: rgba(255,255,255,.06);
+  margin: 4px 10px;
+}
+
+.nav-submenu-link {
+  display: block;
+  padding: 8px 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .76rem;
+  font-weight: 400;
+  color: rgba(255,255,255,.6);
+  text-decoration: none;
+  letter-spacing: .3px;
+  transition: all .15s;
+  white-space: nowrap;
+}
+.nav-submenu-link:hover { color: #64d2ff; background: rgba(100,210,255,0.06); padding-left: 20px; }
+
+/* ---- HAMBURGER ---- */
 .nav-hamburger {
   display: none;
   flex-direction: column;
@@ -114,44 +324,80 @@ nav.scrolled {
   cursor: pointer;
   padding: 4px;
 }
-.nav-hamburger span {
-  width: 24px;
-  height: 2px;
-  background: rgba(255,255,255,.7);
-  border-radius: 2px;
-  transition: all .2s;
-}
+.nav-hamburger span { width: 24px; height: 2px; background: rgba(255,255,255,.7); border-radius: 2px; transition: all .2s; }
+.nav-hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
-/* Mobile menu */
+/* ---- MOBILE MENU ---- */
 .nav-mobile {
   position: fixed;
-  top: 68px;
-  left: 0; right: 0;
+  top: 68px; left: 0; right: 0;
   z-index: 199;
-  background: rgba(0,9,31,0.97);
+  background: rgba(0,9,31,0.98);
   backdrop-filter: blur(20px);
-  padding: 20px 24px 28px;
+  padding: 12px 24px 24px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
   transform: translateY(-110%);
   transition: transform .3s ease;
   border-bottom: 1px solid rgba(100,210,255,0.1);
+  max-height: calc(100vh - 68px);
+  overflow-y: auto;
 }
 .nav-mobile.open { transform: translateY(0); }
-.nav-mobile-link {
-  font-family: 'Montserrat', sans-serif;
-  font-size: .9rem;
-  font-weight: 600;
+
+.nav-mobile-toggle, .nav-mobile-sector-toggle {
+  width: 100%;
+  background: transparent;
+  border: none;
   color: rgba(255,255,255,.7);
-  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .88rem;
+  font-weight: 600;
   letter-spacing: .8px;
   text-transform: uppercase;
   padding: 12px 0;
-  border-bottom: 1px solid rgba(255,255,255,.06);
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,.05);
+}
+.nav-mobile-sector-toggle { font-size: .78rem; padding: 9px 12px; color: rgba(255,255,255,.55); border-bottom: none; }
+.mobile-arrow { transition: transform .2s; font-size: .7rem; }
+.nav-mobile-toggle.open .mobile-arrow,
+.nav-mobile-sector-toggle.open .mobile-arrow { transform: rotate(90deg); }
+
+.nav-mobile-sub { display: none; padding-left: 8px; }
+.nav-mobile-sub.open { display: block; }
+.nav-mobile-sector { border-left: 1px solid rgba(100,210,255,0.1); margin: 2px 0; padding-left: 4px; }
+.nav-mobile-sector-links { display: none; padding-left: 12px; }
+.nav-mobile-sector-links.open { display: flex; flex-direction: column; }
+
+.nav-mobile-link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .8rem;
+  font-weight: 400;
+  color: rgba(255,255,255,.5);
+  text-decoration: none;
+  padding: 8px 0 8px 4px;
+  display: block;
   transition: color .2s;
+  border-bottom: 1px solid rgba(255,255,255,.04);
 }
 .nav-mobile-link:hover { color: #64d2ff; }
+.nav-mobile-root {
+  font-weight: 600;
+  font-size: .88rem;
+  color: rgba(255,255,255,.7);
+  text-transform: uppercase;
+  letter-spacing: .8px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,.05);
+}
 
 @media (max-width: 900px) {
   nav { padding: 0 24px; }
@@ -161,10 +407,45 @@ nav.scrolled {
 </style>
 
 <script>
+// Scroll → nav opaco
+window.addEventListener('scroll', () => {
+  document.getElementById('main-nav')?.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// Hamburger
 const toggle = document.getElementById('nav-toggle');
 const mobileMenu = document.getElementById('nav-mobile');
 toggle?.addEventListener('click', () => {
   const isOpen = mobileMenu?.classList.toggle('open');
+  toggle.classList.toggle('open', isOpen);
   toggle.setAttribute('aria-expanded', String(isOpen));
+});
+
+// Mobile Servicios accordion
+const serviciosToggle = document.getElementById('mobile-servicios-toggle');
+const serviciosSub = document.getElementById('mobile-servicios-sub');
+serviciosToggle?.addEventListener('click', () => {
+  const isOpen = serviciosSub?.classList.toggle('open');
+  serviciosToggle.classList.toggle('open', isOpen);
+  serviciosToggle.setAttribute('aria-expanded', String(isOpen));
+});
+
+// Mobile sector accordions
+document.querySelectorAll('.nav-mobile-sector-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const links = btn.nextElementSibling as HTMLElement;
+    const isOpen = links?.classList.toggle('open');
+    btn.classList.toggle('open', isOpen);
+    btn.setAttribute('aria-expanded', String(isOpen));
+  });
+});
+
+// Cerrar dropdown con Escape
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    mobileMenu?.classList.remove('open');
+    toggle?.classList.remove('open');
+    toggle?.setAttribute('aria-expanded', 'false');
+  }
 });
 </script>

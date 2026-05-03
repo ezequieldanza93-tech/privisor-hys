@@ -85,7 +85,7 @@ h3     { font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing
   gap: 8px;
   background: var(--celeste);
   color: var(--azul-deep);
-  padding: 12px 28px;
+  padding: 10px 24px;
   border-radius: 4px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
@@ -104,7 +104,7 @@ h3     { font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing
   background: transparent;
   color: var(--celeste);
   border: 1px solid rgba(100,210,255,0.4);
-  padding: 12px 28px;
+  padding: 10px 24px;
   border-radius: 4px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
@@ -116,8 +116,11 @@ h3     { font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing
 }
 .btn-outline:hover { background: rgba(100,210,255,0.08); border-color: var(--celeste); }
 
-/* ---- BREADCRUMB ---- */
+/* ---- BREADCRUMB — sticky justo debajo del nav (68px) ---- */
 .breadcrumb {
+  position: sticky;
+  top: 68px;
+  z-index: 100;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -126,7 +129,15 @@ h3     { font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing
   color: rgba(255,255,255,.3);
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin-bottom: 24px;
+  background: rgba(0, 9, 31, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(100,210,255,0.07);
+  /* full-bleed dentro del page-hero */
+  margin-left: -51px;
+  margin-right: -51px;
+  padding: 9px 51px;
+  margin-bottom: 20px;
 }
 .breadcrumb a {
   color: rgba(255,255,255,.3);
@@ -167,7 +178,8 @@ h3     { font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing
 .page-hero {
   position: relative;
   z-index: 1;
-  padding: 130px 60px 70px;
+  /* padding-top reducido: el breadcrumb sticky maneja la separación del nav */
+  padding: 80px 51px 60px;
   background: linear-gradient(160deg, #001030 0%, #001848 50%, #00091f 100%);
   overflow: hidden;
 }
@@ -217,7 +229,7 @@ h3     { font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing
 .content-section {
   position: relative;
   z-index: 1;
-  padding: 80px 60px;
+  padding: 68px 51px;
 }
 .content-inner { max-width: 1200px; margin: 0 auto; }
 
@@ -231,7 +243,7 @@ h3     { font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing
   background: var(--azul-navy);
   border: 2px solid rgba(201,162,39,0.3);
   border-radius: 12px;
-  padding: 24px 20px;
+  padding: 20px 17px;
   transition: all .3s cubic-bezier(.34,1.3,.64,1);
   position: relative;
   overflow: hidden;
@@ -290,11 +302,11 @@ h3     { font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing
 .item {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
+  gap: 14px;
   background: var(--azul-navy);
   border: 2px solid rgba(201,162,39,0.25);
   border-radius: 8px;
-  padding: 18px 16px;
+  padding: 15px 13px;
   transition: all .2s;
 }
 .item:hover { background: #002060; border-color: rgba(100,210,255,0.3); }
@@ -330,9 +342,9 @@ h3     { font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing
   background: linear-gradient(135deg, var(--azul-navy), #002060);
   border: 1px solid rgba(100,210,255,0.15);
   border-radius: 12px;
-  padding: 48px 40px;
+  padding: 41px 34px;
   text-align: center;
-  margin-top: 60px;
+  margin-top: 51px;
 }
 .cta-banner h2 {
   font-size: clamp(32px, 4vw, 52px);
