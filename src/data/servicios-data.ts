@@ -1,0 +1,715 @@
+export interface ServicioIndividual {
+  slug: string;
+  sector: { label: string; href: string };
+  categoria: { label: string; href: string };
+  titulo: string;
+  metaDescription: string;
+  badge: string;
+  heroTitle: string;
+  heroBajada: string;
+  normativa: {
+    codigo: string;
+    nombre: string;
+    resumen: string;
+    obligatoriedad: string;
+  };
+  queMedimos: { titulo: string; descripcion: string }[];
+  incluye: string[];
+}
+
+export const servicios: ServicioIndividual[] = [
+
+  // ── EMPRESAS INDUSTRIALES / MEDICIONES ──────────────────────────────────────
+
+  {
+    slug: 'empresas-industriales/mediciones/ruido',
+    sector: { label: 'Empresas Industriales', href: '/servicios/empresas-industriales/' },
+    categoria: { label: 'Mediciones', href: '/servicios/empresas-industriales/mediciones/' },
+    titulo: 'Medición de Ruido Laboral',
+    metaDescription: 'Medición de ruido laboral según Res. SRT 85/2012. Protocolo oficial, informe técnico firmado y plan de acción correctivo. CABA y GBA.',
+    badge: 'Res. SRT 85/2012',
+    heroTitle: 'MEDICIÓN DE\nRUIDO LABORAL',
+    heroBajada: 'Determinamos la exposición diaria de cada puesto de trabajo al ruido y verificamos el cumplimiento del límite legal de 85 dB(A). Informe con protocolo oficial firmado por profesional habilitado.',
+    normativa: {
+      codigo: 'Res. SRT 85/2012',
+      nombre: 'Protocolo para la medición de la exposición al ruido en el ambiente laboral',
+      resumen: 'La Resolución SRT 85/2012, dictada en el marco de la Ley 19.587 y el Decreto 351/79 (Anexo V), establece el protocolo obligatorio para medir la exposición al ruido en cualquier puesto de trabajo. Exige que las mediciones sean realizadas por un Licenciado en Higiene y Seguridad o Técnico habilitado, y que el informe final incluya el nivel de presión sonora continuo equivalente (LAeq), el nivel de exposición diario (NED) y la comparación con el límite de 85 dB(A). Cuando el NED supera ese umbral, el empleador debe implementar medidas de ingeniería, controles administrativos o proveer protección auditiva con la atenuación adecuada.',
+      obligatoriedad: 'Toda empresa con maquinaria, motores, compresores, ventiladores, prensas u otras fuentes de ruido. Obligatoria para la emisión y renovación del Legajo Técnico ante la SRT.',
+    },
+    queMedimos: [
+      { titulo: 'Nivel continuo equivalente (LAeq)', descripcion: 'Medición ponderada A durante la jornada completa o en ciclos representativos de trabajo.' },
+      { titulo: 'Nivel de exposición diario (NED)', descripcion: 'Cálculo normalizado a 8 horas según el protocolo oficial de la SRT.' },
+      { titulo: 'Picos de presión sonora', descripcion: 'Identificamos impactos y explosiones que superan el límite de 140 dB(C).' },
+      { titulo: 'Mapeo de fuentes', descripcion: 'Identificamos las fuentes emisoras y sus niveles individuales para orientar acciones de ingeniería.' },
+    ],
+    incluye: [
+      'Visita al establecimiento con dosímetro y sonómetro clase 1 calibrado',
+      'Protocolo oficial completo (Formulario SRT 85/2012)',
+      'Informe técnico firmado por profesional habilitado',
+      'Mapa de ruido del sector medido',
+      'Recomendaciones de protección auditiva (NRR requerido)',
+      'Plan de acción correctivo (ingeniería o controles administrativos)',
+    ],
+  },
+
+  {
+    slug: 'empresas-industriales/mediciones/iluminacion',
+    sector: { label: 'Empresas Industriales', href: '/servicios/empresas-industriales/' },
+    categoria: { label: 'Mediciones', href: '/servicios/empresas-industriales/mediciones/' },
+    titulo: 'Medición de Iluminación en el Trabajo',
+    metaDescription: 'Medición de iluminación según Res. SRT 84/2012 y Dec. 351/79 Anexo IV. Protocolo oficial, informe y plan de mejora lumínica. CABA y GBA.',
+    badge: 'Res. SRT 84/2012',
+    heroTitle: 'MEDICIÓN DE\nILUMINACIÓN',
+    heroBajada: 'Verificamos que los niveles de iluminación en cada puesto cumplan los valores mínimos del Decreto 351/79. Detectamos zonas de riesgo visual y generamos el protocolo oficial requerido por la SRT.',
+    normativa: {
+      codigo: 'Res. SRT 84/2012 / Dec. 351/79 Anexo IV',
+      nombre: 'Protocolo para la medición de iluminación en el ambiente laboral',
+      resumen: 'La Resolución SRT 84/2012 establece la metodología oficial para medir iluminación en puestos de trabajo, complementando el Anexo IV del Decreto 351/79 que fija los valores mínimos según el tipo de tarea (desde 100 lux para depósitos hasta 1000 lux para trabajos de alta precisión). La medición debe realizarse en los planos de trabajo reales, considerar tanto iluminación general como localizada, y el protocolo debe ser firmado por profesional habilitado. El incumplimiento de los valores mínimos obliga al empleador a mejorar la instalación o añadir iluminación localizada.',
+      obligatoriedad: 'Toda empresa o establecimiento con puestos de trabajo fijos. Requerida para el Legajo Técnico SRT y como parte de la evaluación de riesgos ergonómicos y visuales.',
+    },
+    queMedimos: [
+      { titulo: 'Iluminancia en plano de trabajo (lux)', descripcion: 'Medición en el plano horizontal donde se realiza la tarea, con luxómetro calibrado.' },
+      { titulo: 'Uniformidad de iluminación', descripcion: 'Relación entre iluminancia mínima y media para detectar zonas con deslumbramiento o sombras.' },
+      { titulo: 'Iluminación de emergencia', descripcion: 'Verificación de los niveles mínimos (10 lux en corredores de evacuación) de las luces de emergencia.' },
+      { titulo: 'Temperatura de color y deslumbramiento', descripcion: 'Evaluación cualitativa de la calidad lumínica para tareas de alta demanda visual.' },
+    ],
+    incluye: [
+      'Relevamiento de todos los puestos de trabajo con luxómetro calibrado',
+      'Protocolo oficial completo (Formulario SRT 84/2012)',
+      'Informe técnico firmado por profesional habilitado',
+      'Tabla comparativa de valores medidos vs. valores reglamentarios',
+      'Identificación de puestos no conformes con recomendación de mejora',
+      'Plan de adecuación lumínica con estimación de intervención',
+    ],
+  },
+
+  {
+    slug: 'empresas-industriales/mediciones/estres-termico',
+    sector: { label: 'Empresas Industriales', href: '/servicios/empresas-industriales/' },
+    categoria: { label: 'Mediciones', href: '/servicios/empresas-industriales/mediciones/' },
+    titulo: 'Medición de Estrés Térmico',
+    metaDescription: 'Evaluación de estrés térmico (WBGT) según Dec. 351/79 Anexo IV. Ambientes calurosos, hornos, fundiciones, cocinas industriales. CABA y GBA.',
+    badge: 'Dec. 351/79 Anexo IV',
+    heroTitle: 'MEDICIÓN DE\nESTRÉS TÉRMICO',
+    heroBajada: 'Evaluamos la carga térmica en puestos con exposición a calor extremo mediante el índice WBGT. Determinamos los límites de exposición según la carga metabólica de cada tarea y el tipo de ropa de trabajo.',
+    normativa: {
+      codigo: 'Dec. 351/79 Anexo IV — Tabla de estrés térmico',
+      nombre: 'Reglamentación de Higiene y Seguridad — Condiciones ambientales en lugares de trabajo',
+      resumen: 'El Anexo IV del Decreto 351/79 establece los valores límite de exposición al calor expresados en índice WBGT (Wet Bulb Globe Temperature), diferenciados según la carga de trabajo (leve, moderada, pesada) y el ciclo trabajo-descanso. El empleador debe realizar mediciones cuando existen fuentes de calor radiante, trabajo al aire libre en verano o procesos que generan humedad y temperatura simultáneamente. Cuando el WBGT medido supera los valores de la tabla, es obligatorio implementar pausas programadas, hidratación y/o modificaciones técnicas en el proceso.',
+      obligatoriedad: 'Establecimientos con hornos, fundición, soldadura intensa, cocinas industriales, lavanderías, trabajos al sol o cualquier puesto con temperatura de bulbo seco superior a 28 °C.',
+    },
+    queMedimos: [
+      { titulo: 'Índice WBGT (interior y exterior)', descripcion: 'Medición simultánea de temperatura de bulbo húmedo natural, temperatura de globo negro y temperatura seca.' },
+      { titulo: 'Temperatura radiante media', descripcion: 'Evaluación de la carga de calor por radiación proveniente de superficies calientes.' },
+      { titulo: 'Velocidad de aire y humedad relativa', descripcion: 'Factores que determinan la capacidad del cuerpo para disipar calor por evaporación.' },
+      { titulo: 'Carga metabólica del puesto', descripcion: 'Estimación del gasto energético por tarea según tablas ISO 8996, necesario para interpretar los límites WBGT.' },
+    ],
+    incluye: [
+      'Medición con termómetro de globo negro, bulbo húmedo y seco calibrados',
+      'Cálculo del índice WBGT por puesto y turno',
+      'Informe técnico con tabla comparativa Dec. 351/79',
+      'Recomendación de regímenes de trabajo-descanso',
+      'Plan de medidas correctivas (ventilación, hidratación, EPI)',
+      'Protocolo firmado por profesional habilitado',
+    ],
+  },
+
+  {
+    slug: 'empresas-industriales/mediciones/material-particulado',
+    sector: { label: 'Empresas Industriales', href: '/servicios/empresas-industriales/' },
+    categoria: { label: 'Mediciones', href: '/servicios/empresas-industriales/mediciones/' },
+    titulo: 'Medición de Material Particulado y Polvo',
+    metaDescription: 'Medición de material particulado, polvo respirable y fracción inhalable según Dec. 351/79 Anexo III. Evaluación ambiental y personal. CABA y GBA.',
+    badge: 'Dec. 351/79 Anexo III',
+    heroTitle: 'MEDICIÓN DE\nMATERIAL PARTICULADO',
+    heroBajada: 'Determinamos la concentración de polvo en el ambiente de trabajo y lo comparamos con los Valores Límite de Umbral (TLV) del Anexo III del Decreto 351/79. Fundamental en industrias de corte, lijado, cementeras y química.',
+    normativa: {
+      codigo: 'Dec. 351/79 Anexo III / Res. SRT 415/2002',
+      nombre: 'Concentraciones máximas permisibles de sustancias químicas en el ambiente de trabajo',
+      resumen: 'El Anexo III del Decreto 351/79 establece los Valores Límite de Umbral (TLV) para cientos de sustancias químicas, incluyendo polvo inerte (10 mg/m³ total, 5 mg/m³ respirable), polvo de sílice (0,1 mg/m³ en fracción respirable) y polvos específicos por industria. La Resolución SRT 415/2002 complementa con la metodología de muestreo. Las mediciones deben realizarse durante la jornada laboral normal, con muestras de área y personales, y el informe debe indicar el índice de exposición diaria (ratio concentración medida / TLV).',
+      obligatoriedad: 'Industrias de piedra, cerámica, construcción, madera, textil, fundición, minería, impresión, panificación y toda actividad con generación de aerosoles sólidos visibles o polvos finos.',
+    },
+    queMedimos: [
+      { titulo: 'Fracción inhalable (polvo total)', descripcion: 'Partículas que ingresan por nariz y boca, relevantes para irritación de vías aéreas superiores.' },
+      { titulo: 'Fracción respirable (polvo fino)', descripcion: 'Partículas <4 µm que alcanzan los alvéolos pulmonares — las de mayor riesgo para enfermedades pulmonares.' },
+      { titulo: 'Sílice libre cristalina (cuarzo)', descripcion: 'Análisis específico mediante gravimetría e IR para puestos con riesgo de silicosis.' },
+      { titulo: 'Polvos de metales (Pb, Mn, Cr, Ni, etc.)', descripcion: 'Muestreo con posterior análisis por absorción atómica para metales pesados según riesgo específico del proceso.' },
+    ],
+    incluye: [
+      'Muestreo personal durante jornada completa con bomba calibrada y filtros PTFE',
+      'Análisis gravimétrico en laboratorio acreditado',
+      'Informe técnico con índices de exposición vs. TLV',
+      'Protocolo firmado por profesional habilitado',
+      'Recomendación de controles de ingeniería (extracción, aspiración)',
+      'Especificación de respiradores según fracción de riesgo (FFP2/P3)',
+    ],
+  },
+
+  {
+    slug: 'empresas-industriales/mediciones/gases-vapores',
+    sector: { label: 'Empresas Industriales', href: '/servicios/empresas-industriales/' },
+    categoria: { label: 'Mediciones', href: '/servicios/empresas-industriales/mediciones/' },
+    titulo: 'Medición de Gases y Vapores Químicos',
+    metaDescription: 'Medición de gases, vapores y contaminantes químicos según Dec. 351/79 Anexo III. Solventes, VOCs, CO, NH3, H2S. CABA y GBA.',
+    badge: 'Dec. 351/79 Anexo III',
+    heroTitle: 'MEDICIÓN DE\nGASES Y VAPORES',
+    heroBajada: 'Evaluamos la concentración ambiental de solventes, gases tóxicos y vapores químicos mediante muestreo pasivo e instrumental directo. Cubrimos desde VOCs en pinturas hasta CO en procesos de combustión.',
+    normativa: {
+      codigo: 'Dec. 351/79 Anexo III',
+      nombre: 'Valores Límite de Umbral (TLV) para sustancias químicas en el ambiente laboral',
+      resumen: 'El Anexo III del Decreto 351/79 lista los TLV-TWA (concentración promedio en 8 horas) y TLV-STEL (concentración máxima en 15 minutos) para más de 600 sustancias químicas, adoptando como referencia los TLV de la ACGIH. Las mediciones deben cubrir el peor escenario de exposición del turno laboral. Para sustancias con efecto cancerígeno confirmado (Grupo A1/A2 ACGIH), la obligación de medición es permanente y el informe debe incluir evaluación de riesgo residual.',
+      obligatoriedad: 'Toda empresa que utilice, almacene o genere solventes orgánicos, adhesivos, pinturas, limpiadores, gases de combustión, amoníaco, cloro u otras sustancias químicas en el proceso productivo.',
+    },
+    queMedimos: [
+      { titulo: 'Compuestos orgánicos volátiles (VOCs)', descripcion: 'Tolueno, xileno, acetona, metanol, MEK y otros solventes mediante tubos Tenax + GC/MS.' },
+      { titulo: 'Monóxido de carbono (CO)', descripcion: 'Medición directa con sensor electroquímico calibrado en zonas con combustión o motores.' },
+      { titulo: 'Gases ácidos y básicos (HCl, NH3, H2S, SO2)', descripcion: 'Muestreo con tubos colorimétricos Dräger o impingers con solución absorbente.' },
+      { titulo: 'Mezclas de solventes', descripcion: 'Cálculo del índice de mezcla cuando hay exposición simultánea a varias sustancias (efecto aditivo).' },
+    ],
+    incluye: [
+      'Muestreo pasivo personal (tubos Carbograph/OV-S10) o activo según sustancia',
+      'Análisis en laboratorio acreditado ENAC/OAA',
+      'Informe técnico con TLV-TWA, STEL y ratio de exposición',
+      'Evaluación de riesgo para mezclas (índice aditivo)',
+      'Recomendación de ventilación y tipo de respirador (cartucho específico)',
+      'Protocolo firmado por profesional habilitado',
+    ],
+  },
+
+  {
+    slug: 'empresas-industriales/mediciones/ergonomia',
+    sector: { label: 'Empresas Industriales', href: '/servicios/empresas-industriales/' },
+    categoria: { label: 'Mediciones', href: '/servicios/empresas-industriales/mediciones/' },
+    titulo: 'Evaluación Ergonómica de Puestos',
+    metaDescription: 'Evaluación ergonómica según Res. SRT 886/2015 y Res. SRT 295/2003. Métodos REBA, RULA, NIOSH, OCRA. Prevención de TME. CABA y GBA.',
+    badge: 'Res. SRT 886/2015',
+    heroTitle: 'EVALUACIÓN\nERGONÓMICA',
+    heroBajada: 'Identificamos y evaluamos los factores de riesgo de trastornos musculoesqueléticos (TME) en puestos de trabajo. Aplicamos métodos validados (REBA, NIOSH, OCRA) y generamos un plan de mejora.',
+    normativa: {
+      codigo: 'Res. SRT 886/2015 / Res. SRT 295/2003',
+      nombre: 'Protocolo de ergonomía — Identificación de factores de riesgo ergonómico',
+      resumen: 'La Resolución SRT 886/2015 establece el protocolo obligatorio de ergonomía para empresas, exigiendo identificar factores de riesgo (postura, fuerza, repetitividad, vibración) en todos los puestos de trabajo. La Resolución 295/2003 incorporó a la normativa argentina las metodologías RULA, REBA y la ecuación de NIOSH para levantamiento manual de cargas. Las empresas deben documentar los resultados en la evaluación de riesgos y aplicar medidas de rediseño de puestos, herramientas o ciclos de trabajo cuando los índices superan los niveles de acción.',
+      obligatoriedad: 'Obligatoria para todas las empresas en el marco de la evaluación de riesgos del Legajo Técnico. Prioritaria en industria alimentaria, automotriz, manufacturera y logística con tareas repetitivas o manipulación manual de cargas.',
+    },
+    queMedimos: [
+      { titulo: 'Postura y carga postural (REBA/RULA)', descripcion: 'Fotografía y análisis de posturas adoptadas durante la tarea para cuantificar el riesgo de lesión.' },
+      { titulo: 'Levantamiento manual de cargas (NIOSH)', descripcion: 'Cálculo del peso límite recomendado y el índice de levantamiento para tareas de manipulación.' },
+      { titulo: 'Movimientos repetitivos (OCRA checklist)', descripcion: 'Evaluación de frecuencia, fuerza y posturas de miembro superior en tareas de ciclo corto.' },
+      { titulo: 'Trabajo con pantallas (PVD)', descripcion: 'Evaluación de pantallas, teclado, silla y distancias según guía INSST para puestos con computadora.' },
+    ],
+    incluye: [
+      'Observación directa del puesto con registro fotográfico/video',
+      'Aplicación de los métodos REBA, NIOSH y OCRA según riesgo identificado',
+      'Informe técnico con nivel de riesgo por puesto (inaceptable / medio / bajo)',
+      'Protocolo oficial SRT 886/2015 completo',
+      'Plan de mejora con rediseño de puesto, herramientas o ciclos de trabajo',
+      'Capacitación básica de operarios sobre pausas activas',
+    ],
+  },
+
+  {
+    slug: 'empresas-industriales/mediciones/instalaciones-electricas',
+    sector: { label: 'Empresas Industriales', href: '/servicios/empresas-industriales/' },
+    categoria: { label: 'Mediciones', href: '/servicios/empresas-industriales/mediciones/' },
+    titulo: 'Verificación de Instalaciones Eléctricas',
+    metaDescription: 'Verificación eléctrica según Dec. 351/79 Anexo VI e IRAM 2281. Medición de resistencia de puesta a tierra, aislación, continuidad. CABA y GBA.',
+    badge: 'Dec. 351/79 Anexo VI',
+    heroTitle: 'VERIFICACIÓN DE\nINSTALACIONES ELÉCTRICAS',
+    heroBajada: 'Verificamos el estado de la instalación eléctrica industrial mediante mediciones de resistencia de puesta a tierra, aislamiento de conductores y continuidad. Prevenimos el riesgo de electrocución y cumplimos el Anexo VI del Decreto 351/79.',
+    normativa: {
+      codigo: 'Dec. 351/79 Anexo VI / IRAM 2281',
+      nombre: 'Instalaciones eléctricas — requisitos de seguridad',
+      resumen: 'El Anexo VI del Decreto 351/79 establece los requisitos de seguridad para instalaciones eléctricas industriales: puesta a tierra con resistencia inferior a 5 Ω (o 1 Ω en ambientes húmedos), protección diferencial con disparo ≤ 30 mA en circuitos de uso general, y verificación periódica obligatoria. La norma IRAM 2281 (equivalente a IEC 60364) fija los métodos de medición y los valores de aislamiento mínimo (1 MΩ por circuito a 500 VDC). La SRT exige que la verificación sea realizada por técnico matriculado y que los resultados consten en el Legajo Técnico.',
+      obligatoriedad: 'Todo establecimiento industrial, comercial o de servicios. La verificación debe repetirse cada 2 años o tras modificaciones en la instalación. Requerida obligatoriamente para el Legajo Técnico SRT.',
+    },
+    queMedimos: [
+      { titulo: 'Resistencia de puesta a tierra', descripcion: 'Medición con telurómetro según método de caída de tensión (3 picas). Valor máximo legal: 5 Ω.' },
+      { titulo: 'Resistencia de aislamiento', descripcion: 'Medición circuito por circuito con megóhmetro a 500 VDC. Valor mínimo: 1 MΩ por circuito.' },
+      { titulo: 'Continuidad de conductores de protección', descripcion: 'Verificación de que el conductor PE llega a todas las masas metálicas del establecimiento.' },
+      { titulo: 'Funcionamiento de disyuntores diferenciales', descripcion: 'Prueba de disparo de cada diferencial con comprobador de DDR (corriente de prueba calibrada).' },
+    ],
+    incluye: [
+      'Medición con telurómetro, megóhmetro y comprobador de diferenciales calibrados',
+      'Informe técnico con resultados de cada circuito y tablero',
+      'Protocolo de verificación firmado por profesional habilitado',
+      'Identificación de circuitos no conformes con prioridad de intervención',
+      'Recomendaciones técnicas de adecuación',
+      'Certificado utilizable ante la SRT y aseguradoras (ART)',
+    ],
+  },
+
+  // ── CONSTRUCCIÓN / MEDICIONES ────────────────────────────────────────────────
+
+  {
+    slug: 'construccion/mediciones/ruido',
+    sector: { label: 'Construcción', href: '/servicios/construccion/' },
+    categoria: { label: 'Mediciones', href: '/servicios/construccion/mediciones/' },
+    titulo: 'Medición de Ruido en Obra',
+    metaDescription: 'Medición de ruido laboral en obra de construcción según Res. SRT 85/2012 y Dec. 911/96. Protocolo oficial y plan de protección auditiva. CABA y GBA.',
+    badge: 'Dec. 911/96 / Res. SRT 85/2012',
+    heroTitle: 'MEDICIÓN DE RUIDO\nEN OBRA',
+    heroBajada: 'Medimos la exposición al ruido de los trabajadores en obra (operadores de maquinaria, perforistas, soldadores) y verificamos el cumplimiento del límite de 85 dB(A) conforme al Decreto 911/96.',
+    normativa: {
+      codigo: 'Dec. 911/96 / Res. SRT 85/2012',
+      nombre: 'Reglamento de Higiene y Seguridad para la Industria de la Construcción',
+      resumen: 'El Decreto 911/96 reglamenta la Ley 19.587 para el sector de la construcción y establece requisitos específicos de control del ruido en obra, remitiendo a los TLV del Decreto 351/79 (Anexo V, límite 85 dB(A)) y a la Resolución SRT 85/2012 como metodología de medición. El Programa de Seguridad de Obra exigido por la Resolución SRT 231/96 debe incluir el relevamiento de los niveles de ruido en los puestos de mayor exposición (operadores, perforistas, demolición) y el plan de protección auditiva.',
+      obligatoriedad: 'Obras con martillos neumáticos, perforadoras, sierras circulares, compactadoras, cizallas y cualquier puesto con exposición sostenida a maquinaria ruidosa. Exigida en el Legajo Técnico de Obra (Res. SRT 231/96).',
+    },
+    queMedimos: [
+      { titulo: 'Exposición personal de operadores de maquinaria', descripcion: 'Dosimetría en operadores de retroexcavadora, minicargadora, motosierra y equipos de demolición.' },
+      { titulo: 'Exposición de trabajadores manuales', descripcion: 'Medición de la exposición de personal que trabaja junto a fuentes de ruido (cuadrillas de ferrallistas, encofrado).' },
+      { titulo: 'Niveles ambientales por zona de obra', descripcion: 'Mapeo de niveles por área (demolición, estructuras, terminaciones) para definir zonificación de riesgo.' },
+      { titulo: 'Picos impulsivos (martillo, detonaciones)', descripcion: 'Registro de picos de presión sonora que superan 140 dB(C) con sonómetro en modo "peak".' },
+    ],
+    incluye: [
+      'Dosimetría personal y medición puntual con equipos calibrados',
+      'Protocolo Res. SRT 85/2012 completo',
+      'Informe técnico firmado por profesional habilitado',
+      'Especificación de protectores auditivos recomendados (NRR)',
+      'Plan de uso de EPP auditivo por puesto',
+      'Integración al Legajo Técnico de Obra',
+    ],
+  },
+
+  {
+    slug: 'construccion/mediciones/iluminacion',
+    sector: { label: 'Construcción', href: '/servicios/construccion/' },
+    categoria: { label: 'Mediciones', href: '/servicios/construccion/mediciones/' },
+    titulo: 'Medición de Iluminación en Obra',
+    metaDescription: 'Medición de iluminación en obra de construcción según Dec. 911/96 y Res. SRT 84/2012. Frentes de trabajo, andamios, subsuelos. CABA y GBA.',
+    badge: 'Dec. 911/96 / Res. SRT 84/2012',
+    heroTitle: 'MEDICIÓN DE\nILUMINACIÓN EN OBRA',
+    heroBajada: 'Verificamos los niveles de iluminación en frentes de trabajo, escaleras, sótanos y zonas de tránsito en obra. Garantizamos el cumplimiento del Dec. 911/96 y la Resolución SRT 84/2012.',
+    normativa: {
+      codigo: 'Dec. 911/96 Art. 61 / Res. SRT 84/2012',
+      nombre: 'Reglamento de Higiene y Seguridad para la Industria de la Construcción — Iluminación',
+      resumen: 'El artículo 61 del Decreto 911/96 establece valores mínimos de iluminación para distintas zonas de obra: 20 lux en vías de tránsito y accesos, 50 lux en trabajos en andamios y excavaciones, 100 lux en trabajos de precisión y oficinas de obra. La Resolución SRT 84/2012 fija la metodología de medición aplicable también a obras. El déficit de iluminación en obra es una de las principales causas de accidentes nocturnos o en subsuelos.',
+      obligatoriedad: 'Toda obra de construcción, especialmente trabajos nocturnos, en subsuelos, pozos de fundación, túneles y plantas de pisos bajo nivel de calle. Exigida en el Legajo Técnico de Obra.',
+    },
+    queMedimos: [
+      { titulo: 'Frentes de trabajo activos', descripcion: 'Verificación en el plano de trabajo real de cada cuadrilla (horizontal o vertical según la tarea).' },
+      { titulo: 'Escaleras provisorias y andamios', descripcion: 'Medición en zonas de circulación vertical que representan alto riesgo de caída.' },
+      { titulo: 'Subsuelos, sótanos y excavaciones', descripcion: 'Evaluación de la iluminación artificial en zonas sin luz natural.' },
+      { titulo: 'Iluminación de emergencia en obra', descripcion: 'Verificación de luminarias de emergencia en rutas de evacuación y tableros eléctricos.' },
+    ],
+    incluye: [
+      'Medición con luxómetro calibrado en todas las zonas relevantes',
+      'Protocolo Res. SRT 84/2012 adaptado a obra',
+      'Informe técnico con mapa de iluminación por nivel',
+      'Identificación de zonas deficientes y recomendación de luminarias provisorias',
+      'Integración al Legajo Técnico de Obra',
+      'Protocolo firmado por profesional habilitado',
+    ],
+  },
+
+  {
+    slug: 'construccion/mediciones/polvo-silice',
+    sector: { label: 'Construcción', href: '/servicios/construccion/' },
+    categoria: { label: 'Mediciones', href: '/servicios/construccion/mediciones/' },
+    titulo: 'Medición de Polvo y Sílice en Obra',
+    metaDescription: 'Medición de polvo de sílice cristalina en obra según Dec. 911/96 y Dec. 351/79 Anexo III. Prevención de silicosis. CABA y GBA.',
+    badge: 'Dec. 911/96 / Dec. 351/79 Anexo III',
+    heroTitle: 'MEDICIÓN DE POLVO\nY SÍLICE EN OBRA',
+    heroBajada: 'Evaluamos la exposición al polvo de sílice libre en trabajos de demolición, corte de bloques, perforación y movimientos de tierra. La silicosis es irreversible — prevenirla es obligación y prioridad.',
+    normativa: {
+      codigo: 'Dec. 911/96 / Dec. 351/79 Anexo III',
+      nombre: 'Concentraciones máximas permisibles — Polvo con sílice libre cristalina',
+      resumen: 'El Decreto 351/79 fija el TLV del cuarzo (sílice libre cristalina) en 0,1 mg/m³ en fracción respirable (10 veces más restrictivo que el polvo inerte). El Decreto 911/96 exige que el Legajo Técnico de Obra incluya la evaluación del riesgo de exposición a polvo en trabajos de hormigonado, demolición, corte de mampostería y perforación de roca. Dado que la silicosis es una enfermedad profesional incurable, la normativa privilegia los controles en el origen (aspiración, humedecimiento) sobre el uso de respirador.',
+      obligatoriedad: 'Obras con demolición de estructuras, corte de bloques calcáreos o de hormigón, perforación de roca, excavación en suelos con cuarzo libre y trabajos en areneras. Exigida en el Legajo Técnico.',
+    },
+    queMedimos: [
+      { titulo: 'Fracción respirable de polvo total', descripcion: 'Muestreo personal durante la tarea de mayor exposición (corte, demolición, perforación).' },
+      { titulo: 'Sílice libre cristalina (cuarzo)', descripcion: 'Análisis por difractometría de rayos X o espectroscopía infrarroja en laboratorio acreditado.' },
+      { titulo: 'Polvo de cemento', descripcion: 'Evaluación del TLV específico de cemento Portland (1 mg/m³ fracción respirable).' },
+      { titulo: 'Niveles ambientales en zona de corte', descripcion: 'Medición de polvo total en el entorno inmediato para evaluar exposición de trabajadores adyacentes.' },
+    ],
+    incluye: [
+      'Muestreo personal con bomba y ciclón de fracción respirable',
+      'Análisis de sílice cristalina en laboratorio acreditado',
+      'Informe técnico con índice de exposición vs. TLV',
+      'Recomendación de medidas en el origen (agua, extracción)',
+      'Especificación de respiradores (FFP3 o media máscara + P3)',
+      'Integración al Legajo Técnico de Obra',
+    ],
+  },
+
+  {
+    slug: 'construccion/mediciones/estres-termico',
+    sector: { label: 'Construcción', href: '/servicios/construccion/' },
+    categoria: { label: 'Mediciones', href: '/servicios/construccion/mediciones/' },
+    titulo: 'Medición de Estrés Térmico en Obra',
+    metaDescription: 'Evaluación de estrés térmico (WBGT) en obra de construcción según Dec. 911/96 y Dec. 351/79. Trabajo al sol en verano. CABA y GBA.',
+    badge: 'Dec. 911/96 / Dec. 351/79 Anexo IV',
+    heroTitle: 'ESTRÉS TÉRMICO\nEN OBRA',
+    heroBajada: 'Evaluamos la exposición al calor en tareas al aire libre durante el verano y en zonas confinadas (sótanos, locales sin ventilación). Determinamos los regímenes de trabajo-descanso reglamentarios.',
+    normativa: {
+      codigo: 'Dec. 911/96 / Dec. 351/79 Anexo IV',
+      nombre: 'Condiciones climáticas y ambientales — Trabajo en calor en industria de la construcción',
+      resumen: 'El Decreto 911/96 incorpora los requisitos del Decreto 351/79 para el control del estrés térmico en obra, con la particularidad de que la construcción al aire libre en verano genera condiciones de WBGT frecuentemente superiores a los límites. Los valores límite varían entre 25 °C WBGT (trabajo pesado continuo) y 32 °C WBGT (trabajo leve con 75% de descanso). El empleador debe implementar pausas, hidratación obligatoria (mínimo 250 ml cada 20 min) y reubicación de tareas pesadas a horarios frescos.',
+      obligatoriedad: 'Obligatoria en obra durante los meses de octubre a marzo en CABA/GBA y siempre que la temperatura de bulbo seco supere 28 °C en el puesto de trabajo.',
+    },
+    queMedimos: [
+      { titulo: 'Índice WBGT exterior con radiación solar', descripcion: 'Medición en los puestos de mayor exposición solar (losas expuestas, trabajos en frente de fachada).' },
+      { titulo: 'WBGT en zonas confinadas', descripcion: 'Evaluación en sótanos, locales interiores sin ventilación y espacios de trabajo bajo techo de chapa.' },
+      { titulo: 'Temperatura y humedad relativa por turno', descripcion: 'Registro horario para correlacionar con la carga de trabajo y definir el régimen trabajo-descanso.' },
+      { titulo: 'Velocidad de viento', descripcion: 'Factor correctivo del WBGT exterior según norma ISO 7243.' },
+    ],
+    incluye: [
+      'Medición con equipo WBGT portátil calibrado (ISO 7243)',
+      'Informe con WBGT por puesto y comparación con tabla Dec. 351/79',
+      'Régimen de trabajo-descanso recomendado por tarea y turno',
+      'Plan de hidratación y pausas para el programa de obra',
+      'Integración al Legajo Técnico de Obra',
+      'Protocolo firmado por profesional habilitado',
+    ],
+  },
+
+  {
+    slug: 'construccion/mediciones/vibraciones',
+    sector: { label: 'Construcción', href: '/servicios/construccion/' },
+    categoria: { label: 'Mediciones', href: '/servicios/construccion/mediciones/' },
+    titulo: 'Medición de Vibraciones Mecánicas en Obra',
+    metaDescription: 'Medición de vibración mano-brazo (HAV) y cuerpo completo (WBV) según Dec. 351/79 y normas ISO 5349 / ISO 2631. Prevención de TME y lesiones vasculares. CABA y GBA.',
+    badge: 'Dec. 351/79 / ISO 5349',
+    heroTitle: 'MEDICIÓN DE\nVIBRACIONES EN OBRA',
+    heroBajada: 'Evaluamos la exposición a vibración mano-brazo (herramientas eléctricas y neumáticas) y vibración de cuerpo completo (maquinaria). Prevenimos el síndrome de dedo blanco y lesiones de columna.',
+    normativa: {
+      codigo: 'Dec. 351/79 Anexo V / ISO 5349-1 / ISO 2631-1',
+      nombre: 'Vibraciones mecánicas en el trabajo — valores límite de exposición',
+      resumen: 'El Decreto 351/79 incorpora los valores límite de vibración mano-brazo (HAV) de 2,5 m/s² como valor de acción (8 h) y 5 m/s² como límite de exposición, y de vibración de cuerpo completo (WBV) de 0,5 m/s² y 1,15 m/s² respectivamente, tomados de la norma ISO 5349-1 y ISO 2631-1. En construcción, la exposición a herramientas de percusión (martillo neumático, rompedor, desbarbadora) genera niveles de HAV frecuentemente superiores a 10 m/s², lo que obliga a limitar el tiempo de uso diario y realizar vigilancia médica.',
+      obligatoriedad: 'Obras con uso de martillos neumáticos, rompedores, desbarbadoras, compactadoras de mano, y operadores de maquinaria pesada (retroexcavadora, rodillo, minicargadora).',
+    },
+    queMedimos: [
+      { titulo: 'Vibración mano-brazo (HAV)', descripcion: 'Aceleración ponderada en frecuencia (m/s²) en el mango de herramientas neumáticas y eléctricas.' },
+      { titulo: 'Vibración cuerpo completo (WBV)', descripcion: 'Aceleración en asiento de operadores de maquinaria pesada (retroexcavadora, rodillo, minicargadora).' },
+      { titulo: 'Dosis diaria de vibración (A(8))', descripcion: 'Cálculo normalizado a 8 horas con registro del tiempo real de uso de cada herramienta.' },
+      { titulo: 'Comparación con valores de acción y límite', descripcion: 'Determinación del riesgo y del tiempo máximo de uso permitido sin superar el nivel de acción.' },
+    ],
+    incluye: [
+      'Medición con acelerómetro triaxial calibrado (ISO 5349 / ISO 2631)',
+      'Informe técnico con A(8) y valores de acción y límite',
+      'Tiempo máximo de uso permitido por herramienta',
+      'Recomendaciones de guantes antivibratorio y mantenimiento de herramientas',
+      'Programa de rotación y descanso de manos',
+      'Protocolo firmado por profesional habilitado',
+    ],
+  },
+
+  // ── EDUCATIVO / RECREATIVO / MEDICIONES ─────────────────────────────────────
+
+  {
+    slug: 'educativo-recreativo/mediciones/ruido',
+    sector: { label: 'Educativo y Recreativo', href: '/servicios/educativo-recreativo/' },
+    categoria: { label: 'Mediciones', href: '/servicios/educativo-recreativo/mediciones/' },
+    titulo: 'Medición de Ruido en Establecimientos Educativos',
+    metaDescription: 'Medición de ruido ambiental y laboral en colegios, universidades y clubs según Res. SRT 85/2012. Protección de docentes y personal. CABA y GBA.',
+    badge: 'Res. SRT 85/2012 / Ley 19.587',
+    heroTitle: 'MEDICIÓN DE RUIDO\nEN ESTABLECIMIENTOS EDUCATIVOS',
+    heroBajada: 'Evaluamos la exposición al ruido de docentes, personal de mantenimiento y operadores de equipos en establecimientos educativos y clubes. El ruido de aula prolongado es un riesgo ocupacional real.',
+    normativa: {
+      codigo: 'Res. SRT 85/2012 / Ley 19.587',
+      nombre: 'Protocolo de medición de ruido laboral — aplicación en sector educativo',
+      resumen: 'La Ley 19.587 y el Decreto 351/79 se aplican a todos los establecimientos con trabajadores en relación de dependencia, incluyendo escuelas, universidades y clubs. Los docentes expuestos a aulas ruidosas, porristas, músicos y personal de mantenimiento con herramientas eléctricas están sujetos al límite de 85 dB(A) de la Resolución SRT 85/2012. Las áreas de talleres, gimnasios con equipo de música, buffets con maquinaria y salas de máquinas deben ser medidas periódicamente.',
+      obligatoriedad: 'Colegios con talleres industriales, gimnasios con sistemas de sonido, clubs deportivos, establecimientos con sala de máquinas, calderas, grupos electrógenos o cocinas industriales.',
+    },
+    queMedimos: [
+      { titulo: 'Exposición de docentes en aulas', descripcion: 'Dosimetría durante clases en aulas de clases especiales (música, taller, educación física).' },
+      { titulo: 'Sala de máquinas y calderas', descripcion: 'Medición puntual en sala de calderas, grupos electrógenos y equipos de HVAC.' },
+      { titulo: 'Talleres y laboratorios', descripcion: 'Evaluación en talleres de carpintería, metalurgia y laboratorios con equipamiento.' },
+      { titulo: 'Zonas de recreo y actividades deportivas', descripcion: 'Medición en gimnasios, patios techados y salones de eventos con sistemas de sonido.' },
+    ],
+    incluye: [
+      'Dosimetría personal y medición puntual',
+      'Protocolo Res. SRT 85/2012 completo',
+      'Informe técnico firmado por profesional habilitado',
+      'Recomendaciones de tratamiento acústico y EPP',
+      'Plan de acción para puestos con NED > 85 dB(A)',
+      'Integración al Legajo Técnico del establecimiento',
+    ],
+  },
+
+  {
+    slug: 'educativo-recreativo/mediciones/iluminacion',
+    sector: { label: 'Educativo y Recreativo', href: '/servicios/educativo-recreativo/' },
+    categoria: { label: 'Mediciones', href: '/servicios/educativo-recreativo/mediciones/' },
+    titulo: 'Medición de Iluminación en Establecimientos Educativos',
+    metaDescription: 'Medición de iluminación en aulas, laboratorios y pasillos según Res. SRT 84/2012 y Dec. 351/79. Prevención de fatiga visual docente. CABA y GBA.',
+    badge: 'Res. SRT 84/2012',
+    heroTitle: 'ILUMINACIÓN EN\nESTABLECIMIENTOS EDUCATIVOS',
+    heroBajada: 'Verificamos los niveles de iluminación en aulas, laboratorios, talleres y zonas de circulación. Una buena iluminación reduce la fatiga visual docente y mejora las condiciones de trabajo del personal.',
+    normativa: {
+      codigo: 'Res. SRT 84/2012 / Dec. 351/79 Anexo IV',
+      nombre: 'Protocolo de medición de iluminación — sector educativo',
+      resumen: 'El Decreto 351/79 (Anexo IV) fija 300 lux como valor mínimo para aulas y oficinas, y 500 lux para laboratorios y talleres de precisión. La Resolución SRT 84/2012 establece el protocolo de medición. En establecimientos educativos, la combinación de iluminación natural variable y artificial frecuentemente genera zonas con menos de 200 lux, especialmente en aulas orientadas al norte o con cortinas. El encandilamiento por ventanas sin tratamiento es otro factor de riesgo visual.',
+      obligatoriedad: 'Todo establecimiento educativo, recreativo o club con trabajadores. Exigida para el Legajo Técnico SRT y requerida por las habilitaciones municipales de CABA y GBA.',
+    },
+    queMedimos: [
+      { titulo: 'Iluminancia en aulas (lux)', descripcion: 'Medición en el plano de trabajo (pupitres y pizarrón) con luxómetro calibrado.' },
+      { titulo: 'Laboratorios y talleres', descripcion: 'Verificación del nivel requerido (500 lux) en planos de trabajo específicos.' },
+      { titulo: 'Pasillos, escaleras y baños', descripcion: 'Control de los mínimos de 100 lux en zonas de circulación y servicios.' },
+      { titulo: 'Iluminación de emergencia', descripcion: 'Verificación de luminarias de emergencia en rutas de evacuación (mínimo 10 lux).' },
+    ],
+    incluye: [
+      'Medición en todos los ambientes con luxómetro calibrado',
+      'Protocolo Res. SRT 84/2012 completo',
+      'Informe técnico con tabla de valores vs. mínimos reglamentarios',
+      'Identificación de ambientes no conformes',
+      'Recomendación de luminarias y disposición',
+      'Protocolo firmado por profesional habilitado',
+    ],
+  },
+
+  {
+    slug: 'educativo-recreativo/mediciones/confort-termico',
+    sector: { label: 'Educativo y Recreativo', href: '/servicios/educativo-recreativo/' },
+    categoria: { label: 'Mediciones', href: '/servicios/educativo-recreativo/mediciones/' },
+    titulo: 'Medición de Confort Térmico',
+    metaDescription: 'Evaluación de confort térmico en establecimientos educativos según Dec. 351/79 Anexo IV. Temperatura, humedad y velocidad de aire en aulas. CABA y GBA.',
+    badge: 'Dec. 351/79 Anexo IV',
+    heroTitle: 'CONFORT TÉRMICO\nEN ESTABLECIMIENTOS',
+    heroBajada: 'Evaluamos temperatura, humedad relativa y velocidad de aire en aulas y espacios de trabajo. Verificamos el cumplimiento del rango de confort (18-24 °C, 45-65% HR) establecido por el Decreto 351/79.',
+    normativa: {
+      codigo: 'Dec. 351/79 Anexo IV',
+      nombre: 'Condiciones ambientales — temperatura, humedad y velocidad de aire',
+      resumen: 'El Decreto 351/79 (Anexo IV) establece que en los lugares de trabajo sedentario (oficinas, aulas) la temperatura debe mantenerse entre 18 °C y 24 °C, la humedad relativa entre 45% y 65%, y la velocidad del aire no debe superar 0,25 m/s. Estas condiciones son responsabilidad del empleador, quien debe asegurarlas mediante sistemas de climatización adecuados. La exposición prolongada fuera de estos rangos genera fatiga, baja productividad y aumenta el ausentismo por enfermedades respiratorias.',
+      obligatoriedad: 'Todo establecimiento con puestos de trabajo sedentarios: escuelas, universidades, clubes con oficinas, centros culturales y cualquier actividad educativa o administrativa.',
+    },
+    queMedimos: [
+      { titulo: 'Temperatura de bulbo seco', descripcion: 'Medición en múltiples puntos del local (centro, bordes, altura de cabeza y pies).' },
+      { titulo: 'Humedad relativa', descripcion: 'Control del rango 45-65% HR recomendado para evitar sequedad mucosas e infecciones respiratorias.' },
+      { titulo: 'Velocidad del aire (corrientes)', descripcion: 'Detección de corrientes de aire frío provenientes de difusores de A/C mal orientados.' },
+      { titulo: 'Temperatura radiante (superficies frías o calientes)', descripcion: 'Medición de superficies vidriadas, paredes exteriores y radiadores para evaluar el confort asimétrico.' },
+    ],
+    incluye: [
+      'Medición con termohigrómetro y anemómetro calibrados',
+      'Informe técnico con comparación al Decreto 351/79',
+      'Evaluación de la distribución espacial de temperatura',
+      'Recomendaciones de regulación de A/C y ventilación',
+      'Protocolo firmado por profesional habilitado',
+      'Integración al Legajo Técnico',
+    ],
+  },
+
+  {
+    slug: 'educativo-recreativo/mediciones/calidad-de-aire',
+    sector: { label: 'Educativo y Recreativo', href: '/servicios/educativo-recreativo/' },
+    categoria: { label: 'Mediciones', href: '/servicios/educativo-recreativo/mediciones/' },
+    titulo: 'Medición de Calidad de Aire Interior (CO₂)',
+    metaDescription: 'Medición de CO₂ y calidad de aire interior en aulas y oficinas según Dec. 351/79. Prevención del síndrome del edificio enfermo. CABA y GBA.',
+    badge: 'Dec. 351/79 Anexo III',
+    heroTitle: 'CALIDAD DE AIRE\nINTERIOR',
+    heroBajada: 'Medimos CO₂, monóxido de carbono y otros indicadores de calidad de aire interior. En aulas superpobladas o edificios herméticos, el CO₂ suele superar los 1000 ppm, causando fatiga y pérdida de concentración.',
+    normativa: {
+      codigo: 'Dec. 351/79 Anexo III / Guía OMS calidad de aire interior',
+      nombre: 'Calidad del aire en lugares de trabajo — CO₂ y contaminantes de ambientes interiores',
+      resumen: 'El Decreto 351/79 fija un TLV de 5000 ppm (0,5%) para CO₂ en exposición laboral de 8 horas. Sin embargo, la OMS y la ASHRAE 62.1 recomiendan no superar 1000 ppm en ambientes de trabajo y educativos, dado que concentraciones de 1000-2500 ppm ya afectan la función cognitiva. La ventilación mínima reglamentaria exige 10 m³/h de aire fresco por persona en ambientes climatizados. El síndrome del edificio enfermo (SBS) es reconocido como riesgo laboral cuando la ventilación es insuficiente.',
+      obligatoriedad: 'Escuelas, universidades y clubs con alta densidad de ocupantes. Prioritaria tras el período de pandemia COVID-19 como medida de prevención de enfermedades respiratorias.',
+    },
+    queMedimos: [
+      { titulo: 'CO₂ (dióxido de carbono)', descripcion: 'Indicador principal de ventilación. Se mide durante períodos de máxima ocupación del local.' },
+      { titulo: 'Monóxido de carbono (CO)', descripcion: 'Detección de CO en locales con estufas a gas o calefactores mal mantenidos.' },
+      { titulo: 'VOCs totales (TVOC)', descripcion: 'Compuestos orgánicos emitidos por pinturas, adhesivos, mobiliario y materiales de construcción nuevos.' },
+      { titulo: 'Material particulado PM2.5 / PM10', descripcion: 'Polvo fino en suspensión relevante en salones con mucho tránsito o sistemas de filtrado deficientes.' },
+    ],
+    incluye: [
+      'Medición con sensor de CO₂ NDIR calibrado durante ocupación normal',
+      'Medición de CO, TVOC y PM2.5/PM10',
+      'Informe con evolución temporal de CO₂ y comparativa OMS/Dec. 351/79',
+      'Diagnóstico del sistema de ventilación existente',
+      'Recomendación de caudales de ventilación (ASHRAE 62.1)',
+      'Protocolo firmado por profesional habilitado',
+    ],
+  },
+
+  {
+    slug: 'educativo-recreativo/mediciones/ergonomia',
+    sector: { label: 'Educativo y Recreativo', href: '/servicios/educativo-recreativo/' },
+    categoria: { label: 'Mediciones', href: '/servicios/educativo-recreativo/mediciones/' },
+    titulo: 'Evaluación Ergonómica Docente',
+    metaDescription: 'Evaluación ergonómica de puestos docentes y administrativos según Res. SRT 886/2015. Pantallas, postura en aula, prevención de TME. CABA y GBA.',
+    badge: 'Res. SRT 886/2015',
+    heroTitle: 'ERGONOMÍA\nPUESTOS DOCENTES',
+    heroBajada: 'Evaluamos las condiciones ergonómicas de puestos de trabajo docente y administrativo. Identificamos factores de riesgo de trastornos musculoesqueléticos y generamos recomendaciones de mejora.',
+    normativa: {
+      codigo: 'Res. SRT 886/2015 / Res. SRT 295/2003',
+      nombre: 'Protocolo de ergonomía — puestos administrativos y docentes',
+      resumen: 'La Resolución SRT 886/2015 obliga a realizar la evaluación ergonómica en todos los puestos. Para puestos docentes, los principales factores son: bipedestación prolongada (fatiga de miembros inferiores), voz como herramienta de trabajo, uso de pantallas sin adecuación del puesto, y carga manual de materiales. La Resolución 295/2003 incorpora las guías de la UE para pantallas de visualización de datos. Los riesgos de TME (tendinitis de hombro, cervicalgia, lumbalgia) en docentes tienen alta incidencia de accidentes de trabajo.',
+      obligatoriedad: 'Todos los establecimientos educativos como empleadores. Incluye a docentes, personal administrativo, auxiliares y personal de secretaría con tareas en computadora.',
+    },
+    queMedimos: [
+      { titulo: 'Puestos con pantallas de visualización (PVD)', descripcion: 'Evaluación de monitor, teclado, silla, distancias y postura según checklist Res. 295/2003.' },
+      { titulo: 'Postura de pie prolongada (docentes en aula)', descripcion: 'Análisis de la postura bipede, superficie de trabajo y disponibilidad de asiento intermedio.' },
+      { titulo: 'Manejo de cargas (auxiliares y mantenimiento)', descripcion: 'Aplicación de la ecuación de NIOSH para tareas de traslado de mobiliario, libros y materiales.' },
+      { titulo: 'Tarea repetitiva (corte, escritura, clasificación)', descripcion: 'Evaluación OCRA para personal de intendencia y administrativos con tareas manuales repetitivas.' },
+    ],
+    incluye: [
+      'Evaluación in situ de todos los puestos relevantes',
+      'Protocolo oficial Res. SRT 886/2015',
+      'Informe de riesgo por puesto con nivel de intervención',
+      'Recomendaciones de sillas ergonómicas y disposición de pantallas',
+      'Ejercicios de pausas activas para personal docente',
+      'Protocolo firmado por profesional habilitado',
+    ],
+  },
+
+  // ── COMERCIAL / OFICINAS / MEDICIONES ───────────────────────────────────────
+
+  {
+    slug: 'comercial-oficinas/mediciones/iluminacion',
+    sector: { label: 'Comercial y Oficinas', href: '/servicios/comercial-oficinas/' },
+    categoria: { label: 'Mediciones', href: '/servicios/comercial-oficinas/mediciones/' },
+    titulo: 'Medición de Iluminación en Comercios y Oficinas',
+    metaDescription: 'Medición de iluminación en locales comerciales y oficinas según Res. SRT 84/2012 y Dec. 351/79. Prevención de fatiga visual. CABA y GBA.',
+    badge: 'Res. SRT 84/2012',
+    heroTitle: 'ILUMINACIÓN EN\nCOMERCIOS Y OFICINAS',
+    heroBajada: 'Verificamos los niveles de iluminación en puestos de caja, oficinas, depósitos y salones de atención al público. Cumplimos la normativa SRT y mejoramos las condiciones visuales de tu equipo.',
+    normativa: {
+      codigo: 'Res. SRT 84/2012 / Dec. 351/79 Anexo IV',
+      nombre: 'Protocolo de medición de iluminación — sector comercial',
+      resumen: 'El Decreto 351/79 establece los niveles mínimos de iluminación según el tipo de tarea: 200 lux para trabajo simple (almacén, tránsito), 300 lux para oficinas y trabajo con papeles, 500 lux para trabajo fino (confección, joyería, farmacia). La Resolución SRT 84/2012 fija la metodología de medición. En comercios, el diseño lumínico orientado a la exhibición de productos frecuentemente descuida la iluminación del puesto de trabajo del empleado, generando asimetrías y deslumbramiento.',
+      obligatoriedad: 'Todo local comercial, oficina o establecimiento de atención al público con trabajadores en relación de dependencia. Exigida para el Legajo Técnico SRT.',
+    },
+    queMedimos: [
+      { titulo: 'Puesto de caja y atención al público', descripcion: 'Medición en el plano de trabajo de la caja registradora, mostrador y terminal de punto de venta.' },
+      { titulo: 'Oficinas y puestos administrativos', descripcion: 'Verificación del mínimo de 300 lux en escritorios y posición de pantallas.' },
+      { titulo: 'Depósito y áreas de carga', descripcion: 'Control de los 200 lux reglamentarios en zonas de stock y manipulación de mercadería.' },
+      { titulo: 'Iluminación de emergencia', descripcion: 'Verificación de la presencia y funcionamiento de luminarias de emergencia según normativa.' },
+    ],
+    incluye: [
+      'Medición en todos los puestos con luxómetro calibrado',
+      'Protocolo Res. SRT 84/2012 completo',
+      'Informe técnico con mapa de iluminación',
+      'Identificación de puestos no conformes',
+      'Recomendación de luminarias y distribución optimizada',
+      'Protocolo firmado por profesional habilitado',
+    ],
+  },
+
+  {
+    slug: 'comercial-oficinas/mediciones/ruido',
+    sector: { label: 'Comercial y Oficinas', href: '/servicios/comercial-oficinas/' },
+    categoria: { label: 'Mediciones', href: '/servicios/comercial-oficinas/mediciones/' },
+    titulo: 'Medición de Ruido en Comercios y Oficinas',
+    metaDescription: 'Medición de ruido laboral en locales comerciales, restaurantes y oficinas según Res. SRT 85/2012. Evaluación de puestos expuestos a música y equipos. CABA y GBA.',
+    badge: 'Res. SRT 85/2012',
+    heroTitle: 'RUIDO EN\nCOMERCIOS Y OFICINAS',
+    heroBajada: 'Medimos la exposición al ruido en locales comerciales con música ambiental, restaurantes, talleres mecánicos y oficinas con equipos ruidosos. El límite de 85 dB(A) aplica igual en este sector.',
+    normativa: {
+      codigo: 'Res. SRT 85/2012 / Dec. 351/79 Anexo V',
+      nombre: 'Protocolo de medición de ruido — sector comercial y servicios',
+      resumen: 'La Resolución SRT 85/2012 es de aplicación universal para todos los trabajadores expuestos a ruido, sin distinción de sector. En comercios y servicios, los principales riesgos se dan en: bares y restaurantes con música a alto volumen (80-95 dB), talleres mecánicos con impactos y maquinaria, centros de distribución con montacargas, y call centers con auriculares mal regulados. El empleador debe documentar la evaluación en el Legajo Técnico y tomar medidas cuando el NED supera el nivel de acción de 80 dB(A).',
+      obligatoriedad: 'Locales con sistemas de música, talleres de reparaciones, restaurantes y bares, centros de distribución, callcenters y toda actividad con fuentes de ruido sostenido.',
+    },
+    queMedimos: [
+      { titulo: 'Exposición de mozos y personal de salón', descripcion: 'Dosimetría durante el turno laboral para evaluar la exposición a música ambiental y ruido de vajilla.' },
+      { titulo: 'Personal de cocina (extractores, hornos)', descripcion: 'Medición de los niveles generados por extractores industriales y equipos de cocina.' },
+      { titulo: 'Talleres mecánicos y de reparaciones', descripcion: 'Medición en puestos con herramientas de impacto, compresores y amoladoras.' },
+      { titulo: 'Oficinas con equipos de producción', descripcion: 'Evaluación de plotters, impresoras industriales, grupos electrógenos y sistemas de climatización.' },
+    ],
+    incluye: [
+      'Dosimetría personal y medición puntual con equipos calibrados',
+      'Protocolo Res. SRT 85/2012 completo',
+      'Informe técnico firmado por profesional habilitado',
+      'Recomendación de límites de nivel de música ambiental',
+      'Plan de acción para puestos no conformes',
+      'Integración al Legajo Técnico',
+    ],
+  },
+
+  {
+    slug: 'comercial-oficinas/mediciones/confort-termico',
+    sector: { label: 'Comercial y Oficinas', href: '/servicios/comercial-oficinas/' },
+    categoria: { label: 'Mediciones', href: '/servicios/comercial-oficinas/mediciones/' },
+    titulo: 'Medición de Confort Térmico en Oficinas',
+    metaDescription: 'Evaluación de confort térmico en oficinas y comercios según Dec. 351/79 Anexo IV. Temperatura, humedad y velocidad de aire. CABA y GBA.',
+    badge: 'Dec. 351/79 Anexo IV',
+    heroTitle: 'CONFORT TÉRMICO\nEN OFICINAS',
+    heroBajada: 'Evaluamos temperatura, humedad y corrientes de aire en oficinas y locales. Las malas condiciones térmicas aumentan el ausentismo, la fatiga y los conflictos laborales. Te ayudamos a cumplir la norma.',
+    normativa: {
+      codigo: 'Dec. 351/79 Anexo IV',
+      nombre: 'Condiciones ambientales térmicas en puestos de trabajo sedentario',
+      resumen: 'El Decreto 351/79 establece para trabajo sedentario: temperatura entre 18 °C y 24 °C, humedad relativa entre 45% y 65%, y velocidad de aire ≤ 0,25 m/s. El empleador tiene la obligación de mantener estas condiciones durante toda la jornada, lo que implica un sistema de climatización adecuado y su correcto mantenimiento. El exceso de frío (A/C excesivo en verano) es tan sancionable como el calor, y es una fuente frecuente de conflictos laborales y enfermedades inculpables.',
+      obligatoriedad: 'Todas las oficinas, locales comerciales y establecimientos de servicios con trabajadores sedentarios. Exigida para el Legajo Técnico SRT.',
+    },
+    queMedimos: [
+      { titulo: 'Temperatura de bulbo seco', descripcion: 'Medición en múltiples puntos de la oficina a altura de cabeza y pies para detectar estratificación.' },
+      { titulo: 'Humedad relativa', descripcion: 'Control en rangos de confort. La baja HR en invierno (calefacción seca) irrita mucosas y aumenta contagios.' },
+      { titulo: 'Velocidad de aire en puestos de trabajo', descripcion: 'Detección de corrientes frías de difusores de A/C directamente sobre puestos de trabajo.' },
+      { titulo: 'Temperatura operativa', descripcion: 'Cálculo de la temperatura efectiva percibida combinando temperatura radiante y del aire.' },
+    ],
+    incluye: [
+      'Medición con termohigrómetro y anemómetro calibrados',
+      'Informe técnico con mapa térmico del local',
+      'Comparativa con valores reglamentarios Dec. 351/79',
+      'Diagnóstico del sistema de climatización',
+      'Recomendaciones de regulación y mantenimiento de A/C',
+      'Protocolo firmado por profesional habilitado',
+    ],
+  },
+
+  {
+    slug: 'comercial-oficinas/mediciones/calidad-de-aire',
+    sector: { label: 'Comercial y Oficinas', href: '/servicios/comercial-oficinas/' },
+    categoria: { label: 'Mediciones', href: '/servicios/comercial-oficinas/mediciones/' },
+    titulo: 'Medición de Calidad de Aire en Oficinas',
+    metaDescription: 'Medición de CO₂, VOCs y calidad de aire interior en oficinas y locales comerciales. Prevención del síndrome del edificio enfermo. CABA y GBA.',
+    badge: 'Dec. 351/79 / ASHRAE 62.1',
+    heroTitle: 'CALIDAD DE AIRE\nEN OFICINAS',
+    heroBajada: 'Medimos CO₂, monóxido de carbono y compuestos orgánicos en aire interior. El 90% del tiempo lo pasamos en interiores — la calidad del aire es salud y productividad.',
+    normativa: {
+      codigo: 'Dec. 351/79 Anexo III / ASHRAE 62.1',
+      nombre: 'Calidad de aire interior en edificios de oficinas y locales comerciales',
+      resumen: 'El Decreto 351/79 establece el TLV de CO₂ en 5000 ppm, pero la evidencia científica actual (y la norma ASHRAE 62.1) recomienda no superar 1000 ppm para preservar la función cognitiva. En edificios cerrados con A/C recirculado sin aporte de aire fresco suficiente, el CO₂ puede superar los 2000-3000 ppm durante las horas de mayor ocupación. Los VOCs emitidos por mobiliario nuevo, pinturas y alfombras son otro factor de riesgo frecuente en locales remodelados.',
+      obligatoriedad: 'Edificios de oficinas con alta densidad de ocupación, locales remodelados recientemente, edificios con sistema de A/C central recirculado y cualquier espacio cerrado con quejas de fatiga o "olor raro".',
+    },
+    queMedimos: [
+      { titulo: 'CO₂ durante jornada laboral', descripcion: 'Registro continuo a lo largo del día para detectar el pico de concentración en hora de mayor ocupación.' },
+      { titulo: 'Monóxido de carbono (CO)', descripcion: 'Medición en locales con estufas a gas, garajes subterráneos o proximidad a vías de tránsito pesado.' },
+      { titulo: 'Compuestos orgánicos volátiles (TVOC)', descripcion: 'Evaluación tras remodelaciones, instalación de muebles nuevos o uso de productos de limpieza.' },
+      { titulo: 'Material particulado PM2.5', descripcion: 'Control del polvo fino interior, especialmente en edificios con filtros de A/C obsoletos.' },
+    ],
+    incluye: [
+      'Medición continua con monitor portátil multiparámetro',
+      'Informe con evolución temporal de CO₂ durante la jornada',
+      'Comparativa con TLV Dec. 351/79 y guía ASHRAE',
+      'Diagnóstico del sistema de ventilación',
+      'Recomendaciones de caudales y frecuencia de renovación de filtros',
+      'Protocolo firmado por profesional habilitado',
+    ],
+  },
+
+  {
+    slug: 'comercial-oficinas/mediciones/ergonomia',
+    sector: { label: 'Comercial y Oficinas', href: '/servicios/comercial-oficinas/' },
+    categoria: { label: 'Mediciones', href: '/servicios/comercial-oficinas/mediciones/' },
+    titulo: 'Evaluación Ergonómica de Oficinas',
+    metaDescription: 'Evaluación ergonómica de puestos con pantallas y escritorios según Res. SRT 886/2015 y Res. 295/2003. Cervicalgia, lumbalgia, tendinitis. CABA y GBA.',
+    badge: 'Res. SRT 886/2015',
+    heroTitle: 'ERGONOMÍA EN\nOFICINAS',
+    heroBajada: 'Evaluamos cada puesto de trabajo con pantalla y escritorio. Las malas posturas frente a la computadora son la primera causa de ausentismo en oficinas. Lo prevenimos antes de que se convierta en una enfermedad profesional.',
+    normativa: {
+      codigo: 'Res. SRT 886/2015 / Res. SRT 295/2003',
+      nombre: 'Protocolo de ergonomía — puestos con pantallas de visualización de datos',
+      resumen: 'La Resolución SRT 295/2003 incorporó a la normativa argentina los requisitos para puestos con pantallas de visualización de datos (PVD), incluyendo: altura del monitor (borde superior al nivel de los ojos o ligeramente por debajo), distancia de visualización de 50-70 cm, silla regulable con apoyo lumbar, antebrazo horizontal al teclado, y pausa activa de 5 minutos cada hora. La Resolución 886/2015 sistematizó la obligación de documentar el riesgo ergonómico en el Legajo Técnico. La cervicalgia y la tendinitis de hombro por uso prolongado de computadora son enfermedades profesionales reconocidas.',
+      obligatoriedad: 'Todo empleador con trabajadores que usan computadora más de 4 horas diarias. Incluye oficinas, callcenters, comercios con administración y cualquier actividad con trabajo de pantalla sostenido.',
+    },
+    queMedimos: [
+      { titulo: 'Puestos con pantalla (PVD)', descripcion: 'Checklist completo: monitor, teclado, ratón, silla, escritorio, distancias y postura del usuario.' },
+      { titulo: 'Portátiles y tablets', descripcion: 'Evaluación específica del riesgo de trabajar con laptops sin base ni teclado externo.' },
+      { titulo: 'Puestos de pie en mostrador', descripcion: 'Análisis de la altura de mostrador, postura de pie prolongada y disposición de equipos.' },
+      { titulo: 'Manipulación de mercadería (depósito)', descripcion: 'Aplicación de ecuación NIOSH para levantamiento y transporte de cajas y mercadería.' },
+    ],
+    incluye: [
+      'Evaluación in situ de todos los puestos',
+      'Protocolo oficial Res. SRT 886/2015',
+      'Informe con nivel de riesgo por puesto y recomendaciones específicas',
+      'Guía de regulación del puesto para cada trabajador',
+      'Capacitación básica en higiene postural y pausas activas',
+      'Protocolo firmado por profesional habilitado',
+    ],
+  },
+];
+
+export function getServicio(slug: string): ServicioIndividual | undefined {
+  return servicios.find(s => s.slug === slug);
+}

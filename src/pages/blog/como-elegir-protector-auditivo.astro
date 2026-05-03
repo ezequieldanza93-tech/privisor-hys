@@ -1,0 +1,186 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Cómo elegir el protector auditivo correcto — Privisor HyS"
+  description="Guía para elegir protectores auditivos según el nivel de ruido medido. Diferencias entre NRR y SNR, tapones vs protectores de copa, y la fórmula de atenuación real."
+>
+  <section class="page-hero">
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span>
+      <a href="/blog/">Blog</a><span>/</span>
+      <span>Cómo elegir el protector auditivo</span>
+    </nav>
+    <div class="page-hero-inner">
+      <div class="page-hero-badge">EPP · Protección auditiva</div>
+      <h1>PROTECTOR<br><em>AUDITIVO CORRECTO</em></h1>
+      <p>No todos los protectores auditivos sirven para todos los ruidos. Si no calculás la atenuación real que necesitás, podés estar regalando EPP inútil — o algo que no protege lo suficiente.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="content-inner article-wrap">
+
+      <div class="article-meta">
+        <span class="art-cat">EPP</span>
+        <span class="art-sep">·</span>
+        <span class="art-fecha">30 abr 2026</span>
+        <span class="art-sep">·</span>
+        <span class="art-tiempo">5 min lectura</span>
+      </div>
+
+      <div class="article-body">
+
+        <p class="article-lead">El protector auditivo es el último recurso de la jerarquía de controles — pero en muchos ambientes industriales es inevitable. El problema es que la mayoría de las empresas los compran "al ojo", sin saber si la atenuación que ofrecen es suficiente para el nivel de ruido medido.</p>
+
+        <h2>El concepto que más se confunde: NRR vs SNR</h2>
+        <p>Son dos índices distintos que miden la atenuación del protector, y <strong>no son intercambiables</strong>:</p>
+
+        <div class="art-tabla">
+          <div class="art-tabla-header">
+            <span>Índice</span>
+            <span>Norma</span>
+            <span>Cómo se usa</span>
+          </div>
+          <div class="art-tabla-row">
+            <span class="art-doc">NRR</span>
+            <span class="art-res">ANSI S3.19 (EE.UU.)</span>
+            <span>Aparece en la mayoría de los tapones importados. <br/>Atenuación real ≈ (NRR – 7) / 2</span>
+          </div>
+          <div class="art-tabla-row">
+            <span class="art-doc">SNR</span>
+            <span class="art-res">EN ISO 4869-2 (Europa)</span>
+            <span>Estándar europeo. Más conservador. Muy usado en proveedores nacionales.</span>
+          </div>
+          <div class="art-tabla-row">
+            <span class="art-doc">H, M, L</span>
+            <span class="art-res">EN ISO 4869-2</span>
+            <span>Valores de atenuación para frecuencias altas (H), medias (M) y bajas (L). Mayor precisión que SNR solo.</span>
+          </div>
+        </div>
+
+        <div class="art-destacado">
+          <strong>Error clásico:</strong> Un tapón con NRR 33 NO atenúa 33 dB en condiciones reales. Usá la fórmula conservadora: (NRR – 7) / 2 = (33 – 7) / 2 = <strong>13 dB de atenuación real</strong>. Mucho menos de lo que dice el envase.
+        </div>
+
+        <h2>¿Cómo sé qué atenuación necesito?</h2>
+        <p>Simple: necesitás que el nivel de ruido <em>en el oído</em> quede por debajo de 85 dB(A). La fórmula:</p>
+        <div class="art-formula">
+          <span>Atenuación mínima requerida</span>
+          <span class="formula-eq">= Nivel medido (dB) − 85 dB</span>
+        </div>
+        <p>Ejemplo: si mediste 98 dB(A) en el puesto, necesitás un protector que atenúe al menos 13 dB. Con el ajuste conservador del NRR, un tapón de NRR 33 logra exactamente eso. Un tapón de NRR 20 lograría (20–7)/2 = 6,5 dB — <strong>insuficiente</strong>.</p>
+
+        <div class="art-formula">
+          <span>Nivel en el oído (con protector)</span>
+          <span class="formula-eq">= Nivel medido − (NRR – 7) / 2</span>
+        </div>
+
+        <p>Si el nivel calculado en el oído supera 85 dB(A), ese protector no alcanza. Necesitás uno de mayor atenuación o combinar tapón + copa (doble protección).</p>
+
+        <h2>Tapones vs. protectores de copa: ¿cuándo usar cada uno?</h2>
+
+        <div class="art-checks">
+          <div class="art-check art-check--yes">
+            <span class="chk">T</span>
+            <div>
+              <strong>Tapones auditivos (foam, premoldeados, personalizados)</strong>
+              <p>Para exposición continua de larga duración (&gt;4 horas). Mayor atenuación media real. Más cómodos en climas cálidos. Deben insertarse correctamente — mal insertados pierden casi toda su atenuación. No recomendados para entornos con mucho polvo o si el trabajador tiene problemas de oído.</p>
+            </div>
+          </div>
+          <div class="art-check art-check--yes">
+            <span class="chk">C</span>
+            <div>
+              <strong>Protectores de copa (orejeras)</strong>
+              <p>Para tareas de corta duración o cuando hay que quitárselos frecuentemente. Más fáciles de poner y sacar correctamente. Menos efectivos que los tapones bien insertados, pero más consistentes en la práctica. Obligatorios cuando el nivel supera 100 dB(A) (Dec. 351/79 no admite solo tapones a partir de ese nivel).</p>
+            </div>
+          </div>
+          <div class="art-check art-check--yes">
+            <span class="chk">D</span>
+            <div>
+              <strong>Doble protección (tapón + copa simultáneo)</strong>
+              <p>Para niveles &gt;105 dB(A). La atenuación combinada no es la suma de ambas — la ganancia adicional de agregar copa a un tapón es de aproximadamente 5 dB extra (no 20+20). Se usa en demolición pesada, sala de motores y trabajos con explosivos.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2>El problema real: la adherencia</h2>
+        <p>El mejor protector auditivo del mundo no sirve si el trabajador se lo saca cuando habla con un compañero, lo usa mal insertado, o directamente lo deja en el bolsillo. La norma argentina exige que el empleador garantice el uso correcto — no solo la entrega.</p>
+        <p>Las estrategias que mejor funcionan en la práctica:</p>
+        <ul class="art-list">
+          <li>Tapones con cordón: el trabajador siente físicamente que los tiene colgados cuando los saca — se los vuelve a poner.</li>
+          <li>Capacitación práctica de inserción (no alcanza con el instructivo del envase).</li>
+          <li>Supervisión en los primeros 30 días de uso.</li>
+          <li>Involucrar a los propios trabajadores en la elección del modelo — el que lo usa tiene que ser cómodo para él.</li>
+        </ul>
+
+        <h2>¿Qué dice la normativa sobre el registro?</h2>
+        <p>El Dec. 351/79 y la Res. SRT 85/2012 exigen que la entrega de EPP quede documentada en el Legajo Técnico con:</p>
+        <ul class="art-list">
+          <li>Nombre del trabajador</li>
+          <li>Puesto de trabajo</li>
+          <li>Tipo de protector entregado (marca, modelo, NRR/SNR)</li>
+          <li>Fecha de entrega y firma del trabajador</li>
+        </ul>
+        <p>Esa planilla de entrega de EPP es obligatoria y la puede pedir la SRT en cualquier inspección.</p>
+
+        <div class="art-destacado art-destacado--warn">
+          <strong>Atención:</strong> Si el informe de medición indica NRR requerido de 15 dB y entregás un protector con atenuación real de 6 dB, estás documentando que sabés que el EPP no protege. Eso agrava la responsabilidad del empleador frente a un reclamo por hipoacusia.
+        </div>
+
+        <div class="art-cta">
+          <h3>Hacemos la medición y especificamos el EPP correcto</h3>
+          <p>En nuestro informe de medición de ruido siempre incluimos la recomendación del protector auditivo específico (NRR mínimo requerido) para cada puesto. No dejamos el EPP librado al criterio del proveedor.</p>
+          <div class="cta-actions" style="margin-top:16px">
+            <a href="https://wa.me/5491133572984?text=Hola%2C%20necesito%20asesoramiento%20sobre%20protecci%C3%B3n%20auditiva" class="btn-primary" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+            <a href="/servicios/empresas-industriales/mediciones/ruido/" class="btn-outline">Medición de ruido</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.article-wrap { max-width: 780px; }
+.article-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 32px; flex-wrap: wrap; }
+.art-cat { font-family: 'JetBrains Mono', monospace; font-size: .54rem; color: var(--dorado); background: rgba(201,162,39,0.09); border: 1px solid rgba(201,162,39,0.2); padding: 3px 9px; border-radius: 3px; letter-spacing: .5px; text-transform: uppercase; }
+.art-sep { color: rgba(255,255,255,.2); }
+.art-fecha, .art-tiempo { font-family: 'JetBrains Mono', monospace; font-size: .55rem; color: rgba(255,255,255,.3); }
+.article-body { display: flex; flex-direction: column; gap: 20px; }
+.article-lead { font-size: 16px; font-weight: 400; color: rgba(255,255,255,.75); line-height: 1.8; border-left: 3px solid var(--celeste); padding-left: 16px; }
+.article-body h2 { font-family: 'Bebas Neue', cursive; font-size: clamp(22px,3vw,30px); letter-spacing: 2px; color: #fff; margin-top: 12px; }
+.article-body p { font-size: 14px; font-weight: 300; color: rgba(255,255,255,.65); line-height: 1.85; }
+.article-body strong { color: rgba(255,255,255,.9); font-weight: 600; }
+.art-list { list-style: none; display: flex; flex-direction: column; gap: 8px; padding: 0; }
+.art-list li { display: flex; gap: 10px; font-size: 14px; font-weight: 300; color: rgba(255,255,255,.65); line-height: 1.7; }
+.art-list li::before { content: '›'; color: var(--celeste); font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+/* tabla */
+.art-tabla { background: rgba(0,24,72,0.6); border: 1px solid rgba(100,210,255,0.12); border-radius: 8px; overflow: hidden; }
+.art-tabla-header { display: grid; grid-template-columns: 0.6fr 1fr 2fr; gap: 12px; padding: 10px 16px; background: rgba(0,0,0,.2); font-family: 'JetBrains Mono', monospace; font-size: .54rem; color: rgba(255,255,255,.3); letter-spacing: 1px; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,.05); }
+.art-tabla-row { display: grid; grid-template-columns: 0.6fr 1fr 2fr; gap: 12px; padding: 11px 16px; border-bottom: 1px solid rgba(255,255,255,.04); font-size: 13px; color: rgba(255,255,255,.55); font-weight: 300; align-items: start; }
+.art-tabla-row:last-child { border-bottom: none; }
+.art-doc { color: rgba(255,255,255,.85) !important; font-weight: 700 !important; }
+.art-res { font-family: 'JetBrains Mono', monospace !important; font-size: .54rem !important; color: var(--dorado) !important; }
+/* fórmula */
+.art-formula { background: rgba(0,0,0,.3); border: 1px solid rgba(100,210,255,0.2); border-radius: 6px; padding: 14px 18px; display: flex; flex-direction: column; gap: 4px; }
+.art-formula span { font-family: 'JetBrains Mono', monospace; font-size: .78rem; color: rgba(255,255,255,.7); }
+.formula-eq { color: var(--celeste) !important; font-size: .85rem !important; }
+/* checks */
+.art-checks { display: flex; flex-direction: column; gap: 8px; }
+.art-check { display: flex; gap: 14px; align-items: flex-start; background: rgba(0,24,72,0.5); border: 1px solid rgba(255,255,255,.05); border-radius: 8px; padding: 13px 15px; border-left: 3px solid rgba(100,210,255,0.4); }
+.chk { font-family: 'JetBrains Mono', monospace; font-size: .7rem; font-weight: 700; color: var(--azul-deep); background: var(--celeste); width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.art-check strong { font-size: 13px; color: #fff; display: block; margin-bottom: 4px; font-weight: 600; }
+.art-check p { font-size: 13px; font-weight: 300; color: rgba(255,255,255,.5); line-height: 1.6; margin: 0; }
+/* destacado */
+.art-destacado { background: rgba(100,210,255,0.05); border: 1px solid rgba(100,210,255,0.15); border-left: 3px solid var(--celeste); border-radius: 0 6px 6px 0; padding: 14px 16px; font-size: 13px; color: rgba(255,255,255,.6); line-height: 1.7; }
+.art-destacado--warn { background: rgba(201,162,39,0.05); border-color: rgba(201,162,39,0.2); border-left-color: var(--dorado); }
+.art-destacado strong { color: rgba(255,255,255,.9); }
+/* cta */
+.art-cta { background: linear-gradient(135deg, var(--azul-navy), #002060); border: 1px solid rgba(100,210,255,0.15); border-radius: 10px; padding: 28px 24px; margin-top: 12px; }
+.art-cta h3 { font-family: 'Bebas Neue', cursive; font-size: 1.4rem; letter-spacing: 2px; color: #fff; margin-bottom: 8px; }
+.art-cta p { font-size: 13px; font-weight: 300; color: rgba(255,255,255,.45); line-height: 1.7; }
+@media (max-width: 640px) { .art-tabla-header, .art-tabla-row { grid-template-columns: 1fr; } .art-tabla-header span:not(:first-child) { display: none; } }
+</style>

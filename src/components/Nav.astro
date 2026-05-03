@@ -101,6 +101,7 @@ const sectors = [
     </div>
 
     <a href="/nosotros/" class={`nav-link ${currentPath === '/nosotros/' ? 'active' : ''}`}>Nosotros</a>
+    <a href="/blog/"     class={`nav-link ${currentPath.startsWith('/blog/') ? 'active' : ''}`}>Blog</a>
     <a href="/contacto/"  class={`nav-link ${currentPath === '/contacto/'  ? 'active' : ''}`}>Contacto</a>
     <a href="/contacto/" class="nav-cta">Consultanos</a>
   </div>
@@ -133,6 +134,7 @@ const sectors = [
     </div>
   </div>
   <a href="/nosotros/" class="nav-mobile-link nav-mobile-root">Nosotros</a>
+  <a href="/blog/"     class="nav-mobile-link nav-mobile-root">Blog</a>
   <a href="/contacto/"  class="nav-mobile-link nav-mobile-root">Contacto</a>
   <a href="/contacto/" class="btn-primary" style="margin-top:8px;">Consultanos</a>
 </div>
