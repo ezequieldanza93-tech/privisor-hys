@@ -7,6 +7,8 @@ function formatFecha(iso: string) {
   const meses = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
   return `${parseInt(d)} ${meses[parseInt(m) - 1]} ${y}`;
 }
+
+const categorias = [...new Set(blogPosts.map(p => p.categoria))];
 ---
 
 <BaseLayout
@@ -27,9 +29,37 @@ function formatFecha(iso: string) {
 
   <section class="content-section">
     <div class="content-inner">
-      <div class="blog-grid">
+
+      <!-- Buscador + filtros -->
+      <div class="blog-toolbar">
+        <div class="blog-search-wrap">
+          <svg class="blog-search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input
+            id="blog-search"
+            type="search"
+            placeholder="Buscar artículos..."
+            autocomplete="off"
+            spellcheck="false"
+          />
+        </div>
+        <span class="blog-count" id="blog-count">{blogPosts.length} artículos</span>
+      </div>
+
+      <div class="blog-filters" id="blog-filters">
+        <button class="blog-filter active" data-cat="todos">Todos</button>
+        {categorias.map(cat => (
+          <button class="blog-filter" data-cat={cat}>{cat}</button>
+        ))}
+      </div>
+
+      <!-- Grid -->
+      <div class="blog-grid" id="blog-grid">
         {blogPosts.map(post => (
-          <article class="blog-card">
+          <article
+            class="blog-card"
+            data-cat={post.categoria}
+            data-text={`${post.titulo} ${post.resumen} ${post.categoria} ${post.tags.join(' ')}`.toLowerCase()}
+          >
             <div class="blog-card-meta">
               <span class="blog-cat">{post.categoria}</span>
               <span class="blog-sep">·</span>
@@ -52,11 +82,95 @@ function formatFecha(iso: string) {
           </article>
         ))}
       </div>
+
+      <!-- Empty state -->
+      <div class="blog-empty" id="blog-empty" style="display:none">
+        <p>No hay artículos que coincidan con tu búsqueda.</p>
+      </div>
+
     </div>
   </section>
 </BaseLayout>
 
 <style>
+/* ---- Toolbar ---- */
+.blog-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.blog-search-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 220px;
+}
+.blog-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255,255,255,.3);
+  pointer-events: none;
+}
+#blog-search {
+  width: 100%;
+  background: rgba(0,24,72,0.6);
+  border: 1px solid rgba(100,210,255,0.18);
+  border-radius: 6px;
+  padding: 10px 14px 10px 36px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .8rem;
+  color: #fff;
+  outline: none;
+  transition: border-color .2s;
+  box-sizing: border-box;
+}
+#blog-search::placeholder { color: rgba(255,255,255,.3); }
+#blog-search:focus { border-color: rgba(100,210,255,0.45); }
+#blog-search::-webkit-search-cancel-button { filter: invert(1) opacity(.4); cursor: pointer; }
+.blog-count {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .58rem;
+  color: rgba(255,255,255,.3);
+  letter-spacing: .5px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ---- Filtros ---- */
+.blog-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+.blog-filter {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .56rem;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.45);
+  background: rgba(0,24,72,0.5);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 4px;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: all .18s;
+  white-space: nowrap;
+}
+.blog-filter:hover {
+  color: rgba(255,255,255,.8);
+  border-color: rgba(100,210,255,0.3);
+}
+.blog-filter.active {
+  color: #64d2ff;
+  background: rgba(100,210,255,0.1);
+  border-color: rgba(100,210,255,0.4);
+}
+
+/* ---- Grid ---- */
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -78,6 +192,7 @@ function formatFecha(iso: string) {
   transform: translateY(-3px);
   box-shadow: 0 12px 36px rgba(0,0,0,0.35);
 }
+.blog-card.hidden { display: none; }
 .blog-card-meta {
   display: flex;
   align-items: center;
@@ -148,5 +263,57 @@ function formatFecha(iso: string) {
   white-space: nowrap;
 }
 .blog-read-more:hover { color: #fff; }
-@media (max-width: 600px) { .blog-grid { grid-template-columns: 1fr; } }
+
+/* ---- Empty state ---- */
+.blog-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: rgba(255,255,255,.3);
+  font-size: 14px;
+  font-weight: 300;
+}
+
+@media (max-width: 600px) {
+  .blog-grid { grid-template-columns: 1fr; }
+  .blog-toolbar { flex-direction: column; align-items: stretch; }
+  .blog-count { text-align: right; }
+}
 </style>
+
+<script>
+const cards   = Array.from(document.querySelectorAll<HTMLElement>('#blog-grid .blog-card'));
+const filters = Array.from(document.querySelectorAll<HTMLButtonElement>('#blog-filters .blog-filter'));
+const search  = document.getElementById('blog-search') as HTMLInputElement;
+const count   = document.getElementById('blog-count') as HTMLElement;
+const empty   = document.getElementById('blog-empty') as HTMLElement;
+
+let activeCat = 'todos';
+let searchVal = '';
+
+function update() {
+  let visible = 0;
+  cards.forEach(card => {
+    const catMatch = activeCat === 'todos' || card.dataset.cat === activeCat;
+    const textMatch = !searchVal || (card.dataset.text ?? '').includes(searchVal);
+    const show = catMatch && textMatch;
+    card.classList.toggle('hidden', !show);
+    if (show) visible++;
+  });
+  count.textContent = `${visible} artículo${visible !== 1 ? 's' : ''}`;
+  empty.style.display = visible === 0 ? 'block' : 'none';
+}
+
+filters.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filters.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeCat = btn.dataset.cat ?? 'todos';
+    update();
+  });
+});
+
+search.addEventListener('input', () => {
+  searchVal = search.value.toLowerCase().trim();
+  update();
+});
+</script>
