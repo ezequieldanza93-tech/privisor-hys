@@ -27,7 +27,7 @@ const schema = {
   serviceType: 'Higiene y Seguridad Laboral',
 };
 
-const normativaSearchUrl = `https://www.argentina.gob.ar/normativa/nacional?search=${encodeURIComponent(s.normativa.codigo.split('/')[0].trim())}`;
+const normativaSearchUrl = s.normativa.url ?? `https://www.argentina.gob.ar/normativa/nacional?search=${encodeURIComponent(s.normativa.codigo.split('/')[0].trim())}`;
 ---
 
 <BaseLayout

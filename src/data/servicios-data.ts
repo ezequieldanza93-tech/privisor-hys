@@ -12,6 +12,7 @@ export interface ServicioIndividual {
     nombre: string;
     resumen: string;
     obligatoriedad: string;
+    url?: string;
   };
   queMedimos: { titulo: string; descripcion: string }[];
   incluye: string[];
