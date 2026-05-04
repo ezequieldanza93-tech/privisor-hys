@@ -127,8 +127,10 @@ const sectores = [
   <section class="sectores-section" id="sectores" aria-label="Servicios por sector">
     <div class="sectores-inner">
       <header class="sectores-header">
-        <div class="kicker">Cobertura completa</div>
-        <h2 class="sectores-title">SERVICIOS POR <em>SECTOR</em></h2>
+        <div class="sectores-header-left">
+          <div class="kicker kicker--left">Cobertura completa</div>
+          <h2 class="sectores-title">SERVICIOS POR <em>SECTOR</em></h2>
+        </div>
         <p class="sectores-sub">Cada industria tiene su normativa específica. Seleccioná tu sector y conocé exactamente qué servicios de H&S aplican a tu empresa.</p>
       </header>
       <div class="sectores-grid">
@@ -322,12 +324,18 @@ const sectores = [
   background: #000d2a;
 }
 .sectores-inner { max-width: 1200px; margin: 0 auto; }
-.sectores-header { text-align: center; margin-bottom: 24px; }
+.sectores-header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 24px;
+}
+.sectores-header-left { flex-shrink: 0; }
 .sectores-title {
   font-size: clamp(40px, 5.5vw, 64px);
   letter-spacing: 2px;
   color: #fff;
-  margin-bottom: 12px;
+  line-height: .9;
 }
 .sectores-title em {
   font-style: normal;
@@ -340,9 +348,8 @@ const sectores = [
   font-size: 14px;
   font-weight: 300;
   color: rgba(255,255,255,.4);
-  max-width: 460px;
+  max-width: 380px;
   line-height: 1.7;
-  margin: 0 auto;
 }
 .sectores-grid {
   display: grid;
@@ -517,6 +524,7 @@ const sectores = [
   .hero-logo-wrap { display: none; }
   .hero-mid { flex-direction: column; align-items: flex-start; gap: 14px; }
   .sectores-section { padding: 32px 20px 48px; }
+  .sectores-header { flex-direction: column; align-items: flex-start; gap: 12px; }
   .porque-section   { padding: 54px 20px; }
 }
 @media (max-width: 600px) {
