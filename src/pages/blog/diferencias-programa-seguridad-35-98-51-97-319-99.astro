@@ -134,6 +134,18 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <p>En la práctica, muchas constructoras aplican el 51/97 a todas sus obras porque los comitentes (especialmente empresas grandes, organismos públicos y multinacionales) lo exigen contractualmente sin importar el tamaño. Es el estándar de facto del sector.</p>
         <p>Si tu empresa hace obras de distintos tipos, lo más ordenado es tener un <strong>procedimiento interno</strong> que defina qué programa corresponde a cada tipo de trabajo. Eso también demuestra madurez del sistema de gestión si pasás una auditoría de la SRT o de un cliente ISO 45001.</p>
 
+        <div class="art-normativa-link">
+          <a href="https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-51-1997-44588/texto" target="_blank" rel="noopener">Ingresá para leer la Res. SRT 51/97 completa →</a>
+        </div>
+
+        <div class="art-normativa-link">
+          <a href="https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-35-1998-50188/texto" target="_blank" rel="noopener">Ingresá para leer la Res. SRT 35/98 completa →</a>
+        </div>
+
+        <div class="art-normativa-link">
+          <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/55000-59999/59941/norma.htm" target="_blank" rel="noopener">Ingresá para leer la Res. SRT 319/99 completa →</a>
+        </div>
+
         <div class="art-cta">
           <h3>¿Necesitás que te preparemos el Plan o Programa?</h3>
           <p>Elaboramos Planes de Higiene y Seguridad (51/97), Programas de Seguridad (35/98) y Programas Viales (319/99) con firma de profesional habilitado. Respuesta en el día.</p>
@@ -314,6 +326,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 .dec-step strong { font-size: 13px; color: #fff; display: block; margin-bottom: 6px; }
 .dec-step p { font-size: 13px; font-weight: 300; color: rgba(255,255,255,.55); margin: 2px 0; }
 .dec-result { color: var(--celeste) !important; font-weight: 600; }
+
+/* Normativa links */
+.art-normativa-link { background: rgba(0,24,72,0.5); border: 1px solid rgba(100,210,255,0.2); border-radius: 6px; padding: 12px 16px; }
+.art-normativa-link a { color: #64d2ff; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: .72rem; letter-spacing: .5px; display: flex; align-items: center; gap: 8px; }
+.art-normativa-link a::before { content: '↗'; }
+.art-normativa-link a:hover { text-decoration: underline; }
 
 /* CTA final */
 .art-cta {
