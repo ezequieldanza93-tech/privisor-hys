@@ -1,0 +1,217 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Cómo evaluar la exposición a vapores orgánicos en planta: guía práctica — Privisor HyS"
+  description="Guía técnica sobre evaluación de vapores orgánicos (COVs) en ambientes de trabajo según la Res. 295/03 en Argentina. Muestreo pasivo, valores TLV/VLA y controles de ingeniería."
+>
+  <section class="page-hero">
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span>
+      <a href="/blog/">Blog</a><span>/</span>
+      <span>Cómo evaluar la exposición a vapores orgánicos en planta</span>
+    </nav>
+    <div class="page-hero-inner">
+      <div class="page-hero-badge">Mediciones · Res. 295/03</div>
+      <h1>VAPORES ORGÁNICOS<br><em>EN PLANTA</em></h1>
+      <p>Solventes, pinturas, adhesivos y resinas emiten COVs que pueden superar los límites seguros sin que nadie lo note. Te explicamos cómo evaluar la exposición según la normativa argentina y qué controles aplicar.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="content-inner article-wrap">
+
+      <div class="article-meta">
+        <span class="art-cat">Mediciones</span>
+        <span class="art-sep">·</span>
+        <span class="art-fecha">27 jul 2026</span>
+        <span class="art-sep">·</span>
+        <span class="art-tiempo">6 min lectura</span>
+      </div>
+
+      <div class="article-body">
+
+        <p class="article-lead">Los compuestos orgánicos volátiles (COVs) son una de las causas más subestimadas de enfermedad profesional en la industria argentina. Pintar, pegar, limpiar con solvente o aplicar resinas son tareas cotidianas que, sin evaluación ni control, exponen a los trabajadores a sustancias hepatotóxicas, neurotóxicas o directamente cancerígenas. La Res. 295/03 obliga a medirlos y compararlos contra valores límite precisos.</p>
+
+        <h2>¿Qué son los compuestos orgánicos volátiles (COVs)?</h2>
+        <p>Los COVs son compuestos químicos que contienen carbono y se evaporan con facilidad a temperatura ambiente. Su presión de vapor elevada hace que pasen del estado líquido al gaseoso rápidamente, generando concentraciones significativas en el aire incluso a temperatura ambiente. En industria se los encuentra en:</p>
+        <ul class="art-list">
+          <li><strong>Solventes industriales:</strong> tolueno, xileno, hexano, MEK (metil etil cetona), acetona, isopropanol, ciclohexano.</li>
+          <li><strong>Pinturas y barnices:</strong> mezclas de solventes alifáticos y aromáticos, incluyendo MIBK, ésteres y alcoholes.</li>
+          <li><strong>Adhesivos y cementos:</strong> benceno residual, ciclohexano, acetato de etilo, MEK.</li>
+          <li><strong>Resinas y catalizadores:</strong> estireno en fibra de vidrio y poliésteres, formaldehído en resinas fenólicas, diisocianatos (TDI/MDI) en poliuretanos.</li>
+          <li><strong>Combustibles y lubricantes:</strong> naftas, gasoil, aceites de corte con contenido de aromáticos.</li>
+        </ul>
+        <p>Los efectos en la salud dependen de la sustancia específica y el nivel de exposición: narcosis a concentraciones altas, daño hepático y renal con exposición crónica, efectos neurotóxicos acumulativos (encefalopatía por solventes), y en el caso del benceno, leucemia (clasificación IARC Grupo 1).</p>
+
+        <h2>¿Cuándo tenés que evaluar?</h2>
+        <p>La obligación de evaluar la exposición a COVs surge cuando hay <strong>uso, almacenamiento o generación de solventes orgánicos</strong> en el proceso de trabajo. No es necesario esperar síntomas ni superar un umbral de olor: muchas sustancias peligrosas como el n-hexano o el estireno se perciben por olfato solo por encima de concentraciones ya dañinas.</p>
+        <p>Los disparadores concretos son:</p>
+        <ul class="art-list">
+          <li>Presencia de solventes en el puesto de trabajo de manera regular (diaria o semanal).</li>
+          <li>Procesos de pintura, acabado superficial, limpieza con solvente, aplicación de adhesivos o colado de resinas.</li>
+          <li>Trabajos en espacios confinados donde se manipulen solventes.</li>
+          <li>Solicitud de la ART tras denuncia, accidente o examen de salud periódico con hallazgos.</li>
+          <li>Cambio en el proceso productivo que incorpore nuevas materias primas con COVs.</li>
+        </ul>
+
+        <div class="art-destacado art-destacado--warn">
+          <strong>Atención:</strong> el umbral olfativo de muchos COVs peligrosos está por encima de los TLV. Que "no huela tan fuerte" no significa que la concentración sea segura. Solo la medición instrumental da certeza.
+        </div>
+
+        <h2>Métodos de muestreo pasivo vs. activo</h2>
+        <p>Existen dos enfoques para capturar COVs del ambiente de trabajo, cada uno con ventajas distintas:</p>
+
+        <div class="art-tabla">
+          <div class="art-tabla-header" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span>Aspecto</span>
+            <span>Muestreo pasivo (dosímetro)</span>
+            <span>Muestreo activo (bomba + tubo)</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span class="art-doc">Principio</span>
+            <span>Difusión molecular hacia adsorbente</span>
+            <span>Succión activa a caudal constante</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span class="art-doc">Duración típica</span>
+            <span>Jornada completa (4-8 h)</span>
+            <span>30 min a 4 h por muestra</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span class="art-doc">Representa</span>
+            <span>Exposición personal promedio (TWA)</span>
+            <span>Concentración puntual o STEL</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span class="art-doc">Ventajas</span>
+            <span>Sin bomba, cómodo para el trabajador</span>
+            <span>Más preciso para concentraciones bajas</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span class="art-doc">Análisis</span>
+            <span>Desorción térmica + GC-MS o GC-FID</span>
+            <span>Desorción química (CS₂) + GC-FID</span>
+          </div>
+        </div>
+
+        <p>El adsorbente más utilizado es el <strong>carbón activado</strong> (tubo NIOSH 1500 para solventes generales) o el <strong>Tenax TA</strong> para COVs de mayor peso molecular. El análisis se realiza en laboratorio acreditado por cromatografía de gases acoplada a espectrometría de masas (GC-MS) o con detector de ionización de llama (GC-FID) para cuantificación.</p>
+
+        <h2>Valores límite TLV y VLA</h2>
+        <p>La Res. 295/03 Anexo I adopta los Valores Límite Umbral (TLV) de la ACGIH como referencia en Argentina. Los TLV establecen dos parámetros clave:</p>
+        <ul class="art-list">
+          <li><strong>TLV-TWA:</strong> valor promedio ponderado por tiempo para una jornada de 8 horas/día y 40 horas/semana. Es el límite principal de exposición crónica.</li>
+          <li><strong>TLV-STEL:</strong> límite de exposición de corta duración (15 minutos), no superable más de 4 veces por jornada con intervalos mínimos de 60 minutos entre excursiones.</li>
+        </ul>
+
+        <div class="art-tabla">
+          <div class="art-tabla-header" style="grid-template-columns: 1.5fr 1fr 1fr 1fr;">
+            <span>Sustancia</span>
+            <span>TLV-TWA</span>
+            <span>TLV-STEL</span>
+            <span>Efecto crítico</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1.5fr 1fr 1fr 1fr;">
+            <span class="art-doc">Tolueno</span>
+            <span class="art-res">50 ppm</span>
+            <span class="art-res">—</span>
+            <span>Narcosis, daño hepático</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1.5fr 1fr 1fr 1fr;">
+            <span class="art-doc">Xileno (todos los isómeros)</span>
+            <span class="art-res">100 ppm</span>
+            <span class="art-res">150 ppm</span>
+            <span>Irritación, narcosis</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1.5fr 1fr 1fr 1fr;">
+            <span class="art-doc">n-Hexano</span>
+            <span class="art-res">50 ppm</span>
+            <span class="art-res">—</span>
+            <span>Neuropatía periférica</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1.5fr 1fr 1fr 1fr;">
+            <span class="art-doc">Acetona</span>
+            <span class="art-res">500 ppm</span>
+            <span class="art-res">750 ppm</span>
+            <span>Irritación, narcosis leve</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1.5fr 1fr 1fr 1fr;">
+            <span class="art-doc">MEK (2-butanona)</span>
+            <span class="art-res">200 ppm</span>
+            <span class="art-res">300 ppm</span>
+            <span>Irritación, narcosis</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1.5fr 1fr 1fr 1fr;">
+            <span class="art-doc">Estireno</span>
+            <span class="art-res">20 ppm</span>
+            <span class="art-res">40 ppm</span>
+            <span>Daño neurológico, posible carcinógeno</span>
+          </div>
+        </div>
+
+        <div class="art-destacado">
+          <strong>Regla de mezclas:</strong> cuando hay varios solventes presentes simultáneamente, la Res. 295/03 exige calcular el efecto combinado. Si la suma de (concentración de cada uno / TLV-TWA de cada uno) es mayor a 1, el límite combinado está superado, aunque ninguno individualmente lo haya superado.
+        </div>
+
+        <h2>Controles de ingeniería recomendados</h2>
+        <p>La jerarquía de controles es idéntica a cualquier otro contaminante: eliminación del agente, sustitución, controles de ingeniería, controles administrativos y por último EPP. Para COVs, los controles más efectivos son:</p>
+        <ul class="art-list">
+          <li><strong>Sustitución del solvente:</strong> reemplazar solventes de alta toxicidad (n-hexano, benceno) por alternativas menos peligrosas (heptano en lugar de hexano, solventes de base acuosa en lugar de aromáticos).</li>
+          <li><strong>Extracción localizada (LEV):</strong> cabinas de pintura con extracción forzada, brazos de aspiración sobre las estaciones de trabajo donde se aplican solventes. Es el control de ingeniería más eficiente.</li>
+          <li><strong>Ventilación general dilutiva:</strong> para reducir la concentración de fondo en ambientes grandes. Solo eficaz como complemento, nunca como único control.</li>
+          <li><strong>Confinamiento del proceso:</strong> usar sistemas cerrados (reactores, circuitos cerrados de limpieza) que impidan la evaporación al ambiente.</li>
+          <li><strong>EPP respiratorio con cartucho orgánico:</strong> media cara o cara completa con cartucho específico para orgánicos (color negro según norma EN 14387). El cartucho tiene vida útil limitada que debe calcularse según concentración y caudal de trabajo.</li>
+        </ul>
+
+        <div class="art-normativa-link">
+          <a href="https://www.argentina.gob.ar/normativa/nacional?search=resoluci%C3%B3n+295+2003" target="_blank" rel="noopener">Ingresá para leer la Res. 295/03 completa →</a>
+        </div>
+
+        <div class="art-cta">
+          <h3>Evaluación de vapores orgánicos en tu planta</h3>
+          <p>Realizamos muestreo pasivo y activo de COVs con análisis en laboratorio acreditado. Entregamos informe con comparación contra TLV y recomendaciones de control. CABA y GBA.</p>
+          <div class="cta-actions" style="margin-top:16px">
+            <a href="https://wa.me/5491133572984?text=Hola%2C%20necesito%20asesoramiento" class="btn-primary" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+            <a href="/servicios/empresas-industriales/mediciones/" class="btn-outline">Ver servicio</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.article-wrap { max-width: 780px; }
+.article-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 32px; flex-wrap: wrap; }
+.art-cat { font-family: 'JetBrains Mono', monospace; font-size: .54rem; color: var(--dorado); background: rgba(201,162,39,0.09); border: 1px solid rgba(201,162,39,0.2); padding: 3px 9px; border-radius: 3px; letter-spacing: .5px; text-transform: uppercase; }
+.art-sep { color: rgba(255,255,255,.2); }
+.art-fecha, .art-tiempo { font-family: 'JetBrains Mono', monospace; font-size: .55rem; color: rgba(255,255,255,.3); }
+.article-body { display: flex; flex-direction: column; gap: 20px; }
+.article-lead { font-size: 16px; font-weight: 400; color: rgba(255,255,255,.75); line-height: 1.8; border-left: 3px solid var(--celeste); padding-left: 16px; }
+.article-body h2 { font-family: 'Bebas Neue', cursive; font-size: clamp(22px,3vw,30px); letter-spacing: 2px; color: #fff; margin-top: 12px; margin-bottom: 0; }
+.article-body p { font-size: 14px; font-weight: 300; color: rgba(255,255,255,.65); line-height: 1.85; }
+.article-body strong { color: rgba(255,255,255,.9); font-weight: 600; }
+.art-list { list-style: none; display: flex; flex-direction: column; gap: 8px; padding: 0; }
+.art-list li { display: flex; gap: 10px; font-size: 14px; font-weight: 300; color: rgba(255,255,255,.65); line-height: 1.7; }
+.art-list li::before { content: '›'; color: var(--celeste); font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+.art-tabla { background: rgba(0,24,72,0.6); border: 1px solid rgba(100,210,255,0.12); border-radius: 8px; overflow: hidden; }
+.art-tabla-header, .art-tabla-row { display: grid; gap: 12px; padding: 10px 16px; border-bottom: 1px solid rgba(255,255,255,.05); font-size: 12px; }
+.art-tabla-header { font-family: 'JetBrains Mono', monospace; font-size: .54rem; color: rgba(255,255,255,.3); letter-spacing: 1px; text-transform: uppercase; background: rgba(0,0,0,.2); }
+.art-tabla-row:last-child { border-bottom: none; }
+.art-tabla-row span { color: rgba(255,255,255,.6); font-weight: 300; line-height: 1.5; }
+.art-doc { color: #fff !important; font-weight: 600 !important; }
+.art-res { font-family: 'JetBrains Mono', monospace !important; font-size: .55rem !important; color: var(--dorado) !important; }
+.art-destacado { background: rgba(100,210,255,0.05); border: 1px solid rgba(100,210,255,0.15); border-left: 3px solid var(--celeste); border-radius: 0 6px 6px 0; padding: 14px 16px; font-size: 13px; color: rgba(255,255,255,.6); line-height: 1.7; }
+.art-destacado--warn { background: rgba(201,162,39,0.05); border-color: rgba(201,162,39,0.2); border-left-color: var(--dorado); }
+.art-destacado strong { color: rgba(255,255,255,.9); }
+.art-normativa-link { background: rgba(0,24,72,0.5); border: 1px solid rgba(100,210,255,0.2); border-radius: 6px; padding: 12px 16px; }
+.art-normativa-link a { color: #64d2ff; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: .72rem; letter-spacing: .5px; display: flex; align-items: center; gap: 8px; }
+.art-normativa-link a::before { content: '↗'; }
+.art-normativa-link a:hover { text-decoration: underline; }
+.art-cta { background: linear-gradient(135deg, var(--azul-navy), #002060); border: 1px solid rgba(100,210,255,0.15); border-radius: 10px; padding: 28px 24px; margin-top: 12px; }
+.art-cta h3 { font-family: 'Bebas Neue', cursive; font-size: 1.4rem; letter-spacing: 2px; color: #fff; margin-bottom: 8px; }
+.art-cta p { font-size: 13px; font-weight: 300; color: rgba(255,255,255,.45); line-height: 1.7; }
+@media (max-width: 640px) { .art-tabla-header, .art-tabla-row { grid-template-columns: 1fr; gap: 4px; } }
+</style>

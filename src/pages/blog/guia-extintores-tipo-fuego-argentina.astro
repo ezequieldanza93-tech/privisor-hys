@@ -1,0 +1,203 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Guía para elegir extintores según el tipo de fuego y la normativa argentina — Privisor HyS"
+  description="Cómo elegir el extintor correcto según las clases de fuego (A, B, C, D, K) y la Norma IRAM 3517 en Argentina. Tipos, mantenimiento obligatorio y recarga."
+>
+  <section class="page-hero">
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span>
+      <a href="/blog/">Blog</a><span>/</span>
+      <span>Guía de extintores por tipo de fuego</span>
+    </nav>
+    <div class="page-hero-inner">
+      <div class="page-hero-badge">Seguridad · IRAM 3517</div>
+      <h1>GUÍA DE EXTINTORES<br><em>POR TIPO DE FUEGO</em></h1>
+      <p>Polvo ABC, CO2, agente limpio, agua. El extintor equivocado en el lugar equivocado puede ser más peligroso que no tener ninguno. Entendé las clases de fuego, los agentes extintores y qué exige la norma argentina.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="content-inner article-wrap">
+
+      <div class="article-meta">
+        <span class="art-cat">Seguridad</span>
+        <span class="art-sep">·</span>
+        <span class="art-fecha">31 ago 2026</span>
+        <span class="art-sep">·</span>
+        <span class="art-tiempo">6 min lectura</span>
+      </div>
+
+      <div class="article-body">
+
+        <p class="article-lead">Poner extintores en el pasillo y creer que eso cumple con la normativa es uno de los errores más comunes en las empresas argentinas. El Dec. 351/79 y la Norma IRAM 3517 no solo dicen cuántos extintores necesitás: dicen qué tipo, dónde, para qué riesgo y con qué mantenimiento. Un extintor de CO2 sobre un incendio de madera no apaga nada. Uno de agua sobre un tablero eléctrico puede matar al operador.</p>
+
+        <h2>Clases de fuego: A, B, C, D y K</h2>
+        <p>La clasificación de los fuegos es el punto de partida de todo sistema de protección contra incendios. En Argentina se usa la clasificación internacional adoptada por las normas IRAM:</p>
+
+        <div class="art-tabla">
+          <div class="art-tabla-header" style="grid-template-columns: .5fr 1.2fr 1.5fr;">
+            <span>Clase</span>
+            <span>Material combustible</span>
+            <span>Ejemplos</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: .5fr 1.2fr 1.5fr;">
+            <span class="art-doc">A</span>
+            <span>Sólidos combustibles comunes</span>
+            <span>Madera, papel, tela, cartón, plástico, goma</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: .5fr 1.2fr 1.5fr;">
+            <span class="art-doc">B</span>
+            <span>Líquidos y gases inflamables</span>
+            <span>Nafta, gasoil, aceite, alcohol, solventes, GLP, barnices</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: .5fr 1.2fr 1.5fr;">
+            <span class="art-doc">C</span>
+            <span>Equipos eléctricos energizados</span>
+            <span>Tableros, motores, computadoras, transformadores bajo tensión</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: .5fr 1.2fr 1.5fr;">
+            <span class="art-doc">D</span>
+            <span>Metales combustibles</span>
+            <span>Magnesio, titanio, sodio, potasio, aluminio en polvo fino</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: .5fr 1.2fr 1.5fr;">
+            <span class="art-doc">K</span>
+            <span>Aceites y grasas de cocina</span>
+            <span>Aceite vegetal o animal en freidoras industriales y cocinas comerciales</span>
+          </div>
+        </div>
+
+        <div class="art-destacado art-destacado--warn">
+          <strong>El fuego Clase C no existe como material combustible independiente.</strong> Significa que hay un equipo eléctrico energizado involucrado en el incendio. El agente extintor debe ser no conductor. Si cortás la corriente antes de combatir el fuego, el incendio puede reclasificarse a Clase A o B según qué esté ardiendo.
+        </div>
+
+        <h2>Tipos de extintores y su agente extintor</h2>
+        <p>Cada agente extintor tiene un mecanismo de acción diferente (enfriamiento, sofocación, inhibición de la reacción en cadena) y una efectividad distinta según la clase de fuego:</p>
+
+        <div class="art-tabla">
+          <div class="art-tabla-header" style="grid-template-columns: 1.3fr .8fr .8fr .8fr .8fr .8fr;">
+            <span>Agente extintor</span>
+            <span>Clase A</span>
+            <span>Clase B</span>
+            <span>Clase C</span>
+            <span>Clase D</span>
+            <span>Clase K</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1.3fr .8fr .8fr .8fr .8fr .8fr;">
+            <span class="art-doc">Polvo ABC (multipropósito)</span>
+            <span>✓</span><span>✓</span><span>✓</span><span>✗</span><span>✗</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1.3fr .8fr .8fr .8fr .8fr .8fr;">
+            <span class="art-doc">CO2 (dióxido de carbono)</span>
+            <span>✗</span><span>✓</span><span>✓</span><span>✗</span><span>✗</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1.3fr .8fr .8fr .8fr .8fr .8fr;">
+            <span class="art-doc">Agente limpio (halón sustituto)</span>
+            <span>✗</span><span>✓</span><span>✓</span><span>✗</span><span>✗</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1.3fr .8fr .8fr .8fr .8fr .8fr;">
+            <span class="art-doc">Agua (chorro o niebla)</span>
+            <span>✓</span><span>✗</span><span>✗</span><span>✗</span><span>✗</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1.3fr .8fr .8fr .8fr .8fr .8fr;">
+            <span class="art-doc">Polvo D (metales)</span>
+            <span>✗</span><span>✗</span><span>✗</span><span>✓</span><span>✗</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1.3fr .8fr .8fr .8fr .8fr .8fr;">
+            <span class="art-doc">Wet chemical / Clase K</span>
+            <span>✗</span><span>✗</span><span>✗</span><span>✗</span><span>✓</span>
+          </div>
+        </div>
+
+        <h2>Cómo elegir el extintor correcto según el riesgo</h2>
+        <p>La elección del extintor no es solo por la clase de fuego: también importa el <strong>potencial extintor</strong> (la capacidad real de extinción expresada en unidades como 6A o 40B), la cantidad de material combustible presente, la superficie a proteger y la accesibilidad para el operador. El Dec. 351/79 establece tablas de distribución según la clasificación del riesgo del local:</p>
+
+        <ul class="art-list">
+          <li><strong>Riesgo leve (Clase I):</strong> oficinas, comercios sin inflamables, locales donde predomina la presencia humana. Un extintor polvo ABC de 5 kg por cada 200 m² con recorrido máximo de 20 m al extintor más cercano es la base.</li>
+          <li><strong>Riesgo ordinario (Clase II):</strong> talleres de producción, depósitos de materiales combustibles, sectores industriales con carga de fuego moderada. Extintores ABC de mayor capacidad (10 kg) y/o combinación con CO2 para sectores eléctricos.</li>
+          <li><strong>Riesgo extra (Clase III):</strong> almacenamiento de líquidos inflamables, pinturas, solventes, sector de carga de baterías. Polvo ABC de alta capacidad, espuma física o CO2 para los sectores B específicos.</li>
+          <li><strong>Salas de servidores y equipos electrónicos:</strong> CO2 o agente limpio (FM-200, Novec 1230). El polvo ABC deja residuo que destruye equipos; el agua y la espuma son absolutamente contraindicados.</li>
+          <li><strong>Cocinas industriales con freidoras:</strong> extintor Clase K obligatorio. El polvo ABC sobre grasa caliente puede provocar una explosión de vapor y propagar el fuego.</li>
+        </ul>
+
+        <div class="art-destacado">
+          <strong>Cálculo de carga de fuego:</strong> el Dec. 351/79 define la carga de fuego como el peso en madera equivalente por unidad de superficie (kg/m²). A mayor carga de fuego, mayor potencial extintor requerido y mayor densidad de extintores. El cálculo debe hacerlo un profesional de H&S o un técnico en protección contra incendios.
+        </div>
+
+        <h2>Norma IRAM 3517: certificación y requisitos</h2>
+        <p>La <strong>Norma IRAM 3517</strong> regula los extintores portátiles de incendio en Argentina: requisitos de fabricación, ensayos, marcado y certificación. Un extintor sin certificación IRAM 3517 no puede comercializarse legalmente en el país y no puede ser aceptado en una auditoría de seguridad.</p>
+        <p>Lo que el sello IRAM 3517 garantiza:</p>
+
+        <ul class="art-list">
+          <li>El agente extintor es el declarado y en la cantidad correcta.</li>
+          <li>El recipiente presurizado soportó los ensayos hidrostáticos de fábrica.</li>
+          <li>La manguera, tobera y mecanismo de disparo funcionan dentro de especificación.</li>
+          <li>El etiquetado indica correctamente las clases de fuego para las que el extintor es apto.</li>
+        </ul>
+
+        <p>Al comprar extintores, verificá que el sello esté vigente y corresponda al modelo específico. Algunas empresas importan equipos con certificaciones de otros países (UL, CE) pero sin homologación IRAM: esos equipos no son válidos en Argentina para cumplir la normativa del Dec. 351/79.</p>
+
+        <h2>Mantenimiento y recarga obligatoria</h2>
+        <p>Un extintor que nunca se usó igual puede fallar en el momento crítico. La normativa establece un esquema de mantenimiento obligatorio:</p>
+
+        <ul class="art-list">
+          <li><strong>Inspección mensual (interna):</strong> visualmente verificar que el extintor está en su lugar, el precinto intacto, la manija sin daños, el manómetro en zona verde (si tiene) y la fecha de vencimiento vigente. La puede hacer personal capacitado de la empresa.</li>
+          <li><strong>Mantenimiento anual (empresa habilitada):</strong> realizado por empresa habilitada por el organismo de bomberos o autoridad provincial. Incluye inspección interna del agente, verificación de peso, prueba de funcionalidad del mecanismo, recarga si corresponde y nueva etiqueta de servicio.</li>
+          <li><strong>Prueba hidráulica (cada 5 años):</strong> el recipiente se somete a presión hidrostática para detectar fisuras o debilitamientos del metal. Obligatoria para todos los extintores de recipiente a presión. Si el extintor no la pasa, se destruye: no se puede reparar ni rellenar.</li>
+          <li><strong>Recarga inmediata tras cualquier uso:</strong> aunque el extintor se haya usado solo 2 segundos. El agente extintor pierde la presión de propelente y no funciona en el siguiente incidente. Muchos accidentes graves ocurrieron con extintores que "habían quedado" de un uso anterior.</li>
+        </ul>
+
+        <div class="art-normativa-link">
+          <a href="https://www.argentina.gob.ar/normativa/nacional?search=decreto+351+1979" target="_blank" rel="noopener">Ingresá para leer el Dec. 351/79 (capítulo de protección contra incendios) completo →</a>
+        </div>
+
+        <div class="art-cta">
+          <h3>Auditamos tu sistema de extintores</h3>
+          <p>Relevamos la carga de fuego por sector, verificamos el tipo y cantidad de extintores, su estado de mantenimiento y la distribución según el Dec. 351/79. Entregamos el informe con las no conformidades y el plan de adecuación. Cobertura en CABA y GBA.</p>
+          <div class="cta-actions" style="margin-top:16px">
+            <a href="https://wa.me/5491133572984?text=Hola%2C%20necesito%20asesoramiento" class="btn-primary" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+            <a href="/servicios/empresas-industriales/gestion-normativa/" class="btn-outline">Ver servicio</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.article-wrap { max-width: 780px; }
+.article-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 32px; flex-wrap: wrap; }
+.art-cat { font-family: 'JetBrains Mono', monospace; font-size: .54rem; color: var(--dorado); background: rgba(201,162,39,0.09); border: 1px solid rgba(201,162,39,0.2); padding: 3px 9px; border-radius: 3px; letter-spacing: .5px; text-transform: uppercase; }
+.art-sep { color: rgba(255,255,255,.2); }
+.art-fecha, .art-tiempo { font-family: 'JetBrains Mono', monospace; font-size: .55rem; color: rgba(255,255,255,.3); }
+.article-body { display: flex; flex-direction: column; gap: 20px; }
+.article-lead { font-size: 16px; font-weight: 400; color: rgba(255,255,255,.75); line-height: 1.8; border-left: 3px solid var(--celeste); padding-left: 16px; }
+.article-body h2 { font-family: 'Bebas Neue', cursive; font-size: clamp(22px,3vw,30px); letter-spacing: 2px; color: #fff; margin-top: 12px; margin-bottom: 0; }
+.article-body p { font-size: 14px; font-weight: 300; color: rgba(255,255,255,.65); line-height: 1.85; }
+.article-body strong { color: rgba(255,255,255,.9); font-weight: 600; }
+.art-list { list-style: none; display: flex; flex-direction: column; gap: 8px; padding: 0; }
+.art-list li { display: flex; gap: 10px; font-size: 14px; font-weight: 300; color: rgba(255,255,255,.65); line-height: 1.7; }
+.art-list li::before { content: '›'; color: var(--celeste); font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+.art-tabla { background: rgba(0,24,72,0.6); border: 1px solid rgba(100,210,255,0.12); border-radius: 8px; overflow: hidden; }
+.art-tabla-header, .art-tabla-row { display: grid; gap: 12px; padding: 10px 16px; border-bottom: 1px solid rgba(255,255,255,.05); font-size: 12px; }
+.art-tabla-header { font-family: 'JetBrains Mono', monospace; font-size: .54rem; color: rgba(255,255,255,.3); letter-spacing: 1px; text-transform: uppercase; background: rgba(0,0,0,.2); }
+.art-tabla-row:last-child { border-bottom: none; }
+.art-tabla-row span { color: rgba(255,255,255,.6); font-weight: 300; line-height: 1.5; }
+.art-doc { color: #fff !important; font-weight: 600 !important; }
+.art-res { font-family: 'JetBrains Mono', monospace !important; font-size: .55rem !important; color: var(--dorado) !important; }
+.art-destacado { background: rgba(100,210,255,0.05); border: 1px solid rgba(100,210,255,0.15); border-left: 3px solid var(--celeste); border-radius: 0 6px 6px 0; padding: 14px 16px; font-size: 13px; color: rgba(255,255,255,.6); line-height: 1.7; }
+.art-destacado--warn { background: rgba(201,162,39,0.05); border-color: rgba(201,162,39,0.2); border-left-color: var(--dorado); }
+.art-destacado strong { color: rgba(255,255,255,.9); }
+.art-normativa-link { background: rgba(0,24,72,0.5); border: 1px solid rgba(100,210,255,0.2); border-radius: 6px; padding: 12px 16px; }
+.art-normativa-link a { color: #64d2ff; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: .72rem; letter-spacing: .5px; display: flex; align-items: center; gap: 8px; }
+.art-normativa-link a::before { content: '↗'; }
+.art-normativa-link a:hover { text-decoration: underline; }
+.art-cta { background: linear-gradient(135deg, var(--azul-navy), #002060); border: 1px solid rgba(100,210,255,0.15); border-radius: 10px; padding: 28px 24px; margin-top: 12px; }
+.art-cta h3 { font-family: 'Bebas Neue', cursive; font-size: 1.4rem; letter-spacing: 2px; color: #fff; margin-bottom: 8px; }
+.art-cta p { font-size: 13px; font-weight: 300; color: rgba(255,255,255,.45); line-height: 1.7; }
+@media (max-width: 640px) { .art-tabla-header, .art-tabla-row { grid-template-columns: 1fr; gap: 4px; } }
+</style>

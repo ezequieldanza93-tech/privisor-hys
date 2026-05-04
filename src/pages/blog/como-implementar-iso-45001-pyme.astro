@@ -1,0 +1,257 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Cómo implementar ISO 45001 en una PyME sin morir en el intento — Privisor HyS"
+  description="Guía práctica para implementar ISO 45001:2018 en PyMEs argentinas: diferencias con OHSAS 18001, los 10 puntos de la norma, documentos necesarios, roadmap de 6 a 12 meses y costo real."
+>
+  <section class="page-hero">
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span>
+      <a href="/blog/">Blog</a><span>/</span>
+      <span>ISO 45001 en PyMEs</span>
+    </nav>
+    <div class="page-hero-inner">
+      <div class="page-hero-badge">Gestión · ISO 45001:2018</div>
+      <h1>CÓMO IMPLEMENTAR ISO 45001<br><em>EN UNA PYME SIN MORIR EN EL INTENTO</em></h1>
+      <p>La ISO 45001 no es solo para multinacionales. Una PyME bien asesorada puede certificar en 12 meses y obtener ventajas reales: menos accidentes, mejor posición para licitaciones y un sistema de gestión que no depende de una sola persona.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="content-inner article-wrap">
+
+      <div class="article-meta">
+        <span class="art-cat">Gestión</span>
+        <span class="art-sep">·</span>
+        <span class="art-fecha">12 oct 2026</span>
+        <span class="art-sep">·</span>
+        <span class="art-tiempo">8 min lectura</span>
+      </div>
+
+      <div class="article-body">
+        <p class="article-lead">Hay dos mitos que rodean a la ISO 45001 en Argentina. El primero: que es solo para grandes empresas. El segundo: que es un sistema de papelería que no cambia nada en la práctica. Ambos son falsos. La ISO 45001 es una norma de gestión de riesgos laborales que puede implementarse —y certificarse— en PyMEs de 20 a 200 empleados con un plazo de 6 a 12 meses. Y cuando se hace bien, reduce accidentabilidad, mejora el clima interno y abre puertas en licitaciones privadas y públicas donde la certificación es requisito excluyente.</p>
+
+        <h2>Qué es la ISO 45001 y en qué se diferencia de OHSAS 18001</h2>
+        <p>La <strong>ISO 45001:2018</strong> es la primera norma internacional de sistemas de gestión de seguridad y salud en el trabajo desarrollada por ISO (Organización Internacional de Normalización). Reemplazó a la OHSAS 18001 —que fue un estándar privado del British Standards Institution— con vigencia desde 2018 y con un período de transición que venció en marzo de 2021. Las empresas que tenían OHSAS debían migrar; hoy ya no es posible certificar OHSAS.</p>
+
+        <div class="art-tabla">
+          <div class="art-tabla-header" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span>Aspecto</span>
+            <span>OHSAS 18001 (retirada)</span>
+            <span>ISO 45001:2018</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span class="art-doc">Origen</span>
+            <span>Consorcio BSI (privado)</span>
+            <span>ISO (organismo internacional de normalización)</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span class="art-doc">Estructura HLS</span>
+            <span>No (estructura propia)</span>
+            <span>Sí — compatible con ISO 9001 e ISO 14001</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span class="art-doc">Contexto y partes interesadas</span>
+            <span>No contemplado</span>
+            <span>Cláusula 4 — obligatorio analizar el contexto</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span class="art-doc">Liderazgo de la alta dirección</span>
+            <span>Mención genérica</span>
+            <span>Cláusula 5 — compromiso activo demostrable</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span class="art-doc">Participación de los trabajadores</span>
+            <span>Recomendada</span>
+            <span>Requisito explícito en cláusula 5.4</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span class="art-doc">Estado: 2026</span>
+            <span>Retirada — no certificable</span>
+            <span>Vigente — única opción de certificación</span>
+          </div>
+        </div>
+
+        <div class="art-normativa-link">
+          <a href="https://www.argentina.gob.ar/normativa/nacional?search=ley+19587" target="_blank" rel="noopener">Ingresá para leer la Ley 19.587 (Higiene y Seguridad en el Trabajo) completa →</a>
+        </div>
+
+        <h2>Los 10 puntos de la norma explicados de forma simple</h2>
+        <p>La ISO 45001 tiene una estructura de 10 cláusulas (High-Level Structure), compartida con ISO 9001 e ISO 14001. Esto facilita la implementación integrada. Lo que importa entender es qué exige cada cláusula en términos concretos:</p>
+
+        <ul class="art-list">
+          <li><strong>Cláusula 1 — Objeto y campo de aplicación:</strong> define qué cubre la norma. No genera requisitos propios.</li>
+          <li><strong>Cláusula 2 — Referencias normativas:</strong> no hay normativas externas referenciadas. Meramente formal.</li>
+          <li><strong>Cláusula 3 — Términos y definiciones:</strong> glosario de la norma. Hay que entender el lenguaje antes de implementar.</li>
+          <li><strong>Cláusula 4 — Contexto de la organización:</strong> entender qué factores externos (mercado, regulaciones, vecinos, clientes) e internos (cultura, recursos, estructura) afectan el sistema de gestión. También identificar las partes interesadas relevantes (trabajadores, sindicatos, ART, clientes, comunidad).</li>
+          <li><strong>Cláusula 5 — Liderazgo y participación de los trabajadores:</strong> la alta dirección debe demostrar compromiso activo: asistir a comités de seguridad, firmar la política, revisar el sistema anualmente. Y los trabajadores deben poder participar en la identificación de peligros y la investigación de accidentes.</li>
+          <li><strong>Cláusula 6 — Planificación:</strong> identificación de peligros, evaluación de riesgos y oportunidades, y definición de objetivos medibles. Es el núcleo técnico del sistema.</li>
+          <li><strong>Cláusula 7 — Apoyo:</strong> recursos, competencias, toma de conciencia, comunicación y documentación. Los procedimientos e instructivos van aquí.</li>
+          <li><strong>Cláusula 8 — Operación:</strong> control operacional: cómo se gestionan los peligros identificados en el día a día, gestión del cambio, contratistas y terceros.</li>
+          <li><strong>Cláusula 9 — Evaluación del desempeño:</strong> monitoreo, medición, auditoría interna y revisión por la dirección. El sistema debe verificarse periódicamente.</li>
+          <li><strong>Cláusula 10 — Mejora:</strong> no conformidades, acciones correctivas y mejora continua. El ciclo no termina en la certificación.</li>
+        </ul>
+
+        <h2>Qué documentos necesita una PyME para certificar</h2>
+        <p>La ISO 45001 es más flexible en documentación que la OHSAS 18001. No exige una lista cerrada de procedimientos documentados, sino que la organización determine qué documentación necesita para demostrar que el sistema funciona. En la práctica, para una PyME, los documentos mínimos son:</p>
+
+        <ul class="art-list">
+          <li><strong>Política de SST:</strong> una página, firmada por el máximo responsable, con compromisos concretos de cumplimiento legal, prevención de lesiones y mejora continua.</li>
+          <li><strong>Análisis de contexto y partes interesadas:</strong> documento que identifica factores internos y externos relevantes y las expectativas de las partes interesadas.</li>
+          <li><strong>Identificación de peligros y evaluación de riesgos:</strong> el documento central del sistema. Para una PyME industrial, puede organizarse por área o proceso.</li>
+          <li><strong>Objetivos de SST y planes de acción:</strong> metas medibles (accidentabilidad, índice de frecuencia, cumplimiento de capacitaciones) con responsables y fechas.</li>
+          <li><strong>Procedimientos operativos de control:</strong> instrucciones de trabajo para las tareas de mayor riesgo. No necesitan ser extensos: una hoja A4 por tarea con los pasos críticos es suficiente.</li>
+          <li><strong>Registros de capacitación, inspecciones y simulacros:</strong> evidencia de que el sistema se ejecuta. Sin registros, el sistema existe solo en papel.</li>
+          <li><strong>Procedimiento de investigación de incidentes:</strong> cómo se investiga cada accidente o casi-accidente, análisis de causa raíz y acción correctiva.</li>
+          <li><strong>Informe de auditoría interna y acta de revisión por la dirección:</strong> obligatorios antes de la auditoría de certificación.</li>
+        </ul>
+
+        <div class="art-destacado">
+          <strong>Sobre la documentación:</strong> el error más frecuente en PyMEs es crear documentos para satisfacer al auditor, no para guiar la operación. Un procedimiento que nadie lee ni sigue no es evidencia de sistema: es papel. La ISO 45001 evalúa si el sistema funciona en la realidad, no si los documentos son lindos.
+        </div>
+
+        <h2>Roadmap de implementación en 6-12 meses para PyMEs</h2>
+        <p>Una implementación realista para una PyME de 20 a 150 empleados tiene estas etapas:</p>
+
+        <div class="art-tabla">
+          <div class="art-tabla-header" style="grid-template-columns: 0.8fr 1fr 1.5fr;">
+            <span>Fase</span>
+            <span>Duración estimada</span>
+            <span>Entregables clave</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 0.8fr 1fr 1.5fr;">
+            <span class="art-doc">1. Diagnóstico GAP</span>
+            <span>2-4 semanas</span>
+            <span>Informe de brechas entre el estado actual y los requisitos ISO 45001</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 0.8fr 1fr 1.5fr;">
+            <span class="art-doc">2. Política y objetivos</span>
+            <span>2 semanas</span>
+            <span>Política firmada, objetivos medibles, asignación de responsabilidades</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 0.8fr 1fr 1.5fr;">
+            <span class="art-doc">3. Identificación de peligros y evaluación de riesgos</span>
+            <span>4-6 semanas</span>
+            <span>Matriz de riesgos por puesto/área, controles propuestos</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 0.8fr 1fr 1.5fr;">
+            <span class="art-doc">4. Procedimientos y documentación</span>
+            <span>4-6 semanas</span>
+            <span>Procedimientos operativos, instructivos de trabajo, registros</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 0.8fr 1fr 1.5fr;">
+            <span class="art-doc">5. Implementación y capacitación</span>
+            <span>6-8 semanas</span>
+            <span>Personal capacitado, sistema en operación, registros generados</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 0.8fr 1fr 1.5fr;">
+            <span class="art-doc">6. Auditoría interna</span>
+            <span>1-2 semanas</span>
+            <span>Informe de auditoría, no conformidades identificadas y cerradas</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 0.8fr 1fr 1.5fr;">
+            <span class="art-doc">7. Revisión por la dirección</span>
+            <span>1 semana</span>
+            <span>Acta firmada por la gerencia con decisiones de mejora</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 0.8fr 1fr 1.5fr;">
+            <span class="art-doc">8. Auditoría de certificación (etapas 1 y 2)</span>
+            <span>2-3 semanas</span>
+            <span>Certificado ISO 45001 emitido por organismo acreditado (IRAM, Bureau Veritas, SGS, etc.)</span>
+          </div>
+        </div>
+
+        <h2>Costo real de la certificación en Argentina</h2>
+        <p>El costo de implementar y certificar ISO 45001 en una PyME argentina tiene tres componentes:</p>
+
+        <ul class="art-list">
+          <li><strong>Consultoría de implementación:</strong> según el tamaño de la empresa y la distancia desde el estado actual, varía entre USD 2.500 y USD 8.000 para una PyME de hasta 100 empleados. Algunas consultoras ofrecen paquetes "llave en mano" que incluyen toda la documentación y el acompañamiento hasta la certificación.</li>
+          <li><strong>Auditoría de certificación:</strong> depende del organismo certificador y del número de empleados. Para PyMEs, los organismos acreditados en Argentina (IRAM, Bureau Veritas, SGS, TÜV Rheinland, DNV) cobran entre USD 1.500 y USD 4.000 por la auditoría inicial de 2 etapas.</li>
+          <li><strong>Mantenimiento anual:</strong> las auditorías de seguimiento (anuales) y la re-certificación (cada 3 años) tienen un costo de entre USD 800 y USD 2.000 por año, según el organismo y el alcance.</li>
+        </ul>
+
+        <p>En total, para una PyME de 30-80 empleados, una implementación completa hasta la primera certificación tiene un costo aproximado de USD 5.000 a USD 12.000, distribuido en el período de implementación.</p>
+
+        <h2>Diferencia entre cumplir legalmente (Ley 19.587) y tener ISO 45001</h2>
+        <p>Esta pregunta tiene una respuesta clara: cumplir con la Ley 19.587 y el Dec. 351/79 es el piso legal mínimo que toda empresa en Argentina debe alcanzar para no ser sancionada. La ISO 45001 es un sistema de gestión que va más allá del cumplimiento mínimo.</p>
+
+        <div class="art-tabla">
+          <div class="art-tabla-header" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span>Aspecto</span>
+            <span>Ley 19.587 / Dec. 351/79</span>
+            <span>ISO 45001:2018</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span class="art-doc">Naturaleza</span>
+            <span>Obligación legal — incumplir tiene consecuencias penales y civiles</span>
+            <span>Voluntaria — nadie te obliga, pero muchos clientes la piden</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span class="art-doc">Enfoque</span>
+            <span>Requisitos mínimos de condiciones de trabajo</span>
+            <span>Sistema de gestión de riesgos con mejora continua</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span class="art-doc">Verificación</span>
+            <span>Inspección de la SRT o de la ART</span>
+            <span>Auditoría por tercero independiente acreditado</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span class="art-doc">Resultado</span>
+            <span>Cumplimiento de la norma mínima</span>
+            <span>Evidencia de gestión sistemática de la seguridad</span>
+          </div>
+        </div>
+
+        <div class="art-destacado art-destacado--warn">
+          <strong>Importante:</strong> tener ISO 45001 NO exime del cumplimiento de la Ley 19.587, el Dec. 351/79 ni de ninguna normativa legal argentina. La certificación ISO no es un sustituto del marco legal: es un complemento. Una empresa puede tener ISO 45001 y aun así estar incumpliendo la normativa de la SRT si no tiene el legajo técnico actualizado, el RAR completado o las mediciones higiénicas realizadas.
+        </div>
+
+        <div class="art-cta">
+          <h3>Te acompañamos en la implementación y certificación ISO 45001</h3>
+          <p>Hacemos el diagnóstico inicial, desarrollamos toda la documentación del sistema, capacitamos al equipo interno, coordinamos la auditoría interna y te acompañamos hasta obtener el certificado. Experiencia con PyMEs industriales, logísticas y de servicios en el AMBA y GBA.</p>
+          <div class="cta-actions" style="margin-top:16px">
+            <a href="https://wa.me/5491133572984?text=Hola%2C%20necesito%20asesoramiento" class="btn-primary" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+            <a href="/servicios/empresas-industriales/sistemas-de-gestion/" class="btn-outline">Ver servicio</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.article-wrap { max-width: 780px; }
+.article-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 32px; flex-wrap: wrap; }
+.art-cat { font-family: 'JetBrains Mono', monospace; font-size: .54rem; color: var(--dorado); background: rgba(201,162,39,0.09); border: 1px solid rgba(201,162,39,0.2); padding: 3px 9px; border-radius: 3px; letter-spacing: .5px; text-transform: uppercase; }
+.art-sep { color: rgba(255,255,255,.2); }
+.art-fecha, .art-tiempo { font-family: 'JetBrains Mono', monospace; font-size: .55rem; color: rgba(255,255,255,.3); }
+.article-body { display: flex; flex-direction: column; gap: 20px; }
+.article-lead { font-size: 16px; font-weight: 400; color: rgba(255,255,255,.75); line-height: 1.8; border-left: 3px solid var(--celeste); padding-left: 16px; }
+.article-body h2 { font-family: 'Bebas Neue', cursive; font-size: clamp(22px,3vw,30px); letter-spacing: 2px; color: #fff; margin-top: 12px; margin-bottom: 0; }
+.article-body p { font-size: 14px; font-weight: 300; color: rgba(255,255,255,.65); line-height: 1.85; }
+.article-body strong { color: rgba(255,255,255,.9); font-weight: 600; }
+.art-list { list-style: none; display: flex; flex-direction: column; gap: 8px; padding: 0; }
+.art-list li { display: flex; gap: 10px; font-size: 14px; font-weight: 300; color: rgba(255,255,255,.65); line-height: 1.7; }
+.art-list li::before { content: '›'; color: var(--celeste); font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+.art-tabla { background: rgba(0,24,72,0.6); border: 1px solid rgba(100,210,255,0.12); border-radius: 8px; overflow: hidden; }
+.art-tabla-header, .art-tabla-row { display: grid; gap: 12px; padding: 10px 16px; border-bottom: 1px solid rgba(255,255,255,.05); font-size: 12px; }
+.art-tabla-header { font-family: 'JetBrains Mono', monospace; font-size: .54rem; color: rgba(255,255,255,.3); letter-spacing: 1px; text-transform: uppercase; background: rgba(0,0,0,.2); }
+.art-tabla-row:last-child { border-bottom: none; }
+.art-tabla-row span { color: rgba(255,255,255,.6); font-weight: 300; line-height: 1.5; }
+.art-doc { color: #fff !important; font-weight: 600 !important; }
+.art-res { font-family: 'JetBrains Mono', monospace !important; font-size: .55rem !important; color: var(--dorado) !important; }
+.art-destacado { background: rgba(100,210,255,0.05); border: 1px solid rgba(100,210,255,0.15); border-left: 3px solid var(--celeste); border-radius: 0 6px 6px 0; padding: 14px 16px; font-size: 13px; color: rgba(255,255,255,.6); line-height: 1.7; }
+.art-destacado--warn { background: rgba(201,162,39,0.05); border-color: rgba(201,162,39,0.2); border-left-color: var(--dorado); }
+.art-destacado strong { color: rgba(255,255,255,.9); }
+.art-normativa-link { background: rgba(0,24,72,0.5); border: 1px solid rgba(100,210,255,0.2); border-radius: 6px; padding: 12px 16px; }
+.art-normativa-link a { color: #64d2ff; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: .72rem; letter-spacing: .5px; display: flex; align-items: center; gap: 8px; }
+.art-normativa-link a::before { content: '↗'; }
+.art-normativa-link a:hover { text-decoration: underline; }
+.art-cta { background: linear-gradient(135deg, var(--azul-navy), #002060); border: 1px solid rgba(100,210,255,0.15); border-radius: 10px; padding: 28px 24px; margin-top: 12px; }
+.art-cta h3 { font-family: 'Bebas Neue', cursive; font-size: 1.4rem; letter-spacing: 2px; color: #fff; margin-bottom: 8px; }
+.art-cta p { font-size: 13px; font-weight: 300; color: rgba(255,255,255,.45); line-height: 1.7; }
+@media (max-width: 640px) { .art-tabla-header, .art-tabla-row { grid-template-columns: 1fr; gap: 4px; } }
+</style>

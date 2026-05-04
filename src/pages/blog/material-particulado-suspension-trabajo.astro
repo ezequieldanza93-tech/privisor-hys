@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Material particulado en suspensión: qué mide y cuándo tu empresa debe hacerlo — Privisor HyS"
+  description="Todo sobre la medición de material particulado en ambientes laborales según la Res. 295/03 en Argentina. Fracción total vs. respirable, técnicas NIOSH y sílice libre."
+>
+  <section class="page-hero">
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span>
+      <a href="/blog/">Blog</a><span>/</span>
+      <span>Material particulado en suspensión en el trabajo</span>
+    </nav>
+    <div class="page-hero-inner">
+      <div class="page-hero-badge">Mediciones · Res. 295/03</div>
+      <h1>MATERIAL PARTICULADO<br><em>EN SUSPENSIÓN</em></h1>
+      <p>El polvo invisible es el más peligroso: las partículas que llegan a los alvéolos no se ven ni se sienten, pero acumulan daño pulmonar irreversible. La Res. 295/03 establece cómo medirlo y cuándo actuar.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="content-inner article-wrap">
+
+      <div class="article-meta">
+        <span class="art-cat">Mediciones</span>
+        <span class="art-sep">·</span>
+        <span class="art-fecha">3 ago 2026</span>
+        <span class="art-sep">·</span>
+        <span class="art-tiempo">6 min lectura</span>
+      </div>
+
+      <div class="article-body">
+
+        <p class="article-lead">La silicosis mató a más trabajadores argentinos que muchos accidentes de trabajo juntos, y lo sigue haciendo. El polvo de sílice no irrita los ojos, no huele, no quema la garganta — simplemente se deposita en los pulmones y genera fibrosis irreversible durante años. Medir el material particulado no es un trámite: es la diferencia entre detectar el problema a tiempo o descubrirlo cuando ya no tiene solución.</p>
+
+        <h2>¿Qué es el material particulado en suspensión?</h2>
+        <p>El material particulado (MP) es el conjunto de partículas sólidas o líquidas de origen diverso que se encuentran suspendidas en el aire. En los ambientes de trabajo se genera por procesos mecánicos (corte, trituración, molienda, esmerilado), térmicos (soldadura, fundición, combustión) o por resuspensión de polvo depositado. Su tamaño varía desde fracciones de micrómetro hasta cientos de micrómetros.</p>
+        <p>Lo crítico desde el punto de vista de la salud no es solo la composición química del polvo, sino su <strong>tamaño aerodinámico</strong>: determina hasta dónde llega en el aparato respiratorio. Las partículas grandes (mayores a 10 μm) quedan atrapadas en la nariz y la tráquea. Las menores de 4 μm llegan a los bronquiolos y alvéolos, donde el organismo no puede eliminarlas eficientemente y se acumula daño progresivo.</p>
+
+        <h2>Fracción total vs. fracción respirable</h2>
+        <p>La normativa distingue dos fracciones de muestreo con significados distintos:</p>
+
+        <div class="art-tabla">
+          <div class="art-tabla-header" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span>Parámetro</span>
+            <span>Fracción total (PNRT)</span>
+            <span>Fracción respirable (PRRT)</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span class="art-doc">Tamaño capturado</span>
+            <span>Todas las partículas inhalables (&lt; 100 μm)</span>
+            <span>Partículas &lt; 10 μm (fracción alveolar)</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span class="art-doc">Zona de depósito</span>
+            <span>Nariz, boca, tráquea, bronquios</span>
+            <span>Alvéolos pulmonares</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span class="art-doc">Método de muestreo</span>
+            <span>NIOSH 0500 — filtro PVC gravimétrico</span>
+            <span>NIOSH 0600 — ciclón + filtro PVC</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span class="art-doc">Valor límite (polvo inerte)</span>
+            <span class="art-res">10 mg/m³</span>
+            <span class="art-res">3 mg/m³</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span class="art-doc">Relevancia</span>
+            <span>Evaluación general de contaminación</span>
+            <span>Evaluación de riesgo neumoconiosis</span>
+          </div>
+        </div>
+
+        <p>Para la mayoría de los procesos de riesgo (cerámica, silicosis, neumoconiosis del minero del carbón), el parámetro relevante es la <strong>fracción respirable</strong>. Medir solo la fracción total subestima gravemente el riesgo real en esos sectores.</p>
+
+        <div class="art-destacado">
+          <strong>Regla práctica:</strong> si el proceso genera polvo visible, ya hay fracción respirable. El polvo fino suspendido en el aire que se ve con un rayo de luz lateral (efecto Tyndall) indica presencia de partículas en el rango 1-10 μm, exactamente las más peligrosas.
+        </div>
+
+        <h2>Técnicas de muestreo: NIOSH 500 y 600</h2>
+        <p>Las dos técnicas de referencia aprobadas por la normativa argentina —derivadas de los métodos de NIOSH— son:</p>
+        <ul class="art-list">
+          <li><strong>NIOSH 0500 (fracción total):</strong> el trabajador lleva un portafiltros abierto con filtro de PVC de 5 μm de poro, a un caudal de 1,7 L/min. Al final de la jornada el filtro se pesa antes y después en balanza analítica de precisión. La diferencia de masa dividida por el volumen de aire muestreado da la concentración en mg/m³.</li>
+          <li><strong>NIOSH 0600 (fracción respirable):</strong> usa un ciclón (Dorr-Oliver o Higgins-Dewell) delante del filtro. El ciclón separa aerodinámicamente las partículas grandes antes de que lleguen al filtro, que solo retiene las menores de ~4 μm con la curva de corte de la ACGIH. El resto del procedimiento es gravimétrico, igual que el 0500.</li>
+        </ul>
+        <p>El muestreo es personal (el equipo va pegado al trabajador en la zona de respiración) durante toda la jornada o al menos 25 % de ella. Los filtros deben equilibrarse 24 horas a temperatura y humedad controladas antes de la pesada. El análisis puede completarse con difracción de rayos X (DRX) para cuantificar el contenido de sílice libre cristalina.</p>
+
+        <h2>Sílice libre y humos de soldadura: los casos más críticos</h2>
+        <p>Dentro del universo de polvos industriales, dos representan el mayor riesgo por la gravedad de sus efectos y la frecuencia de exposición:</p>
+
+        <p><strong>Sílice libre cristalina (cuarzo):</strong> está presente en arena, granito, pizarra, ladrillo refractario, cerámica, cemento, hormigón y materiales de construcción en general. La enfermedad que produce —la silicosis— genera fibrosis pulmonar progresiva e irreversible, eleva el riesgo de tuberculosis y es un carcinógeno IARC Grupo 1. El valor límite de la Res. 295/03 para sílice respirable es de <strong>0,025 mg/m³</strong> para cuarzo y <strong>0,05 mg/m³</strong> para cristobalita. Son valores extremadamente bajos: requieren técnicas de muestreo muy sensibles.</p>
+
+        <p><strong>Humos de soldadura:</strong> se generan por la condensación de vapores metálicos en el arco eléctrico. Contienen óxidos de hierro, manganeso, cromo, níquel y otros metales según el electrodo y el material base. La IARC los clasificó en 2023 como carcinógenos del Grupo 1 para cáncer de pulmón. El valor límite en Argentina es de <strong>1 mg/m³</strong> para humos de soldadura en general, con límites más estrictos para cromo hexavalente (0,01 mg/m³) y compuestos de manganeso.</p>
+
+        <div class="art-destacado art-destacado--warn">
+          <strong>Atención — sectores de alto riesgo silicosis:</strong> canteras, demolición, fabricación de cerámicos y ladrillos refractarios, sandblasting, fabricación de prótesis dentales, corte de granito y mármol. En estos sectores el muestreo de sílice respirable es prioritario y los niveles encontrados suelen superar ampliamente el TLV.
+        </div>
+
+        <h2>Marco legal en Argentina</h2>
+        <p>El marco normativo para material particulado descansa sobre dos pilares:</p>
+        <ul class="art-list">
+          <li><strong>Dec. 351/79 Anexo III y IV:</strong> establece los valores límite para polvos de diferente naturaleza química (sílice libre, asbesto, polvo de madera, polvo inerte) y obliga a los empleadores a evaluar y controlar la exposición.</li>
+          <li><strong>Res. SRT 295/03:</strong> adopta los TLV de la ACGIH actualizados y los métodos de muestreo y análisis aceptados. Es la referencia vigente para la determinación de valores límite por sustancia.</li>
+        </ul>
+        <p>La frecuencia de medición no está fijada explícitamente, pero la práctica aceptada por la SRT es <strong>cada 2 años</strong> como mínimo, o ante cambios en el proceso, incorporación de nuevas materias primas pulverulentas, modificaciones del sistema de ventilación o resultados previos que hayan superado el 50 % del valor límite.</p>
+        <p>El incumplimiento puede derivar en observaciones del legajo técnico por parte de la ART, multas de la SRT o clausura preventiva por parte de la autoridad de aplicación provincial, además de la responsabilidad civil y penal ante enfermedades profesionales comprobadas.</p>
+
+        <div class="art-normativa-link">
+          <a href="https://www.argentina.gob.ar/normativa/nacional?search=resoluci%C3%B3n+295+2003" target="_blank" rel="noopener">Ingresá para leer la Res. 295/03 completa →</a>
+        </div>
+
+        <div class="art-cta">
+          <h3>Medición de material particulado y sílice en tu empresa</h3>
+          <p>Realizamos muestreo gravimétrico de fracción total y respirable con análisis de sílice libre por DRX. Protocolo conforme Res. 295/03. Cubrimos CABA y GBA.</p>
+          <div class="cta-actions" style="margin-top:16px">
+            <a href="https://wa.me/5491133572984?text=Hola%2C%20necesito%20asesoramiento" class="btn-primary" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+            <a href="/servicios/empresas-industriales/mediciones/" class="btn-outline">Ver servicio</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.article-wrap { max-width: 780px; }
+.article-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 32px; flex-wrap: wrap; }
+.art-cat { font-family: 'JetBrains Mono', monospace; font-size: .54rem; color: var(--dorado); background: rgba(201,162,39,0.09); border: 1px solid rgba(201,162,39,0.2); padding: 3px 9px; border-radius: 3px; letter-spacing: .5px; text-transform: uppercase; }
+.art-sep { color: rgba(255,255,255,.2); }
+.art-fecha, .art-tiempo { font-family: 'JetBrains Mono', monospace; font-size: .55rem; color: rgba(255,255,255,.3); }
+.article-body { display: flex; flex-direction: column; gap: 20px; }
+.article-lead { font-size: 16px; font-weight: 400; color: rgba(255,255,255,.75); line-height: 1.8; border-left: 3px solid var(--celeste); padding-left: 16px; }
+.article-body h2 { font-family: 'Bebas Neue', cursive; font-size: clamp(22px,3vw,30px); letter-spacing: 2px; color: #fff; margin-top: 12px; margin-bottom: 0; }
+.article-body p { font-size: 14px; font-weight: 300; color: rgba(255,255,255,.65); line-height: 1.85; }
+.article-body strong { color: rgba(255,255,255,.9); font-weight: 600; }
+.art-list { list-style: none; display: flex; flex-direction: column; gap: 8px; padding: 0; }
+.art-list li { display: flex; gap: 10px; font-size: 14px; font-weight: 300; color: rgba(255,255,255,.65); line-height: 1.7; }
+.art-list li::before { content: '›'; color: var(--celeste); font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+.art-tabla { background: rgba(0,24,72,0.6); border: 1px solid rgba(100,210,255,0.12); border-radius: 8px; overflow: hidden; }
+.art-tabla-header, .art-tabla-row { display: grid; gap: 12px; padding: 10px 16px; border-bottom: 1px solid rgba(255,255,255,.05); font-size: 12px; }
+.art-tabla-header { font-family: 'JetBrains Mono', monospace; font-size: .54rem; color: rgba(255,255,255,.3); letter-spacing: 1px; text-transform: uppercase; background: rgba(0,0,0,.2); }
+.art-tabla-row:last-child { border-bottom: none; }
+.art-tabla-row span { color: rgba(255,255,255,.6); font-weight: 300; line-height: 1.5; }
+.art-doc { color: #fff !important; font-weight: 600 !important; }
+.art-res { font-family: 'JetBrains Mono', monospace !important; font-size: .55rem !important; color: var(--dorado) !important; }
+.art-destacado { background: rgba(100,210,255,0.05); border: 1px solid rgba(100,210,255,0.15); border-left: 3px solid var(--celeste); border-radius: 0 6px 6px 0; padding: 14px 16px; font-size: 13px; color: rgba(255,255,255,.6); line-height: 1.7; }
+.art-destacado--warn { background: rgba(201,162,39,0.05); border-color: rgba(201,162,39,0.2); border-left-color: var(--dorado); }
+.art-destacado strong { color: rgba(255,255,255,.9); }
+.art-normativa-link { background: rgba(0,24,72,0.5); border: 1px solid rgba(100,210,255,0.2); border-radius: 6px; padding: 12px 16px; }
+.art-normativa-link a { color: #64d2ff; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: .72rem; letter-spacing: .5px; display: flex; align-items: center; gap: 8px; }
+.art-normativa-link a::before { content: '↗'; }
+.art-normativa-link a:hover { text-decoration: underline; }
+.art-cta { background: linear-gradient(135deg, var(--azul-navy), #002060); border: 1px solid rgba(100,210,255,0.15); border-radius: 10px; padding: 28px 24px; margin-top: 12px; }
+.art-cta h3 { font-family: 'Bebas Neue', cursive; font-size: 1.4rem; letter-spacing: 2px; color: #fff; margin-bottom: 8px; }
+.art-cta p { font-size: 13px; font-weight: 300; color: rgba(255,255,255,.45); line-height: 1.7; }
+@media (max-width: 640px) { .art-tabla-header, .art-tabla-row { grid-template-columns: 1fr; gap: 4px; } }
+</style>

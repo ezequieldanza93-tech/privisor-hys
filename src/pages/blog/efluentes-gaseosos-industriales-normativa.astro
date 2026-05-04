@@ -1,0 +1,224 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Efluentes gaseosos industriales: normativa, métodos de medición y límites en Argentina — Privisor HyS"
+  description="Guía sobre efluentes gaseosos industriales en Argentina: Ley 25.675, OPDS PBA, muestreo isocinético, límites por categoría, diferencia entre monitoreo continuo y periódico y sanciones."
+>
+  <section class="page-hero">
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span>
+      <a href="/blog/">Blog</a><span>/</span>
+      <span>Efluentes gaseosos industriales</span>
+    </nav>
+    <div class="page-hero-inner">
+      <div class="page-hero-badge">Medio Ambiente · Ley 25.675 + OPDS PBA</div>
+      <h1>EFLUENTES GASEOSOS INDUSTRIALES<br><em>NORMATIVA, MEDICIÓN Y LÍMITES EN ARGENTINA</em></h1>
+      <p>Las emisiones gaseosas de tu chimenea tienen límites legales y métodos de medición específicos. Conocer qué se mide, cómo se mide y a quién reportar es el primer paso para cumplir con la normativa ambiental industrial en Argentina.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="content-inner article-wrap">
+
+      <div class="article-meta">
+        <span class="art-cat">Medio Ambiente</span>
+        <span class="art-sep">·</span>
+        <span class="art-fecha">19 oct 2026</span>
+        <span class="art-sep">·</span>
+        <span class="art-tiempo">7 min lectura</span>
+      </div>
+
+      <div class="article-body">
+        <p class="article-lead">Una industria que quema combustible, calcina materiales, procesa polímeros o usa solventes emite al aire compuestos que tienen límites legales. El problema es que muchas empresas desconocen qué están emitiendo, en qué cantidad y qué autoridad tiene jurisdicción sobre sus emisiones. En Argentina, la gestión de efluentes gaseosos industriales involucra normativa nacional (Ley 25.675) y provincial (en PBA, el OPDS tiene competencia sobre las emisiones), con métodos de medición técnicamente exigentes que no se pueden improvisar.</p>
+
+        <h2>Qué son los efluentes gaseosos: emisiones puntuales vs. fugitivas</h2>
+        <p>Los efluentes gaseosos industriales son las mezclas de gases, vapores y partículas que un establecimiento emite a la atmósfera como resultado de sus procesos productivos. La distinción más importante desde el punto de vista de la medición y el control es entre emisiones puntuales y emisiones fugitivas:</p>
+
+        <p><strong>Emisiones puntuales:</strong> salen por una chimenea, conducto o stack de geometría definida. Son las emisiones "controlables": el flujo está concentrado, tiene una sección transversal conocida y puede medirse con técnicas estandarizadas. Ejemplos: gases de combustión de una caldera, humos de un horno de fundición, gases de una torre de absorción química.</p>
+
+        <p><strong>Emisiones fugitivas:</strong> escapan al ambiente desde fuentes difusas que no están conectadas a un punto de emisión definido. Son más difíciles de cuantificar. Ejemplos: evaporación desde tanques abiertos de solventes, emisiones de válvulas y bridas en industrias de proceso, ventilación de cámaras de mezcla o reactores no herméticos, emanaciones de pilas de material a granel en intemperie.</p>
+
+        <div class="art-destacado">
+          <strong>Diferencia práctica:</strong> las emisiones puntuales se regulan mediante muestreo en chimenea y se expresan en mg/Nm³ o kg/hora. Las emisiones fugitivas se regulan mediante límites de concentración en el ambiente perimetral de la planta, evaluados con muestreo ambiental (difusivo o activo) en los límites del predio.
+        </div>
+
+        <h2>Principales contaminantes industriales en emisiones gaseosas</h2>
+        <p>Los contaminantes prioritarios en emisiones industriales se agrupan según su origen y sus efectos:</p>
+
+        <div class="art-tabla">
+          <div class="art-tabla-header" style="grid-template-columns: 1.2fr 1fr 1.5fr;">
+            <span>Contaminante</span>
+            <span>Fuente típica</span>
+            <span>Efecto principal</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1.2fr 1fr 1.5fr;">
+            <span class="art-doc">Material particulado (PM10, PM2.5)</span>
+            <span>Hornos, calderas, minería, cementera</span>
+            <span>Enfermedades respiratorias, depósito en suelo y vegetación</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1.2fr 1fr 1.5fr;">
+            <span class="art-doc">Dióxido de azufre (SO₂)</span>
+            <span>Combustión de fuel-oil y carbón, fundiciones de cobre</span>
+            <span>Lluvia ácida, irritación respiratoria, daño a ecosistemas</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1.2fr 1fr 1.5fr;">
+            <span class="art-doc">Óxidos de nitrógeno (NOx)</span>
+            <span>Combustión a alta temperatura, plantas de ácido nítrico</span>
+            <span>Smog fotoquímico, lluvia ácida, ozono troposférico</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1.2fr 1fr 1.5fr;">
+            <span class="art-doc">Monóxido de carbono (CO)</span>
+            <span>Combustión incompleta en calderas, hornos y motores</span>
+            <span>Tóxico agudo, indicador de ineficiencia en la combustión</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1.2fr 1fr 1.5fr;">
+            <span class="art-doc">Compuestos Orgánicos Volátiles (COVs)</span>
+            <span>Pinturas, barnices, industria petroquímica, imprentas</span>
+            <span>Precursores de ozono troposférico, muchos son tóxicos o carcinógenos</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1.2fr 1fr 1.5fr;">
+            <span class="art-doc">Metales pesados (Pb, Cd, Hg, As, Cr)</span>
+            <span>Fundiciones, incineración de residuos, galvanoplastia</span>
+            <span>Bioacumulación, toxicidad crónica, carcinogenicidad</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1.2fr 1fr 1.5fr;">
+            <span class="art-doc">Cloruro de hidrógeno (HCl) y fluoruro de hidrógeno (HF)</span>
+            <span>Incineración de plásticos clorados, industria de fluoruros</span>
+            <span>Corrosión, afectación de vías respiratorias, daño a vegetación</span>
+          </div>
+        </div>
+
+        <h2>Marco normativo: Ley 25.675 y regulación provincial OPDS en PBA</h2>
+        <p>El marco normativo de las emisiones gaseosas industriales en Argentina tiene una estructura federal:</p>
+
+        <p><strong>Nivel nacional — Ley 25.675 (Ley General del Ambiente):</strong> establece los principios de la política ambiental nacional (prevención, precautorio, sustentabilidad, responsabilidad) y la obligación de Evaluación de Impacto Ambiental para actividades de potencial impacto. No fija límites numéricos de emisión directamente, sino que establece el marco dentro del cual cada provincia regula. La Ley 24.051 de Residuos Peligrosos también tiene relevancia cuando las emisiones contienen sustancias de la categoría Y de esa norma.</p>
+
+        <p><strong>Nivel provincial — Provincia de Buenos Aires (OPDS):</strong> el Organismo Provincial para el Desarrollo Sostenible es la autoridad de aplicación en materia ambiental en PBA. Sus resoluciones específicas sobre emisiones gaseosas establecen:</p>
+
+        <ul class="art-list">
+          <li><strong>Categorización de industrias:</strong> las industrias se clasifican según su potencial contaminante (categorías 1, 2 y 3). Las de mayor categoría tienen requisitos más estrictos de monitoreo y control.</li>
+          <li><strong>Límites de emisión por contaminante y categoría:</strong> expresados en mg/Nm³ (miligramos por metro cúbico normal, es decir, corregido a condiciones estándar de temperatura y presión).</li>
+          <li><strong>Periodicidad del monitoreo:</strong> varía según la categoría. Industrias de alta categoría pueden requerir monitoreo continuo (CEMS — Continuous Emission Monitoring System); las de menor categoría, monitoreo periódico semestral o anual.</li>
+          <li><strong>Comunicación de resultados:</strong> los informes de monitoreo deben presentarse al OPDS en los plazos establecidos. El incumplimiento genera intimaciones y eventual sanción.</li>
+        </ul>
+
+        <div class="art-normativa-link">
+          <a href="https://www.argentina.gob.ar/normativa/nacional?search=ley+25675" target="_blank" rel="noopener">Ingresá para leer la Ley 25.675 (Ley General del Ambiente) completa →</a>
+        </div>
+
+        <div class="art-normativa-link">
+          <a href="https://www.argentina.gob.ar/normativa/nacional?search=resoluci%C3%B3n+OPDS+emisiones+gaseosas" target="_blank" rel="noopener">Ingresá para buscar resoluciones del OPDS sobre emisiones gaseosas →</a>
+        </div>
+
+        <h2>Cómo se realizan los muestreos en chimenea</h2>
+        <p>El muestreo de emisiones en chimenea es una tarea técnicamente compleja que solo puede realizar un laboratorio acreditado (IRAM ISO/IEC 17025) con equipamiento específico. Los dos métodos principales son:</p>
+
+        <p><strong>Muestreo isocinético (para material particulado):</strong> es el método de referencia para medir partículas en suspensión en gases de chimenea. La clave del método es que el gas de muestreo debe extraerse a la misma velocidad que el gas del conducto ("isocinéticamente"), para no alterar la distribución de las partículas en el flujo. Un muestreo no isocinético sobreestima o subestima la concentración de partículas según si la velocidad de muestreo es mayor o menor que la del gas. El procedimiento incluye:</p>
+
+        <ul class="art-list">
+          <li>Medición de la velocidad del gas en el conducto (pitot-S o pitot tipo L).</li>
+          <li>Cálculo del caudal de muestreo necesario para garantizar isocinetismo.</li>
+          <li>Extracción de la muestra a través de un tren de muestreo con filtro y condensador.</li>
+          <li>Pesaje gravimétrico del material retenido en laboratorio y cálculo de concentración.</li>
+        </ul>
+
+        <p><strong>Muestreo semiautomático o manual para gases (SO₂, NOx, CO, HCl, COVs):</strong> para gases, el muestreo isocinético no es necesario porque los gases se distribuyen homogéneamente en el flujo. Se extraen muestras con bombas de muestreo conectadas a tubos adsorbentes, soluciones de absorción o bolsas Tedlar, y se analizan en laboratorio por métodos instrumentales (cromatografía gaseosa, espectroscopía de absorción atómica, espectrofotometría).</p>
+
+        <div class="art-destacado art-destacado--warn">
+          <strong>Punto de muestreo:</strong> la selección del punto de muestreo en la chimenea no es arbitraria. Las normas establecen criterios geométricos para asegurar que el flujo sea desarrollado y representativo (mínimo 8 diámetros aguas abajo y 2 diámetros aguas arriba de perturbaciones como codos, expansiones o contracciones). Si el punto de muestreo no es adecuado, los resultados pueden ser rechazados por el organismo de control.
+        </div>
+
+        <h2>Diferencia entre monitoreo continuo (CEMS) y periódico</h2>
+        <p>La elección entre monitoreo continuo y periódico no depende del presupuesto de la empresa, sino de los requisitos que establece la autoridad de aplicación según la categoría de la industria:</p>
+
+        <div class="art-tabla">
+          <div class="art-tabla-header" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span>Característica</span>
+            <span>Monitoreo continuo (CEMS)</span>
+            <span>Monitoreo periódico</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span class="art-doc">Frecuencia</span>
+            <span>Continuo — datos en tiempo real cada 15 min o 1 hora</span>
+            <span>Semestral o anual según categoría</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span class="art-doc">Inversión</span>
+            <span>Alta (equipos de USD 20.000 a USD 150.000 según parámetros)</span>
+            <span>Sin inversión en equipo — costo por campaña de muestreo</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span class="art-doc">Información</span>
+            <span>Detección inmediata de excedencias, tendencias, eficiencia de control</span>
+            <span>Foto instantánea en el momento del muestreo</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span class="art-doc">Quién lo exige</span>
+            <span>Industrias de alto impacto: cementeras, centrales térmicas, grandes incineradoras</span>
+            <span>Industrias de impacto moderado: categorías 1 y 2 OPDS</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span class="art-doc">Mantenimiento</span>
+            <span>Calibración, limpieza y QA/QC permanentes — requiere personal dedicado</span>
+            <span>Solo durante las campañas de muestreo</span>
+          </div>
+        </div>
+
+        <h2>Qué pasa cuando se superan los límites de emisión</h2>
+        <p>El incumplimiento de los límites de emisión tiene consecuencias progresivas, similares en estructura a las del incumplimiento de efluentes líquidos pero con sus particularidades:</p>
+
+        <ul class="art-list">
+          <li><strong>Intimación y plan de adecuación:</strong> el OPDS o el organismo equivalente intima a la empresa a presentar un plan de mejoras con cronograma. Puede incluir la instalación de equipos de control (filtros de mangas, precipitadores electrostáticos, scrubbers) o la modificación del proceso.</li>
+          <li><strong>Multa:</strong> las multas en PBA se calculan según la Ley 11.723 y sus actualizaciones. El incumplimiento reiterado multiplica la sanción base.</li>
+          <li><strong>Clausura de la fuente emisora:</strong> si la chimenea o el proceso que genera la emisión no puede adecuarse en el plazo fijado y la emisión supera ampliamente los límites, el OPDS puede ordenar la clausura preventiva del proceso emisor (no necesariamente de toda la planta, pero sí del equipo o proceso involucrado).</li>
+          <li><strong>Responsabilidad civil y penal:</strong> si la emisión causa daño a terceros documentable (afectación de cultivos, de salud de vecinos, de ecosistemas), la empresa puede enfrentar demandas civiles. La Ley 25.675 establece la responsabilidad objetiva en materia ambiental: no es necesario probar la intención de dañar, solo el nexo causal entre la emisión y el daño.</li>
+        </ul>
+
+        <div class="art-cta">
+          <h3>Gestionamos el monitoreo de tus emisiones gaseosas</h3>
+          <p>Coordinamos las campañas de muestreo en chimenea con laboratorios acreditados, interpretamos los resultados frente a los límites del OPDS y la Ley 25.675, y elaboramos los informes para presentar ante la autoridad. Si estás fuera de límite, te acompañamos en el plan de adecuación.</p>
+          <div class="cta-actions" style="margin-top:16px">
+            <a href="https://wa.me/5491133572984?text=Hola%2C%20necesito%20asesoramiento" class="btn-primary" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+            <a href="/servicios/empresas-industriales/gestion-ambiental/" class="btn-outline">Ver servicio</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.article-wrap { max-width: 780px; }
+.article-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 32px; flex-wrap: wrap; }
+.art-cat { font-family: 'JetBrains Mono', monospace; font-size: .54rem; color: var(--dorado); background: rgba(201,162,39,0.09); border: 1px solid rgba(201,162,39,0.2); padding: 3px 9px; border-radius: 3px; letter-spacing: .5px; text-transform: uppercase; }
+.art-sep { color: rgba(255,255,255,.2); }
+.art-fecha, .art-tiempo { font-family: 'JetBrains Mono', monospace; font-size: .55rem; color: rgba(255,255,255,.3); }
+.article-body { display: flex; flex-direction: column; gap: 20px; }
+.article-lead { font-size: 16px; font-weight: 400; color: rgba(255,255,255,.75); line-height: 1.8; border-left: 3px solid var(--celeste); padding-left: 16px; }
+.article-body h2 { font-family: 'Bebas Neue', cursive; font-size: clamp(22px,3vw,30px); letter-spacing: 2px; color: #fff; margin-top: 12px; margin-bottom: 0; }
+.article-body p { font-size: 14px; font-weight: 300; color: rgba(255,255,255,.65); line-height: 1.85; }
+.article-body strong { color: rgba(255,255,255,.9); font-weight: 600; }
+.art-list { list-style: none; display: flex; flex-direction: column; gap: 8px; padding: 0; }
+.art-list li { display: flex; gap: 10px; font-size: 14px; font-weight: 300; color: rgba(255,255,255,.65); line-height: 1.7; }
+.art-list li::before { content: '›'; color: var(--celeste); font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+.art-tabla { background: rgba(0,24,72,0.6); border: 1px solid rgba(100,210,255,0.12); border-radius: 8px; overflow: hidden; }
+.art-tabla-header, .art-tabla-row { display: grid; gap: 12px; padding: 10px 16px; border-bottom: 1px solid rgba(255,255,255,.05); font-size: 12px; }
+.art-tabla-header { font-family: 'JetBrains Mono', monospace; font-size: .54rem; color: rgba(255,255,255,.3); letter-spacing: 1px; text-transform: uppercase; background: rgba(0,0,0,.2); }
+.art-tabla-row:last-child { border-bottom: none; }
+.art-tabla-row span { color: rgba(255,255,255,.6); font-weight: 300; line-height: 1.5; }
+.art-doc { color: #fff !important; font-weight: 600 !important; }
+.art-res { font-family: 'JetBrains Mono', monospace !important; font-size: .55rem !important; color: var(--dorado) !important; }
+.art-destacado { background: rgba(100,210,255,0.05); border: 1px solid rgba(100,210,255,0.15); border-left: 3px solid var(--celeste); border-radius: 0 6px 6px 0; padding: 14px 16px; font-size: 13px; color: rgba(255,255,255,.6); line-height: 1.7; }
+.art-destacado--warn { background: rgba(201,162,39,0.05); border-color: rgba(201,162,39,0.2); border-left-color: var(--dorado); }
+.art-destacado strong { color: rgba(255,255,255,.9); }
+.art-normativa-link { background: rgba(0,24,72,0.5); border: 1px solid rgba(100,210,255,0.2); border-radius: 6px; padding: 12px 16px; }
+.art-normativa-link a { color: #64d2ff; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: .72rem; letter-spacing: .5px; display: flex; align-items: center; gap: 8px; }
+.art-normativa-link a::before { content: '↗'; }
+.art-normativa-link a:hover { text-decoration: underline; }
+.art-cta { background: linear-gradient(135deg, var(--azul-navy), #002060); border: 1px solid rgba(100,210,255,0.15); border-radius: 10px; padding: 28px 24px; margin-top: 12px; }
+.art-cta h3 { font-family: 'Bebas Neue', cursive; font-size: 1.4rem; letter-spacing: 2px; color: #fff; margin-bottom: 8px; }
+.art-cta p { font-size: 13px; font-weight: 300; color: rgba(255,255,255,.45); line-height: 1.7; }
+@media (max-width: 640px) { .art-tabla-header, .art-tabla-row { grid-template-columns: 1fr; gap: 4px; } }
+</style>
