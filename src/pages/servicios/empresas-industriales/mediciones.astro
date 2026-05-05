@@ -42,7 +42,7 @@ const mediciones = [
   <section class="content-section">
     <div class="content-inner">
       <div class="kicker kicker--left">7 tipos de mediciones</div>
-      <h2 style="font-size:clamp(28px,4vw,48px);letter-spacing:2px;color:#fff;margin-bottom:40px;">MEDICIONES QUE <em style="font-style:normal;background:linear-gradient(90deg,#64d2ff,#4dc8f5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">REALIZAMOS</em></h2>
+      <h2 style="font-size:clamp(28px,4vw,48px);letter-spacing:2px;color:var(--gris-1);margin-bottom:40px;">MEDICIONES QUE <em style="font-style:normal;color:var(--verde);">REALIZAMOS</em></h2>
 
       <div class="cards-grid">
         {mediciones.map(m => (
@@ -67,7 +67,7 @@ const mediciones = [
       </div>
 
       <div class="cta-banner">
-        <h2>SOLICITÁ TUS <em style="font-style:normal;background:linear-gradient(90deg,#64d2ff,#4dc8f5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">MEDICIONES</em></h2>
+        <h2>SOLICITÁ TUS <em style="font-style:normal;background:linear-gradient(90deg,var(--verde),var(--verde));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">MEDICIONES</em></h2>
         <p>Coordinamos la visita técnica en el horario que mejor te convenga, incluso fuera de hora si tu proceso productivo lo requiere.</p>
         <div class="cta-actions">
           <a href="https://wa.me/5491123496789" class="btn-primary" target="_blank" rel="noopener">💬 Pedir cotización</a>
@@ -82,7 +82,7 @@ const mediciones = [
 .info-box {
   background: rgba(100,210,255,0.04);
   border: 1px solid var(--borde);
-  border-left: 3px solid #64d2ff;
+  border-left: 3px solid var(--verde);
   border-radius: 8px;
   padding: 28px 32px;
   margin-top: 40px;
@@ -105,5 +105,5 @@ const mediciones = [
   position: relative;
   line-height: 1.55;
 }
-.info-box li::before { content: '✓'; position: absolute; left: 0; color: #64d2ff; font-size: .7rem; }
+.info-box li::before { content: '✓'; position: absolute; left: 0; color: var(--verde); font-size: .7rem; }
 </style>

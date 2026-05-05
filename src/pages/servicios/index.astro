@@ -88,49 +88,54 @@ const sectores = [
   gap: 20px;
 }
 .sector-full-card {
-  background: #001848;
-  border: 2px solid var(--verde-borde);
+  background: var(--blanco);
+  border: 1px solid var(--borde);
   border-radius: 12px;
   padding: 32px 28px;
   display: flex;
   flex-direction: column;
   gap: 14px;
   transition: all .3s;
+  text-decoration: none;
 }
 .sector-full-card:hover {
-  border-color: rgba(100,210,255,0.35);
+  border-color: var(--verde);
   transform: translateY(-3px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+  box-shadow: 0 16px 40px rgba(0,0,0,.08);
 }
 .sfc-header { display: flex; align-items: center; gap: 12px; }
 .sfc-icon { font-size: 2.2rem; }
 .sfc-badge {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: .52rem;
-  color: rgba(201,162,39,.85);
-  background: rgba(201,162,39,0.07);
-  border: 1px solid rgba(201,162,39,0.22);
+  font-weight: 600;
+  color: var(--verde-dark);
+  background: var(--verde-light);
+  border: 1px solid var(--verde-borde);
   padding: 4px 9px;
   border-radius: 3px;
   letter-spacing: .5px;
 }
 .sfc-title {
-  font-family: 'Bebas Neue', cursive;
-  font-size: 1.8rem;
-  letter-spacing: 2px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
   color: var(--gris-1);
-  line-height: .95;
+  text-transform: uppercase;
+  line-height: 1.1;
 }
 .sfc-desc {
   font-size: 14px;
   font-weight: 300;
-  color: var(--gris-3);
+  color: var(--gris-2);
   line-height: 1.7;
 }
 .sfc-subs-label {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: .55rem;
-  color: rgba(100,210,255,.6);
+  font-family: 'Montserrat', sans-serif;
+  font-size: .52rem;
+  font-weight: 600;
+  color: var(--gris-3);
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 8px;
@@ -142,14 +147,14 @@ const sectores = [
   gap: 6px;
 }
 .sfc-subs li {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: .58rem;
-  color: var(--gris-3);
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
+  font-family: 'Poppins', sans-serif;
+  font-size: .72rem;
+  font-weight: 300;
+  color: var(--gris-2);
+  background: var(--gris-bg);
+  border: 1px solid var(--borde);
   padding: 4px 10px;
   border-radius: 20px;
-  letter-spacing: .5px;
 }
 @media (max-width: 700px) {
   .sectores-full-grid { grid-template-columns: 1fr; }
