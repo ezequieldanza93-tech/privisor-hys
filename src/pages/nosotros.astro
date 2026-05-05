@@ -3,16 +3,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="Nosotros — Equipo Privisor HyS | Consultora de Higiene y Seguridad"
-  description="Conocé al equipo de Privisor HyS. Matriculados en COPIME, CPSH y el Colegio de Ingeniería Industrial, con cobertura legal en CABA y toda la provincia de Buenos Aires."
+  title="Nosotros — Equipo SIGMETRÍA HyS | Consultora de Higiene y Seguridad"
+  description="Conocé al equipo de SIGMETRÍA HyS. Matriculados en COPIME, CPSH y el Colegio de Ingeniería Industrial, con cobertura legal en CABA y toda la provincia de Buenos Aires."
 >
   <section class="page-hero">
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span>
+      <span>Nosotros</span>
+    </nav>
     <div class="page-hero-inner">
-      <nav aria-label="Breadcrumb" class="breadcrumb">
-        <a href="/">Inicio</a><span>/</span>
-        <span>Nosotros</span>
-      </nav>
-      <div class="page-hero-badge">Equipo · Trayectoria</div>
+      <div class="page-hero-badge">Equipo · Trayectoria · Identidad</div>
       <h1>QUIÉNES<br><em>SOMOS</em></h1>
       <p>Somos una consultora de Higiene y Seguridad Laboral con base en CABA. Matriculados en COPIME, CPSH y el Colegio Profesional de Ingeniería Industrial — con cobertura legal en CABA y toda la provincia de Buenos Aires.</p>
     </div>
@@ -21,26 +21,77 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="content-section">
     <div class="content-inner">
 
-      <div class="nosotros-grid">
-        <div class="nosotros-texto">
-          <div class="kicker kicker--left">Nuestra historia</div>
-          <h2 style="font-size:clamp(28px,4vw,48px);letter-spacing:2px;color:#fff;margin-bottom:20px;">PRIVISOR <em style="font-style:normal;background:linear-gradient(90deg,#64d2ff,#4dc8f5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">HyS</em></h2>
-          <p style="font-size:15px;font-weight:300;color:rgba(255,255,255,.5);line-height:1.85;margin-bottom:16px;">Privisor es una consultora especializada en Higiene y Seguridad Laboral orientada a empresas de CABA y el Gran Buenos Aires. Nuestro diferencial es la presencia real en campo: el profesional va a tu establecimiento, conoce tus procesos y firma con responsabilidad cada protocolo.</p>
-          <p style="font-size:15px;font-weight:300;color:rgba(255,255,255,.5);line-height:1.85;">Trabajamos con empresas industriales, constructoras, establecimientos educativos y locales comerciales, ofreciendo cobertura normativa completa ante SRT y ART.</p>
+      <!-- MISIÓN Y VISIÓN -->
+      <div class="mv-grid">
+        <div class="mv-card">
+          <div class="mv-icon">🎯</div>
+          <div class="page-hero-badge">Misión</div>
+          <h2>NUESTRA <em>MISIÓN</em></h2>
+          <p>Diseñar e implementar sistemas de gestión que aseguren el cumplimiento legal, reduzcan riesgos y mejoren la productividad de las organizaciones.</p>
         </div>
-        <div class="nosotros-valores">
-          <div class="valor-item"><span class="valor-icon">🎯</span><div><h3>Compromiso</h3><p>Cumplimos los plazos sin excusas. Documentación entregada en tiempo y forma.</p></div></div>
-          <div class="valor-item"><span class="valor-icon">🔬</span><div><h3>Rigor técnico</h3><p>Mediciones con instrumentos calibrados. Protocolos firmados por profesional matriculado.</p></div></div>
-          <div class="valor-item"><span class="valor-icon">🤝</span><div><h3>Presencia real</h3><p>El profesional va a tu establecimiento. No tercerizamos ni gestionamos a distancia.</p></div></div>
-          <div class="valor-item"><span class="valor-icon">📍</span><div><h3>Cobertura CABA y GBA</h3><p>Un solo equipo para todas tus sedes en la Ciudad y el Conurbano.</p></div></div>
+        <div class="mv-card">
+          <div class="mv-icon">🔭</div>
+          <div class="page-hero-badge">Visión</div>
+          <h2>NUESTRA <em>VISIÓN</em></h2>
+          <p>Ser la consultora referente en innovación y gestión inteligente en Higiene, Seguridad y Bienestar, integrando tecnología, cultura preventiva y eficiencia operativa.</p>
+        </div>
+      </div>
+
+      <!-- VALORES -->
+      <div class="valores-section">
+        <header class="valores-header">
+          <div class="kicker">Lo que nos guía</div>
+          <h2 class="valores-title">NUESTROS <em>VALORES</em></h2>
+        </header>
+        <div class="valores-grid">
+          <div class="valor-card">
+            <span class="valor-icon">🤝</span>
+            <h3>Compromiso</h3>
+            <p>Cumplimos los plazos sin excusas. Documentación entregada en tiempo y forma, siempre con responsabilidad profesional.</p>
+          </div>
+          <div class="valor-card">
+            <span class="valor-icon">📋</span>
+            <h3>Responsabilidad</h3>
+            <p>Cada protocolo lleva la firma de un profesional matriculado. Asumimos las consecuencias de nuestras recomendaciones.</p>
+          </div>
+          <div class="valor-card">
+            <span class="valor-icon">💡</span>
+            <h3>Innovación</h3>
+            <p>Integramos tecnología y procesos modernos para mejorar la gestión normativa y ofrecer soluciones más eficientes.</p>
+          </div>
+          <div class="valor-card">
+            <span class="valor-icon">⚡</span>
+            <h3>Eficiencia</h3>
+            <p>Optimizamos recursos y tiempos para que el cumplimiento normativo no frene tu operación sino que la potencie.</p>
+          </div>
+          <div class="valor-card">
+            <span class="valor-icon">⚖️</span>
+            <h3>Equilibrio</h3>
+            <p>Encontramos el punto entre cumplimiento estricto y operatividad real. Soluciones que funcionan en el día a día.</p>
+          </div>
+          <div class="valor-card">
+            <span class="valor-icon">💚</span>
+            <h3>Bienestar</h3>
+            <p>El objetivo final es que las personas trabajen seguras. La normativa es el medio; el bienestar de tu equipo, el fin.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- DESCRIPCIÓN -->
+      <div class="nosotros-desc">
+        <div class="kicker kicker--left">Nuestra trayectoria</div>
+        <h2 class="nosotros-desc-title">SIGMETRÍA <em>HyS</em></h2>
+        <div class="nosotros-desc-body">
+          <p>SIGMETRÍA es una consultora especializada en Higiene y Seguridad Laboral orientada a empresas de CABA y el Gran Buenos Aires. Nuestro diferencial es la presencia real en campo: el profesional va a tu establecimiento, conoce tus procesos y firma con responsabilidad cada protocolo.</p>
+          <p>Trabajamos con empresas industriales, constructoras, establecimientos educativos y locales comerciales, ofreciendo cobertura normativa completa ante SRT y ART.</p>
         </div>
       </div>
 
       <div class="cta-banner">
-        <h2>¿TRABAJAMOS <em style="font-style:normal;background:linear-gradient(90deg,#64d2ff,#4dc8f5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">JUNTOS</em>?</h2>
+        <h2>¿TRABAJAMOS <em>JUNTOS</em>?</h2>
         <p>Contanos de tu empresa y te armamos una propuesta a medida sin cargo.</p>
         <div class="cta-actions">
-          <a href="https://wa.me/5491133572984" class="btn-primary" target="_blank" rel="noopener">💬 Escribinos</a>
+          <a href="https://wa.me/5491123496789" class="btn-primary" target="_blank" rel="noopener">💬 Escribinos por WhatsApp</a>
           <a href="/contacto/" class="btn-outline">Formulario de contacto</a>
         </div>
       </div>
@@ -50,17 +101,119 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </BaseLayout>
 
 <style>
-.nosotros-grid {
+/* MISIÓN / VISIÓN */
+.mv-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
+  gap: 20px;
   margin-bottom: 60px;
 }
-.nosotros-valores { display: flex; flex-direction: column; gap: 20px; }
-.valor-item { display: flex; align-items: flex-start; gap: 14px; }
-.valor-icon { font-size: 1.6rem; flex-shrink: 0; }
-.valor-item h3 { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 4px; }
-.valor-item p  { font-size: 13px; font-weight: 300; color: rgba(255,255,255,.4); line-height: 1.65; }
-@media (max-width: 800px) { .nosotros-grid { grid-template-columns: 1fr; gap: 40px; } }
+.mv-card {
+  background: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  padding: 32px 28px;
+  position: relative;
+  overflow: hidden;
+  transition: all .25s;
+}
+.mv-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--verde);
+}
+.mv-card:hover {
+  border-color: var(--verde-borde);
+  box-shadow: 0 8px 28px rgba(0,0,0,.07);
+}
+.mv-icon { font-size: 2rem; margin-bottom: 12px; }
+.mv-card .page-hero-badge { margin-bottom: 10px; }
+.mv-card h2 {
+  font-size: clamp(20px, 2.5vw, 30px);
+  letter-spacing: 1.5px;
+  color: var(--gris-1);
+  margin-bottom: 14px;
+}
+.mv-card h2 em { font-style: normal; color: var(--verde); }
+.mv-card p {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--gris-2);
+  line-height: 1.8;
+}
+
+/* VALORES */
+.valores-section { margin-bottom: 60px; }
+.valores-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.valores-title {
+  font-size: clamp(32px, 4.5vw, 54px);
+  letter-spacing: 2px;
+  color: var(--gris-1);
+}
+.valores-title em { font-style: normal; color: var(--verde); }
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.valor-card {
+  background: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  padding: 22px 18px;
+  transition: all .2s;
+}
+.valor-card:hover {
+  border-color: var(--verde-borde);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.07);
+}
+.valor-card .valor-icon { font-size: 1.6rem; display: block; margin-bottom: 10px; }
+.valor-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gris-1);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-bottom: 8px;
+}
+.valor-card p { font-size: 13px; font-weight: 300; color: var(--gris-2); line-height: 1.65; }
+
+/* DESCRIPCIÓN */
+.nosotros-desc {
+  margin-bottom: 60px;
+  padding: 40px 36px;
+  background: var(--verde-light);
+  border: 1px solid var(--verde-borde);
+  border-radius: 10px;
+}
+.nosotros-desc-title {
+  font-size: clamp(28px, 3.5vw, 44px);
+  letter-spacing: 1.5px;
+  color: var(--gris-1);
+  margin-bottom: 20px;
+}
+.nosotros-desc-title em { font-style: normal; color: var(--verde); }
+.nosotros-desc-body { display: flex; flex-direction: column; gap: 14px; }
+.nosotros-desc-body p {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--gris-2);
+  line-height: 1.85;
+  max-width: 700px;
+}
+
+@media (max-width: 800px) {
+  .mv-grid { grid-template-columns: 1fr; }
+  .valores-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 500px) {
+  .valores-grid { grid-template-columns: 1fr; }
+}
 </style>

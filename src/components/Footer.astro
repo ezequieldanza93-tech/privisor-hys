@@ -12,23 +12,13 @@ const servicios = [
 
     <!-- Logo + descripción -->
     <div class="footer-brand">
-      <svg width="160" height="30" viewBox="0 0 700 120" xmlns="http://www.w3.org/2000/svg" style="display:block;margin-bottom:14px;">
-        <defs>
-          <linearGradient id="fg" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#f0d060"/><stop offset="100%" stop-color="#c9a227"/>
-          </linearGradient>
-          <clipPath id="fL"><rect x="0" y="0" width="60" height="120"/></clipPath>
-          <clipPath id="fR"><rect x="60" y="0" width="60" height="120"/></clipPath>
-        </defs>
-        <rect x="0" y="0" width="60" height="120" fill="#1565a8"/>
-        <text x="4" y="90" font-family="'Oswald',sans-serif" font-size="82" font-weight="300" fill="#fff" clip-path="url(#fL)">H</text>
-        <line x1="61" y1="16" x2="61" y2="104" stroke="url(#fg)" stroke-width="2.5"/>
-        <text x="63" y="90" font-family="'Oswald',sans-serif" font-size="82" font-weight="300" fill="url(#fg)" clip-path="url(#fR)">S</text>
-        <line x1="132" y1="14" x2="132" y2="106" stroke="url(#fg)" stroke-width="1.5" opacity=".4"/>
-        <text x="150" y="60" font-family="'Bebas Neue',cursive" font-size="52" fill="#fff" letter-spacing="6">PRIVISOR</text>
-        <line x1="150" y1="68" x2="688" y2="68" stroke="url(#fg)" stroke-width="1" opacity=".3"/>
-        <text x="150" y="84" font-family="'Montserrat',sans-serif" font-size="10" font-weight="700" fill="#c9a227" letter-spacing="2.5">HIGIENE Y SEGURIDAD LABORAL</text>
-      </svg>
+      <div class="footer-logo">
+        <img src="/logo-sigmetria.svg" alt="SIGMETRÍA HyS" width="36" height="36" style="object-fit:contain;flex-shrink:0;" />
+        <div class="footer-brand-text">
+          <span class="footer-brand-name">SIGMETRÍA</span>
+          <span class="footer-brand-sub">HIGIENE Y SEGURIDAD</span>
+        </div>
+      </div>
       <p class="footer-desc">Consultora de H&amp;S en CABA y provincia de Buenos Aires. Matriculados en COPIME, CPSH y el Colegio de Ingeniería Industrial. Cumplimiento normativo integral para empresas.</p>
     </div>
 
@@ -53,7 +43,6 @@ const servicios = [
     <!-- Contacto / NAP -->
     <div class="footer-col">
       <h3 class="footer-heading">Contacto</h3>
-      <!-- NAP (Name, Address, Phone) — crítico para SEO local -->
       <address>
         <p class="nap-item">
           <span class="nap-icon">📍</span>
@@ -61,11 +50,15 @@ const servicios = [
         </p>
         <p class="nap-item">
           <span class="nap-icon">📞</span>
-          <a href="tel:+5491133572984">+54 9 11 3357-2984</a>
+          <a href="tel:+5491123496789">+54 9 11 2349-6789</a>
         </p>
         <p class="nap-item">
           <span class="nap-icon">💬</span>
-          <a href="https://wa.me/5491133572984" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://wa.me/5491123496789" target="_blank" rel="noopener">WhatsApp</a>
+        </p>
+        <p class="nap-item">
+          <span class="nap-icon">✉️</span>
+          <a href="mailto:ezequiel@sigmetriahys.com">ezequiel@sigmetriahys.com</a>
         </p>
       </address>
     </div>
@@ -73,7 +66,7 @@ const servicios = [
   </div>
 
   <div class="footer-bottom">
-    <p>© {new Date().getFullYear()} Privisor HyS · Todos los derechos reservados</p>
+    <p>© {new Date().getFullYear()} SIGMETRÍA HyS · Todos los derechos reservados</p>
     <p>Matriculados COPIME · CPSH · Ing. Industrial · ISO 45001:2018</p>
   </div>
 </footer>
@@ -82,9 +75,9 @@ const servicios = [
 footer {
   position: relative;
   z-index: 1;
-  background: #000d20;
-  border-top: 1px solid rgba(100,210,255,0.08);
-  padding: 60px 60px 0;
+  background: var(--gris-bg);
+  border-top: 1px solid var(--borde);
+  padding: 60px 51px 0;
 }
 .footer-inner {
   max-width: 1200px;
@@ -94,31 +87,61 @@ footer {
   gap: 48px;
   padding-bottom: 48px;
 }
+
+/* ---- Logo ---- */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.footer-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.footer-brand-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .9rem;
+  font-weight: 800;
+  color: var(--gris-1);
+  letter-spacing: 1px;
+}
+.footer-brand-sub {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .4rem;
+  font-weight: 600;
+  color: var(--verde);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
 .footer-desc {
   font-size: 13px;
   font-weight: 300;
-  color: rgba(255,255,255,.35);
+  color: var(--gris-3);
   line-height: 1.75;
   max-width: 280px;
 }
 .footer-heading {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: .6rem;
-  color: rgba(201,162,39,.8);
-  letter-spacing: 3px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .54rem;
+  color: var(--verde-dark);
+  letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 16px;
-  font-weight: 400;
+  font-weight: 700;
 }
 .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
 .footer-col a {
   font-size: 13px;
   font-weight: 300;
-  color: rgba(255,255,255,.4);
+  color: var(--gris-2);
   text-decoration: none;
   transition: color .2s;
 }
-.footer-col a:hover { color: #64d2ff; }
+.footer-col a:hover { color: var(--verde); }
 
 address { font-style: normal; display: flex; flex-direction: column; gap: 10px; }
 .nap-item {
@@ -127,18 +150,18 @@ address { font-style: normal; display: flex; flex-direction: column; gap: 10px; 
   gap: 8px;
   font-size: 13px;
   font-weight: 300;
-  color: rgba(255,255,255,.4);
+  color: var(--gris-2);
   line-height: 1.5;
 }
 .nap-icon { flex-shrink: 0; font-size: .85rem; }
-.nap-item a { color: rgba(255,255,255,.4); text-decoration: none; transition: color .2s; }
-.nap-item a:hover { color: #64d2ff; }
+.nap-item a { color: var(--gris-2); text-decoration: none; transition: color .2s; }
+.nap-item a:hover { color: var(--verde); }
 
 .footer-bottom {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px 0;
-  border-top: 1px solid rgba(255,255,255,.05);
+  border-top: 1px solid var(--borde);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -146,10 +169,11 @@ address { font-style: normal; display: flex; flex-direction: column; gap: 10px; 
   gap: 8px;
 }
 .footer-bottom p {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: .55rem;
-  color: rgba(255,255,255,.2);
-  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .52rem;
+  color: var(--gris-3);
+  letter-spacing: .8px;
+  text-transform: uppercase;
 }
 
 @media (max-width: 1000px) {
