@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const fases = [
+  { num: '01', title: 'Diagnóstico inicial', desc: 'Evaluamos el nivel de cumplimiento actual de tu empresa constructora frente a los requisitos de la norma ISO 45001:2018. Identificamos brechas y definimos el plan de trabajo.' },
+  { num: '02', title: 'Implementación del sistema', desc: 'Acompañamiento en diseño e implementación. Documentación de procesos específicos de obra: peligros, evaluación de riesgos, controles y procedimientos de trabajo seguro.' },
+  { num: '03', title: 'Asesoría continua', desc: 'Elaboración de políticas de SST, objetivos, indicadores de desempeño y revisiones por la dirección adaptados al sector construcción.' },
+  { num: '04', title: 'Auditoría interna', desc: 'Auditorías internas para verificar la conformidad del sistema y preparar a la empresa para la certificación con el organismo externo.' },
+];
+
+const beneficios = [
+  { icon: '🏆', text: 'Mayor competitividad en licitaciones públicas y privadas que exigen certificación' },
+  { icon: '📉', text: 'Reducción de accidentes en obra y costos por ausentismo y sanciones SRT' },
+  { icon: '🤝', text: 'Mejora de la relación con la ART y menor carga de siniestralidad' },
+  { icon: '⚖️', text: 'Cumplimiento proactivo del Decreto 911/96 integrado al sistema de gestión' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'ISO 45001 en Construcción — Asesoría e Implementación',
+  description: 'Implementación y asesoría para certificación ISO 45001:2018 en empresas constructoras de CABA y GBA.',
+  provider: { '@type': 'ProfessionalService', name: 'SIGMETRÍA HyS', url: 'https://sigmetriahys.com' },
+};
+---
+
+<BaseLayout
+  title="ISO 45001 en Construcción — Asesoría e Implementación | SIGMETRÍA HyS"
+  description="Implementamos el Sistema de Gestión de Seguridad y Salud en el Trabajo ISO 45001:2018 en empresas constructoras de CABA y GBA. Diagnóstico, documentación y auditoría interna."
+  schema={schema}
+>
+  <section class="page-hero">
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span>
+      <a href="/servicios/">Servicios</a><span>/</span>
+      <a href="/servicios/construccion/">Construcción</a><span>/</span>
+      <span>ISO 45001</span>
+    </nav>
+    <div class="page-hero-inner">
+      <div class="page-hero-badge">Norma internacional · ISO 45001:2018</div>
+      <h1>ISO 45001<br><em>EN CONSTRUCCIÓN</em></h1>
+      <p>Sistema de Gestión de la Seguridad y Salud en el Trabajo adaptado a la industria de la construcción. Asesoramos e implementamos el SGS&T para empresas que buscan certificación.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="content-inner">
+
+      <div class="kicker kicker--left">Proceso de implementación</div>
+      <h2 class="section-title" style="margin-bottom:32px;">LAS 4 <em>FASES</em></h2>
+      <div class="items-list">
+        {fases.map(f => (
+          <div class="item">
+            <span class="item-num">{f.num}</span>
+            <div><h3>{f.title}</h3><p>{f.desc}</p></div>
+          </div>
+        ))}
+      </div>
+
+      <div style="margin-top:56px;">
+        <div class="kicker kicker--left">Por qué certificar</div>
+        <h2 class="section-title" style="margin-bottom:28px;">BENEFICIOS DE <em>CERTIFICAR</em></h2>
+        <div class="beneficios-grid">
+          {beneficios.map(b => (
+            <div class="beneficio">
+              <span>{b.icon}</span>
+              <p>{b.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="cta-banner" style="margin-top:56px;">
+        <div class="kicker">¿Querés certificar?</div>
+        <h2>EMPEZÁ CON UN <em>DIAGNÓSTICO GRATUITO</em></h2>
+        <p>Evaluamos el punto de partida de tu empresa y te decimos qué distancia hay hasta la certificación y cuánto tiempo llevaría.</p>
+        <div class="cta-actions">
+          <a href="https://wa.me/5491123496789?text=Hola%2C%20quiero%20información%20sobre%20ISO%2045001%20para%20construcci%C3%B3n" class="btn-primary" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Diagnóstico gratuito
+          </a>
+          <a href="/contacto/" class="btn-outline">Formulario de contacto</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+.beneficio {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: var(--gris-bg);
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  padding: 20px 18px;
+}
+.beneficio span { font-size: 1.8rem; flex-shrink: 0; }
+.beneficio p { font-size: 13px; font-weight: 300; color: var(--gris-2); line-height: 1.65; }
+@media (max-width: 600px) { .beneficios-grid { grid-template-columns: 1fr; } }
+</style>
