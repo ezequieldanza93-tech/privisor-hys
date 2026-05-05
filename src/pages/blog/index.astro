@@ -71,8 +71,6 @@ const sectores = [
             <div class="blog-card-meta">
               <span class="blog-cat">{post.categoria}</span>
               <span class="blog-sep">·</span>
-              <span class="blog-fecha">{formatFecha(post.fecha)}</span>
-              <span class="blog-sep">·</span>
               <span class="blog-tiempo">{post.tiempoLectura} lectura</span>
             </div>
             <h2 class="blog-card-title">
@@ -202,118 +200,6 @@ const sectores = [
   border-color: var(--verde);
 }
 
-/* ---- Grid ---- */
-.blog-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-}
-.blog-card {
-  background: var(--blanco);
-  border: 1px solid var(--borde);
-  border-radius: 10px;
-  padding: 24px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  transition: all .25s;
-  position: relative;
-  overflow: hidden;
-}
-.blog-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: var(--verde);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform .3s;
-}
-.blog-card:hover {
-  border-color: var(--verde-borde);
-  transform: translateY(-3px);
-  box-shadow: 0 12px 32px rgba(0,0,0,.08);
-}
-.blog-card:hover::before { transform: scaleX(1); }
-.blog-card.hidden { display: none; }
-.blog-card-meta {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  flex-wrap: wrap;
-}
-.blog-cat {
-  font-family: 'Montserrat', sans-serif;
-  font-size: .52rem;
-  font-weight: 600;
-  color: var(--verde-dark);
-  background: var(--verde-light);
-  border: 1px solid var(--verde-borde);
-  padding: 3px 8px;
-  border-radius: 3px;
-  letter-spacing: .5px;
-  text-transform: uppercase;
-}
-.blog-sep { color: var(--borde); font-size: .75rem; }
-.blog-fecha, .blog-tiempo {
-  font-family: 'Montserrat', sans-serif;
-  font-size: .55rem;
-  font-weight: 400;
-  color: var(--gris-3);
-}
-.blog-card-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 1.45;
-  text-transform: none;
-  letter-spacing: 0;
-}
-.blog-card-title a { color: var(--gris-1); text-decoration: none; transition: color .2s; }
-.blog-card-title a:hover { color: var(--verde); }
-.blog-card-resumen {
-  font-size: 13px;
-  font-weight: 300;
-  color: var(--gris-2);
-  line-height: 1.7;
-  flex: 1;
-}
-.blog-card-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  flex-wrap: wrap;
-  border-top: 1px solid var(--borde);
-  padding-top: 12px;
-}
-.blog-tags { display: flex; gap: 6px; flex-wrap: wrap; }
-.blog-tag {
-  font-family: 'Montserrat', sans-serif;
-  font-size: .48rem;
-  font-weight: 600;
-  color: var(--gris-3);
-  background: var(--gris-bg);
-  border: 1px solid var(--borde);
-  padding: 2px 7px;
-  border-radius: 3px;
-  letter-spacing: .4px;
-  text-transform: uppercase;
-}
-.blog-read-more {
-  font-family: 'Montserrat', sans-serif;
-  font-size: .58rem;
-  font-weight: 700;
-  color: var(--verde);
-  text-decoration: none;
-  letter-spacing: .8px;
-  text-transform: uppercase;
-  transition: color .2s;
-  white-space: nowrap;
-}
-.blog-read-more:hover { color: var(--verde-dark); }
-
 /* ---- Empty state ---- */
 .blog-empty {
   text-align: center;
@@ -324,7 +210,6 @@ const sectores = [
 }
 
 @media (max-width: 600px) {
-  .blog-grid { grid-template-columns: 1fr; }
   .blog-toolbar { flex-direction: column; align-items: stretch; }
   .blog-count { text-align: right; }
 }
@@ -368,15 +253,4 @@ search.addEventListener('input', () => {
   update();
 });
 
-// Leer parámetro ?sector= de la URL para pre-filtrar desde el nav
-const urlSector = new URLSearchParams(window.location.search).get('sector');
-if (urlSector) {
-  const btn = filters.find(b => b.dataset.sector === urlSector);
-  if (btn) {
-    filters.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    activeSector = urlSector;
-    update();
-  }
-}
 </script>
