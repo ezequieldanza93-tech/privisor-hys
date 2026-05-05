@@ -92,9 +92,6 @@ const sectores = [
         </div>
       </div>
 
-      <div class="hero-isotipo">
-        <img src="/logo-sigmetria.svg" alt="Isotipo SIGMETRÍA HyS" class="hero-isotipo-img" />
-      </div>
 
     </div>
   </section>
@@ -188,18 +185,12 @@ const sectores = [
 .hero-layout {
   position: relative;
   z-index: 1;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 60px;
+  max-width: 860px;
 }
 .hero-content {
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0;
 }
 .hero-title {
   font-size: clamp(36px, 4.5vw, 62px);
@@ -252,17 +243,6 @@ const sectores = [
   animation: fadeUp .6s ease .45s both;
 }
 
-/* Isotipo grande en el hero */
-.hero-isotipo {
-  flex-shrink: 0;
-  animation: fadeUp .8s ease .2s both;
-}
-.hero-isotipo-img {
-  width: 180px;
-  height: 180px;
-  object-fit: contain;
-  filter: drop-shadow(0 8px 32px rgba(76,175,80,0.18));
-}
 
 /* SECTORES */
 .sectores-section {
@@ -474,8 +454,6 @@ const sectores = [
 }
 @media (max-width: 900px) {
   .hero { padding: 88px 24px 52px; }
-  .hero-isotipo { display: none; }
-  .hero-layout  { gap: 0; }
   .sectores-section { padding: 52px 24px; }
   .sectores-header { flex-direction: column; align-items: flex-start; gap: 12px; }
   .porque-section   { padding: 54px 24px; }
