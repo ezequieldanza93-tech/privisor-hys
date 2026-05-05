@@ -24,7 +24,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         <!-- Formulario -->
         <div class="form-wrap">
-          <h2 style="font-family:'Bebas Neue',cursive;font-size:1.6rem;letter-spacing:2px;color:#fff;margin-bottom:24px;">FORMULARIO DE CONTACTO</h2>
+          <h2 class="contacto-h2">FORMULARIO DE CONTACTO</h2>
           <div id="form-success" class="form-success" style="display:none">
             <span class="form-success-icon">✅</span>
             <h3>¡Consulta enviada!</h3>
@@ -83,7 +83,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         <!-- Info de contacto -->
         <div class="contacto-info">
-          <h2 style="font-family:'Bebas Neue',cursive;font-size:1.6rem;letter-spacing:2px;color:#fff;margin-bottom:24px;">OTRAS FORMAS DE CONTACTO</h2>
+          <h2 class="contacto-h2">OTRAS FORMAS DE CONTACTO</h2>
 
           <div class="contact-method">
             <span class="contact-method-icon">💬</span>
@@ -98,7 +98,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <span class="contact-method-icon">📞</span>
             <div>
               <h3>Teléfono</h3>
-              <a href="tel:+5491123496789" style="color:#64d2ff;font-family:'JetBrains Mono',monospace;font-size:.85rem;text-decoration:none;">+54 9 11 3357-2984</a>
+              <a href="tel:+5491123496789" class="contact-phone">+54 9 11 2349-6789</a>
             </div>
           </div>
 
@@ -106,7 +106,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <span class="contact-method-icon">📍</span>
             <div>
               <h3>Área de cobertura</h3>
-              <address style="font-style:normal;font-size:14px;font-weight:300;color:rgba(255,255,255,.45);line-height:1.65;">
+              <address class="contact-address">
                 Ciudad Autónoma de Buenos Aires (CABA)<br>
                 Gran Buenos Aires (GBA)
               </address>
@@ -128,6 +128,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </BaseLayout>
 
 <style>
+.contacto-h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--gris-1);
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
 .contacto-grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -139,33 +148,34 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 .form-group  { display: flex; flex-direction: column; gap: 6px; }
 .form-row    { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .form-group label {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: .58rem;
-  color: rgba(255,255,255,.4);
-  letter-spacing: 1.5px;
+  font-weight: 600;
+  color: var(--gris-2);
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 .form-group input,
 .form-group select,
 .form-group textarea {
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.1);
+  background: var(--blanco);
+  border: 1px solid var(--borde);
   border-radius: 6px;
   padding: 12px 14px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 300;
-  color: #e2eeff;
+  color: var(--gris-1);
   outline: none;
   transition: border-color .2s;
   width: 100%;
 }
 .form-group input::placeholder,
-.form-group textarea::placeholder { color: rgba(255,255,255,.2); }
+.form-group textarea::placeholder { color: var(--gris-3); }
 .form-group input:focus,
 .form-group select:focus,
-.form-group textarea:focus { border-color: rgba(100,210,255,0.45); background: rgba(100,210,255,0.03); }
-.form-group select option { background: #001848; color: #e2eeff; }
+.form-group textarea:focus { border-color: var(--verde); background: var(--verde-light); }
+.form-group select option { background: var(--blanco); color: var(--gris-1); }
 .form-group textarea { resize: vertical; min-height: 100px; }
 
 /* Métodos contacto */
@@ -176,12 +186,27 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   font-family: 'Montserrat', sans-serif;
   font-size: 13px;
   font-weight: 700;
-  color: #fff;
+  color: var(--gris-1);
   text-transform: uppercase;
   letter-spacing: .5px;
   margin-bottom: 5px;
 }
-.contact-method p { font-size: 13px; font-weight: 300; color: rgba(255,255,255,.4); line-height: 1.6; }
+.contact-method p { font-size: 13px; font-weight: 300; color: var(--gris-2); line-height: 1.6; }
+.contact-phone {
+  color: var(--verde);
+  font-family: 'Montserrat', sans-serif;
+  font-size: .9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.contact-phone:hover { color: var(--verde-dark); }
+.contact-address {
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--gris-2);
+  line-height: 1.65;
+}
 
 @media (max-width: 900px) {
   .contacto-grid { grid-template-columns: 1fr; }
@@ -190,8 +215,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 /* Mensaje de éxito */
 .form-success {
-  background: rgba(100,210,255,0.06);
-  border: 1px solid rgba(100,210,255,0.2);
+  background: var(--verde-light);
+  border: 1px solid var(--verde-borde);
   border-radius: 10px;
   padding: 32px 28px;
   text-align: center;
@@ -199,16 +224,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 }
 .form-success-icon { font-size: 2.2rem; display: block; margin-bottom: 12px; }
 .form-success h3 {
-  font-family: 'Bebas Neue', cursive;
-  font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
   letter-spacing: 2px;
-  color: #fff;
+  color: var(--gris-1);
   margin-bottom: 8px;
+  text-transform: uppercase;
 }
 .form-success p {
   font-size: 14px;
   font-weight: 300;
-  color: rgba(255,255,255,.45);
+  color: var(--gris-2);
   line-height: 1.7;
 }
 </style>
