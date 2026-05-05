@@ -1,0 +1,261 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="ISO 45001 en construcción: cómo implementarla cuando cada obra es un site diferente — Privisor HyS"
+  description="Guía para implementar ISO 45001 en empresas constructoras argentinas. Integración con el Dec. 911/96, gestión de subcontratistas, obras temporales y diferencias con la certificación industrial."
+>
+  <section class="page-hero">
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span>
+      <a href="/blog/">Blog</a><span>/</span>
+      <span>ISO 45001 en Construcción</span>
+    </nav>
+    <div class="page-hero-inner">
+      <div class="page-hero-badge">Construcción · ISO 45001:2018</div>
+      <h1>ISO 45001 EN CONSTRUCCIÓN<br><em>CUANDO CADA OBRA ES UN SITE DIFERENTE</em></h1>
+      <p>Implementar ISO 45001 en una empresa constructora no es lo mismo que hacerlo en una planta industrial. Las obras son temporales, el personal rota, los subcontratistas son parte del riesgo y el marco legal ya te exige el Dec. 911/96. Acá explicamos cómo articular todo eso.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="content-inner article-wrap">
+
+      <div class="article-meta">
+        <span class="art-cat">Gestión</span>
+        <span class="art-sep">·</span>
+        <span class="art-fecha">5 may 2026</span>
+        <span class="art-sep">·</span>
+        <span class="art-tiempo">8 min lectura</span>
+      </div>
+
+      <div class="article-body">
+
+        <p class="article-lead">La construcción tiene la tasa de accidentabilidad más alta de todas las industrias en Argentina. El Dec. 911/96 y las resoluciones de la SRT establecen el piso legal mínimo — pero no alcanzan para gestionar sistemáticamente el riesgo en una empresa con múltiples obras simultáneas, docenas de subcontratistas y un plantel que cambia de obra en obra. Ahí es donde la ISO 45001 agrega valor real: no como reemplazo del marco legal, sino como sistema que lo integra y lo hace funcionar.</p>
+
+        <h2>Por qué la construcción es un caso especial dentro de ISO 45001</h2>
+        <p>La norma tiene una cláusula específica — <strong>8.1.3 Gestión del cambio</strong> — que en una planta industrial se aplica a cambios de proceso o equipos. En construcción, el "cambio" es permanente: cada obra nueva es un site diferente, con riesgos distintos, proveedores distintos y condiciones de trabajo que evolucionan semana a semana. La norma lo contempla, pero exige que la empresa tenga procedimientos explícitos para gestionar esa variabilidad.</p>
+        <p>Los tres desafíos que distinguen a la construcción del resto de las industrias cuando se implementa ISO 45001:</p>
+
+        <ul class="art-list">
+          <li><strong>Temporalidad de los sites:</strong> cada obra tiene inicio y fin. El sistema de gestión debe funcionar igual en una obra de 3 meses que en una de 3 años, sin depender de la presencia física del responsable de H&S en el día a día.</li>
+          <li><strong>Subcontratistas y terceros:</strong> en construcción, entre el 40 y el 80% del trabajo lo ejecutan subcontratistas. La cláusula 8.1.4 de ISO 45001 los incluye explícitamente en el alcance del sistema. No podés certificar y luego ignorar lo que hace el subcontratista en tu obra.</li>
+          <li><strong>Rotación del personal:</strong> la inducción de cada trabajador que ingresa a obra es un requisito tanto del Dec. 911/96 como de la cláusula 7.3 (toma de conciencia) de ISO 45001. Con alta rotación, el sistema de inducción tiene que ser robusto, rápido y verificable.</li>
+        </ul>
+
+        <h2>ISO 45001 y el Dec. 911/96: complementarios, no competidores</h2>
+        <p>El <strong>Decreto 911/96</strong> es el marco legal que regula la H&S en construcción. Exige Programas de Seguridad, Legajos Técnicos, responsable de H&S en obra y un conjunto de medidas específicas por tipo de trabajo. ISO 45001 no reemplaza nada de eso: lo encuadra dentro de un sistema de gestión.</p>
+
+        <div class="art-tabla">
+          <div class="art-tabla-header" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span>Requisito</span>
+            <span>Dec. 911/96 + Res. SRT</span>
+            <span>ISO 45001</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span class="art-doc">Documento de planificación de la obra</span>
+            <span>Programa de Seguridad (Res. 51/97, 35/98 o 319/99)</span>
+            <span>Cláusula 6.1 — planificación para abordar riesgos</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span class="art-doc">Identificación de peligros</span>
+            <span>RAR (Res. 463/2009) + Legajo Técnico</span>
+            <span>Cláusula 6.1.2 — identificación de peligros (exige metodología documentada)</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span class="art-doc">Capacitación del personal</span>
+            <span>Inducción obligatoria + registro firmado</span>
+            <span>Cláusula 7.2 (competencia) + 7.3 (toma de conciencia)</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span class="art-doc">Subcontratistas</span>
+            <span>Coordinación prevista en Dec. 911/96 art. 7</span>
+            <span>Cláusula 8.1.4 — contratistas y adquisiciones</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span class="art-doc">Accidentes e incidentes</span>
+            <span>Denuncia a la ART — Res. SRT 1691/2015</span>
+            <span>Cláusula 10.2 — investigación, análisis de causa raíz, acción correctiva</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <span class="art-doc">Revisión y mejora</span>
+            <span>No exigida por la normativa legal</span>
+            <span>Cláusula 9.3 — revisión por la dirección (al menos 1 vez por año)</span>
+          </div>
+        </div>
+
+        <div class="art-destacado">
+          <strong>La diferencia clave:</strong> el Dec. 911/96 te dice QUÉ tener. La ISO 45001 te exige demostrar que funciona, que se revisa y que mejora. Una empresa puede cumplir el 911/96 con documentos perfectos que nadie aplica. La ISO 45001 audita la realidad, no los papeles.
+        </div>
+
+        <h2>Cómo gestionar subcontratistas bajo ISO 45001</h2>
+        <p>La <strong>cláusula 8.1.4</strong> es la que más trabajo adicional genera en construcción. La norma exige que los requisitos de H&S se comuniquen a los contratistas antes de que ingresen a la obra y que se verifique su cumplimiento durante la ejecución. En la práctica, eso implica:</p>
+
+        <ul class="art-list">
+          <li><strong>Requisitos previos al ingreso:</strong> el contratista debe acreditar su ART (cobertura vigente), presentar el listado de trabajadores con exámenes médicos al día y firmar el plan de H&S de la obra antes de comenzar.</li>
+          <li><strong>Inducción de ingreso:</strong> todo trabajador de un subcontratista debe recibir la misma inducción que el personal propio. Sin inducción firmada, no ingresa a obra. Esto es exigible tanto por el Dec. 911/96 como por ISO 45001.</li>
+          <li><strong>Verificación en campo:</strong> el responsable de H&S de la obra debe realizar inspecciones periódicas a los trabajos del subcontratista y registrarlas. Un subcontratista que genera un accidente en tu obra es un incidente de tu sistema de gestión.</li>
+          <li><strong>Calificación de contratistas:</strong> la norma recomienda —y la práctica exige— tener un registro de contratistas habilitados con su historial de accidentabilidad y cumplimiento. Los subcontratistas con mal desempeño en H&S deben ser descalificados.</li>
+        </ul>
+
+        <h2>El sistema documental específico para constructoras</h2>
+        <p>Una empresa constructora que implementa ISO 45001 necesita un sistema documental en dos niveles: el <strong>nivel corporativo</strong> (documentos que aplican a toda la empresa) y el <strong>nivel de obra</strong> (documentos específicos para cada proyecto).</p>
+
+        <div class="art-tabla">
+          <div class="art-tabla-header" style="grid-template-columns: 0.6fr 1fr 1.5fr;">
+            <span>Nivel</span>
+            <span>Documento</span>
+            <span>Contenido / propósito</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 0.6fr 1fr 1.5fr;">
+            <span class="art-doc">Corporativo</span>
+            <span>Política de SST</span>
+            <span>Compromiso de la dirección con H&S, firmada y comunicada a todo el personal</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 0.6fr 1fr 1.5fr;">
+            <span class="art-doc">Corporativo</span>
+            <span>Procedimiento de identificación de peligros</span>
+            <span>Metodología estándar para relevar riesgos en cualquier tipo de obra</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 0.6fr 1fr 1.5fr;">
+            <span class="art-doc">Corporativo</span>
+            <span>Procedimiento de gestión de subcontratistas</span>
+            <span>Requisitos de ingreso, inducción, verificación y descalificación</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 0.6fr 1fr 1.5fr;">
+            <span class="art-doc">Corporativo</span>
+            <span>Procedimiento de investigación de incidentes</span>
+            <span>Cómo se investiga, quién lo hace, en qué plazo y cómo se cierran las acciones</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 0.6fr 1fr 1.5fr;">
+            <span class="art-doc">Por obra</span>
+            <span>Programa de Seguridad (Res. 51/97 / 35/98)</span>
+            <span>Requerido legalmente — dentro del sistema, es el plan de H&S del proyecto</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 0.6fr 1fr 1.5fr;">
+            <span class="art-doc">Por obra</span>
+            <span>Matriz de riesgos de la obra</span>
+            <span>Riesgos específicos del proyecto, controles y responsables</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 0.6fr 1fr 1.5fr;">
+            <span class="art-doc">Por obra</span>
+            <span>Registro de inducciones y capacitaciones</span>
+            <span>Evidencia de toma de conciencia — exigido en auditoría</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 0.6fr 1fr 1.5fr;">
+            <span class="art-doc">Por obra</span>
+            <span>Registros de inspecciones y no conformidades</span>
+            <span>Evidencia de que el sistema opera en el campo, no solo en el papel</span>
+          </div>
+        </div>
+
+        <h2>Roadmap de implementación para una empresa constructora</h2>
+        <p>El proceso de implementación en construcción tiene algunas particularidades respecto de una planta industrial. El mayor desafío no es la documentación: es lograr que el sistema funcione en múltiples obras al mismo tiempo, con responsables de H&S que pueden no estar en todas a la vez.</p>
+
+        <div class="art-tabla">
+          <div class="art-tabla-header" style="grid-template-columns: 0.8fr 1fr 1.5fr;">
+            <span>Fase</span>
+            <span>Duración</span>
+            <span>Foco específico para construcción</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 0.8fr 1fr 1.5fr;">
+            <span class="art-doc">1. Diagnóstico</span>
+            <span>3-4 semanas</span>
+            <span>Análisis de obras en curso, historial de accidentabilidad, estado de documentación legal (Programas, Legajos, RAR)</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 0.8fr 1fr 1.5fr;">
+            <span class="art-doc">2. Sistema corporativo</span>
+            <span>4-6 semanas</span>
+            <span>Política, procedimientos corporativos, definición del alcance (¿todas las obras o solo determinados tipos?)</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 0.8fr 1fr 1.5fr;">
+            <span class="art-doc">3. Sistema de obra piloto</span>
+            <span>6-8 semanas</span>
+            <span>Implementar el sistema completo en una obra representativa antes de extenderlo al resto</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 0.8fr 1fr 1.5fr;">
+            <span class="art-doc">4. Capacitación interna</span>
+            <span>2-4 semanas</span>
+            <span>Jefes de obra, responsables de H&S y supervisores: son los que van a operar el sistema en campo</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 0.8fr 1fr 1.5fr;">
+            <span class="art-doc">5. Extensión a todas las obras</span>
+            <span>4-8 semanas</span>
+            <span>Despliegue del sistema corporativo en todas las obras activas</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 0.8fr 1fr 1.5fr;">
+            <span class="art-doc">6. Auditoría interna</span>
+            <span>2 semanas</span>
+            <span>Auditoría en sede corporativa y en al menos una obra activa</span>
+          </div>
+          <div class="art-tabla-row" style="grid-template-columns: 0.8fr 1fr 1.5fr;">
+            <span class="art-doc">7. Revisión por la dirección + certificación</span>
+            <span>3-4 semanas</span>
+            <span>Acta de revisión y auditoría de certificación por organismo acreditado</span>
+          </div>
+        </div>
+
+        <div class="art-destacado art-destacado--warn">
+          <strong>Definición del alcance:</strong> la ISO 45001 exige definir el alcance del sistema de gestión. Para constructoras, hay dos opciones: incluir todas las obras (más complejo, más valor ante clientes) o limitarlo a obras de determinado tipo o valor de contrato. La segunda opción suele ser el punto de partida en empresas que recién comienzan.
+        </div>
+
+        <h2>Por qué los clientes y comitentes cada vez más la exigen</h2>
+        <p>En Argentina, las grandes empresas industriales, las multinacionales y los organismos públicos que contratan obras cada vez incluyen la certificación ISO 45001 —o al menos el compromiso de implementación— como requisito en sus pliegos. Las razones son concretas:</p>
+
+        <ul class="art-list">
+          <li><strong>Responsabilidad solidaria del comitente:</strong> si un subcontratista tuyo tiene un accidente grave en la obra del cliente, ese cliente asume responsabilidad solidaria. Un contratista con ISO 45001 certificada es una evidencia de gestión que reduce ese riesgo.</li>
+          <li><strong>Índices de accidentabilidad:</strong> empresas con ISO 45001 tienen, en promedio, tasas de accidentabilidad significativamente menores que las que solo cumplen el marco legal mínimo. Los comitentes lo saben.</li>
+          <li><strong>Puntaje en licitaciones:</strong> en licitaciones privadas y públicas de obras de envergadura, tener ISO 45001 suma puntos en los criterios de evaluación. En algunos casos es excluyente.</li>
+        </ul>
+
+        <div class="art-normativa-link">
+          <a href="https://www.argentina.gob.ar/normativa/nacional/decreto-911-1996-38568/actualizacion" target="_blank" rel="noopener">Ingresá para leer el Dec. 911/96 (Reglamento de H&S para Construcción) completo →</a>
+        </div>
+
+        <div class="art-cta">
+          <h3>¿Tu empresa constructora necesita ISO 45001?</h3>
+          <p>Tenemos experiencia implementando ISO 45001 en empresas constructoras del AMBA y GBA. Hacemos el diagnóstico, desarrollamos la documentación corporativa y por obra, capacitamos a los jefes de obra y responsables de H&S, y te acompañamos hasta la certificación.</p>
+          <div class="cta-actions" style="margin-top:16px">
+            <a href="https://wa.me/5491133572984?text=Hola%2C%20necesito%20implementar%20ISO%2045001%20en%20mi%20empresa%20constructora" class="btn-primary" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+            <a href="/servicios/construccion/gestion-normativa/" class="btn-outline">Ver servicio de gestión</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.article-wrap { max-width: 780px; }
+.article-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 32px; flex-wrap: wrap; }
+.art-cat { font-family: 'JetBrains Mono', monospace; font-size: .54rem; color: var(--dorado); background: rgba(201,162,39,0.09); border: 1px solid rgba(201,162,39,0.2); padding: 3px 9px; border-radius: 3px; letter-spacing: .5px; text-transform: uppercase; }
+.art-sep { color: rgba(255,255,255,.2); }
+.art-fecha, .art-tiempo { font-family: 'JetBrains Mono', monospace; font-size: .55rem; color: rgba(255,255,255,.3); }
+.article-body { display: flex; flex-direction: column; gap: 20px; }
+.article-lead { font-size: 16px; font-weight: 400; color: rgba(255,255,255,.75); line-height: 1.8; border-left: 3px solid var(--celeste); padding-left: 16px; }
+.article-body h2 { font-family: 'Bebas Neue', cursive; font-size: clamp(22px,3vw,30px); letter-spacing: 2px; color: #fff; margin-top: 12px; margin-bottom: 0; }
+.article-body p { font-size: 14px; font-weight: 300; color: rgba(255,255,255,.65); line-height: 1.85; }
+.article-body strong { color: rgba(255,255,255,.9); font-weight: 600; }
+.art-list { list-style: none; display: flex; flex-direction: column; gap: 8px; padding: 0; }
+.art-list li { display: flex; gap: 10px; font-size: 14px; font-weight: 300; color: rgba(255,255,255,.65); line-height: 1.7; }
+.art-list li::before { content: '›'; color: var(--celeste); font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+.art-tabla { background: rgba(0,24,72,0.6); border: 1px solid rgba(100,210,255,0.12); border-radius: 8px; overflow: hidden; }
+.art-tabla-header, .art-tabla-row { display: grid; gap: 12px; padding: 10px 16px; border-bottom: 1px solid rgba(255,255,255,.05); font-size: 12px; }
+.art-tabla-header { font-family: 'JetBrains Mono', monospace; font-size: .54rem; color: rgba(255,255,255,.3); letter-spacing: 1px; text-transform: uppercase; background: rgba(0,0,0,.2); }
+.art-tabla-row:last-child { border-bottom: none; }
+.art-tabla-row span { color: rgba(255,255,255,.6); font-weight: 300; line-height: 1.5; }
+.art-doc { color: #fff !important; font-weight: 600 !important; }
+.art-destacado { background: rgba(100,210,255,0.05); border: 1px solid rgba(100,210,255,0.15); border-left: 3px solid var(--celeste); border-radius: 0 6px 6px 0; padding: 14px 16px; font-size: 13px; color: rgba(255,255,255,.6); line-height: 1.7; }
+.art-destacado--warn { background: rgba(201,162,39,0.05); border-color: rgba(201,162,39,0.2); border-left-color: var(--dorado); }
+.art-destacado strong { color: rgba(255,255,255,.9); }
+.art-normativa-link { background: rgba(0,24,72,0.5); border: 1px solid rgba(100,210,255,0.2); border-radius: 6px; padding: 12px 16px; }
+.art-normativa-link a { color: #64d2ff; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: .72rem; letter-spacing: .5px; display: flex; align-items: center; gap: 8px; }
+.art-normativa-link a::before { content: '↗'; }
+.art-normativa-link a:hover { text-decoration: underline; }
+.art-cta { background: linear-gradient(135deg, var(--azul-navy), #002060); border: 1px solid rgba(100,210,255,0.15); border-radius: 10px; padding: 28px 24px; margin-top: 12px; }
+.art-cta h3 { font-family: 'Bebas Neue', cursive; font-size: 1.4rem; letter-spacing: 2px; color: #fff; margin-bottom: 8px; }
+.art-cta p { font-size: 13px; font-weight: 300; color: rgba(255,255,255,.45); line-height: 1.7; }
+@media (max-width: 640px) { .art-tabla-header, .art-tabla-row { grid-template-columns: 1fr !important; gap: 4px; } }
+</style>

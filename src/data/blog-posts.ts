@@ -341,6 +341,17 @@ export const blogPosts: BlogPost[] = [
     tags: ['efluentes gaseosos', 'emisiones', 'OPDS', 'Ley 25675', 'muestreo isocinético'],
     sectores: ['Empresas Industriales'],
   },
+  {
+    slug: 'iso-45001-construccion-implementacion',
+    titulo: 'ISO 45001 en construcción: cómo implementarla cuando cada obra es un site diferente',
+    metaDescription: 'Guía para implementar ISO 45001 en empresas constructoras argentinas. Integración con el Dec. 911/96, gestión de subcontratistas, obras temporales y roadmap específico para el sector.',
+    fecha: '2026-11-02',
+    categoria: 'Gestión',
+    tiempoLectura: '8 min',
+    resumen: 'Implementar ISO 45001 en una constructora no es lo mismo que en una planta industrial. Las obras son temporales, el personal rota y los subcontratistas forman parte del riesgo. Acá explicamos cómo articular todo eso con el Dec. 911/96.',
+    tags: ['ISO 45001', 'construcción', 'Dec. 911/96', 'subcontratistas', 'sistema de gestión'],
+    sectores: ['Construcción'],
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
