@@ -138,11 +138,39 @@ const servicios = [
               <span class="hero-stat-text">onboarding de plataforma</span>
             </div>
           </div>
-          <div class="hero-card-tags">
-            <span>COPIME</span>
-            <span>CPSH</span>
-            <span>Ing. Industrial</span>
-            <span>ISO 45001:2018</span>
+          <div class="hero-branches">
+            <div class="hero-branch">
+              <div class="hero-branch-head">
+                <span class="hero-branch-icon">🏗️</span>
+                <span class="hero-branch-name">Cumplimiento operativo</span>
+              </div>
+              <ul class="hero-branch-list">
+                <li><a href="/servicios/construccion/">Industrias y Construcciones</a></li>
+                <li><a href="/servicios/mediciones/">Mediciones Técnicas</a></li>
+                <li><a href="/servicios/capacitaciones/">Capacitaciones</a></li>
+              </ul>
+            </div>
+            <div class="hero-branch">
+              <div class="hero-branch-head">
+                <span class="hero-branch-icon">📋</span>
+                <span class="hero-branch-name">ISO 45001</span>
+              </div>
+              <ul class="hero-branch-list">
+                <li><a href="/servicios/iso-45001/implementacion/">Implementación</a></li>
+                <li><a href="/servicios/auditorias/">Auditorías y Gap Analysis</a></li>
+                <li><a href="/servicios/iso-45001/mantenimiento/">Mantenimiento post-cert.</a></li>
+              </ul>
+            </div>
+            <div class="hero-branch">
+              <div class="hero-branch-head">
+                <span class="hero-branch-icon">💻</span>
+                <span class="hero-branch-name">Plataforma y tecnología</span>
+              </div>
+              <ul class="hero-branch-list">
+                <li><a href="/plataforma/">Plataforma SaaS HyS</a></li>
+                <li><a href="/enterprise/">Enterprise + Dashboards</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -366,23 +394,57 @@ const servicios = [
   color: rgba(255,255,255,.45);
   line-height: 1.4;
 }
-.hero-card-tags {
+.hero-branches {
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding-top: 16px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
+  flex-direction: column;
 }
-.hero-card-tags span {
+.hero-branch {
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(255,255,255,.05);
+}
+.hero-branch:last-child { border-bottom: none; padding-bottom: 0; }
+.hero-branch-head {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 6px;
+}
+.hero-branch-icon { font-size: .85rem; line-height: 1; }
+.hero-branch-name {
   font-family: 'Montserrat', sans-serif;
-  font-size: .43rem;
-  font-weight: 600;
-  color: rgba(255,255,255,.3);
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.09);
-  border-radius: 3px;
-  padding: 3px 7px;
+  font-size: .5rem;
+  font-weight: 700;
+  color: rgba(255,255,255,.65);
   letter-spacing: .5px;
   text-transform: uppercase;
 }
+.hero-branch-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding-left: 20px;
+}
+.hero-branch-list li { position: relative; }
+.hero-branch-list li::before {
+  content: '→';
+  position: absolute;
+  left: -16px;
+  color: var(--verde);
+  font-size: .6rem;
+  opacity: .45;
+  top: 1px;
+}
+.hero-branch-list a {
+  font-size: 11px;
+  font-weight: 300;
+  color: rgba(255,255,255,.38);
+  text-decoration: none;
+  transition: color .15s;
+}
+.hero-branch-list a:hover { color: var(--verde); }
 
 /* SERVICIOS */
 .sectores-section {
