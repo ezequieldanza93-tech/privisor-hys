@@ -10,19 +10,19 @@ function formatFecha(iso: string) {
 
 const categoryGroups = [
   {
-    label: 'Cumplimiento operativo',
+    label: '🏗️ Cumplimiento operativo',
     categorias: ['Construcción y Obra', 'Mediciones', 'Capacitaciones'],
   },
   {
-    label: 'ISO 45001',
+    label: '📋 ISO 45001',
     categorias: ['ISO 45001', 'Auditorías'],
   },
   {
-    label: 'Plataforma y tecnología',
+    label: '💻 Plataforma y tecnología',
     categorias: ['Plataforma HyS'],
   },
   {
-    label: 'Medio Ambiente',
+    label: '🌿 Medio Ambiente',
     categorias: ['Medio Ambiente'],
   },
 ];
@@ -209,19 +209,21 @@ const categoryGroups = [
   align-items: center;
   gap: 4px;
   flex-wrap: wrap;
-  border-left: 2px solid var(--borde);
-  padding-left: 10px;
-  margin-left: 4px;
+  background: var(--gris-bg, #f7f7f7);
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  padding: 5px 10px;
 }
 .filter-group-label {
   font-family: 'Montserrat', sans-serif;
-  font-size: .46rem;
+  font-size: .52rem;
   font-weight: 700;
-  letter-spacing: .8px;
-  text-transform: uppercase;
-  color: var(--gris-3);
+  letter-spacing: .4px;
+  color: var(--gris-2);
   white-space: nowrap;
-  padding-right: 2px;
+  padding-right: 4px;
+  border-right: 1px solid var(--borde);
+  margin-right: 4px;
 }
 .blog-filter {
   font-family: 'Montserrat', sans-serif;
