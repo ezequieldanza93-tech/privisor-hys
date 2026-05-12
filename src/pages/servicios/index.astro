@@ -7,8 +7,8 @@ const servicios = [
     icon: '🏗️',
     badge: 'Decreto 911/96 · CABA · GBA',
     name: 'HyS Industrias y Construcciones',
-    desc: 'Matriculado disponible, plan firmado y app de campo. Obra documentada en 7 días, lista para AGC, GCBA o SRT.',
-    items: ['Matriculado COPIME · Ing. Industrial', 'Plan de seguridad con aviso de obra', 'App de campo para capataces', 'Control de subcontratistas'],
+    desc: 'Matriculado disponible, plan firmado y app de campo. Obra documentada en 7 días.',
+    items: ['Matriculado COPIME · Ing. Industrial', 'Plan de seguridad con aviso de obra', 'App de campo para capataces'],
   },
   {
     href: '/servicios/iso-45001/implementacion/',
@@ -16,55 +16,55 @@ const servicios = [
     badge: 'ISO 45001:2018 · 6 meses',
     name: 'Implementación ISO 45001',
     desc: 'Desde cero a certificado en 6 meses. Roadmap por cláusula y plataforma que sobrevive al consultor.',
-    items: ['Roadmap por cláusula con avance medible', 'Gap analysis dinámico', 'Auditoría sombra previa a la externa', 'Plataforma SaaS post-certificación'],
+    items: ['Roadmap por cláusula con avance medible', 'Gap analysis dinámico', 'Auditoría sombra previa a la externa'],
   },
   {
     href: '/plataforma/',
     icon: '💻',
     badge: 'SaaS · Onboarding en 30 días',
     name: 'Plataforma SaaS HyS',
-    desc: 'Planificá, ejecutá, controlá y medí tu sistema completo. Vencimientos automáticos y reportes listos para auditoría.',
-    items: ['Gestión documental y vencimientos', 'Seguimiento de desvíos con trazabilidad', 'Capacitaciones digitales con evidencias', 'Matriz de riesgos dinámica'],
+    desc: 'Planificá, ejecutá, controlá y medí tu sistema completo. Vencimientos automáticos y reportes.',
+    items: ['Gestión documental y vencimientos', 'Seguimiento de desvíos con trazabilidad', 'Capacitaciones digitales con evidencias'],
   },
   {
     href: '/servicios/mediciones/',
     icon: '📐',
     badge: 'Protocolos SRT · CABA · GBA',
     name: 'Mediciones Técnicas',
-    desc: 'Iluminación, ruido, carga térmica, puesta a tierra y ergonomía. Informes firmados y carga directa al sistema.',
-    items: ['Iluminación en puestos de trabajo', 'Ruido y vibración laboral', 'Puesta a tierra y continuidad de masas', 'Carga térmica, ergonomía, contaminantes'],
+    desc: 'Iluminación, ruido, carga térmica, puesta a tierra y ergonomía. Informes firmados.',
+    items: ['Iluminación en puestos de trabajo', 'Ruido y vibración laboral', 'Puesta a tierra y continuidad de masas'],
   },
   {
     href: '/servicios/capacitaciones/',
     icon: '🎓',
     badge: 'In company · Registro digital',
     name: 'Capacitaciones In Company',
-    desc: 'Trabajo en altura, espacios confinados, riesgo eléctrico y más. Constancias digitales listas para auditoría.',
-    items: ['Trabajo en altura', 'Espacios confinados', 'Riesgo eléctrico · Uso de EPP', 'Brigada de emergencia · Inducción'],
+    desc: 'Trabajo en altura, espacios confinados, riesgo eléctrico. Constancias digitales para auditoría.',
+    items: ['Trabajo en altura', 'Espacios confinados', 'Riesgo eléctrico · Uso de EPP'],
   },
   {
     href: '/servicios/auditorias/',
     icon: '🔍',
     badge: 'Gap analysis · Auditoría sombra',
     name: 'Auditorías y Gap Analysis',
-    desc: 'Sabé exactamente en qué estado estás antes de la auditoría externa. Gap analysis, interna y sombra.',
-    items: ['Gap analysis ISO 45001', 'Auditoría interna y sombra pre-externa', 'Hallazgos con plan de acción', 'Preparación para certificadoras'],
+    desc: 'Sabé exactamente en qué estado estás antes de la auditoría externa.',
+    items: ['Gap analysis ISO 45001', 'Auditoría interna y sombra pre-externa', 'Hallazgos con plan de acción'],
   },
   {
     href: '/servicios/iso-45001/mantenimiento/',
     icon: '🔄',
     badge: 'Post-certificación · SaaS',
     name: 'Mantenimiento ISO 45001',
-    desc: 'Mantenemos vivo tu sistema post-certificación sin que dependa de nosotros. SaaS + soporte + seguimiento.',
-    items: ['SaaS post-certificación activo', 'Auditorías de seguimiento y recertificación', 'No conformidades con trazabilidad', 'Actualización documental continua'],
+    desc: 'Mantenemos vivo tu sistema post-certificación sin que dependa de nosotros.',
+    items: ['SaaS post-certificación activo', 'Auditorías de seguimiento', 'No conformidades con trazabilidad'],
   },
   {
     href: '/enterprise/',
     icon: '🖥️',
     badge: 'Enterprise · ERP · IA',
     name: 'Enterprise + Dashboards',
-    desc: 'HyS integrado a tu modelo operativo. Dashboards multi-sitio, integraciones con ERP y IA aplicada.',
-    items: ['Integración SAP / Oracle / Dynamics', 'Dashboards multi-planta en tiempo real', 'KPIs consolidados por planta', 'Soporte enterprise 24/7 con SLA'],
+    desc: 'HyS integrado a tu modelo operativo. Dashboards multi-sitio, ERP e IA aplicada.',
+    items: ['Integración SAP / Oracle / Dynamics', 'Dashboards multi-planta en tiempo real', 'Soporte enterprise 24/7 con SLA'],
   },
 ];
 ---
@@ -74,21 +74,21 @@ const servicios = [
   description="Ocho servicios especializados integrados en un solo sistema. HyS construcción, ISO 45001, plataforma SaaS, mediciones, capacitaciones, auditorías y enterprise en CABA y GBA."
 >
 
-  <section class="page-hero">
-    <div class="page-hero-inner">
+  <div class="sv-layout">
+
+    <!-- Sidebar izquierdo -->
+    <aside class="sv-aside">
       <nav aria-label="Breadcrumb" class="breadcrumb">
-        <a href="/">Inicio</a>
-        <span>/</span>
-        <span>Servicios</span>
+        <a href="/">Inicio</a><span>/</span><span>Servicios</span>
       </nav>
       <div class="page-hero-badge">Sistema · No consultoría</div>
-      <h1>SERVICIOS Y <em>SOLUCIONES</em></h1>
-      <p>Ocho servicios especializados integrados en un solo sistema. No son servicios aislados — son partes de una plataforma que planifica, ejecuta, controla y mide tu HyS.</p>
-    </div>
-  </section>
+      <h1 class="sv-title">SERVICIOS Y<br><em>SOLUCIONES</em></h1>
+      <p class="sv-desc">Ocho servicios integrados en un solo sistema. No son servicios aislados — son partes de una plataforma que planifica, ejecuta, controla y mide tu HyS.</p>
+      <a href="/contacto/" class="btn-primary sv-cta">Diagnóstico gratuito</a>
+    </aside>
 
-  <section class="content-section">
-    <div class="content-inner">
+    <!-- Grid de servicios -->
+    <main class="sv-main">
       <div class="servicios-grid">
         {servicios.map(s => (
           <article class="servicio-card">
@@ -105,38 +105,81 @@ const servicios = [
           </article>
         ))}
       </div>
+    </main>
 
-      <div class="cta-banner">
-        <h2>¿NO SABÉS POR <em>DÓNDE ARRANCAR</em>?</h2>
-        <p>Hacemos un diagnóstico gratuito de tu situación actual. En una reunión te decimos exactamente qué necesitás y por qué — sin compromiso de contratación.</p>
-        <div class="cta-actions">
-          <a href="/contacto/" class="btn-primary">Diagnóstico gratuito</a>
-          <a href="https://wa.me/5491123496789" class="btn-outline" target="_blank" rel="noopener">Consulta por WhatsApp</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  </div>
 
 </BaseLayout>
 
 <style>
+/* Layout principal: sidebar + grid */
+.sv-layout {
+  display: flex;
+  min-height: calc(100vh - 68px);
+  margin-top: 68px;
+}
+
+/* Sidebar */
+.sv-aside {
+  width: 260px;
+  flex-shrink: 0;
+  padding: 40px 28px;
+  border-right: 1px solid var(--borde);
+  background: var(--gris-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  position: sticky;
+  top: 68px;
+  height: calc(100vh - 68px);
+  overflow: hidden;
+}
+.sv-aside .breadcrumb { margin-bottom: 4px; }
+.sv-title {
+  font-size: clamp(22px, 2.2vw, 34px);
+  letter-spacing: 1.5px;
+  color: var(--gris-1);
+  line-height: 1.05;
+}
+.sv-title em { font-style: normal; color: var(--verde); }
+.sv-desc {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--gris-2);
+  line-height: 1.75;
+}
+.sv-cta { align-self: flex-start; margin-top: 8px; }
+
+/* Área del grid */
+.sv-main {
+  flex: 1;
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+/* Grid 4×2 */
 .servicios-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
-  margin-bottom: 48px;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 12px;
+  width: 100%;
 }
+
+/* Tarjetas */
 .servicio-card {
   background: var(--blanco);
   border: 1px solid var(--borde);
   border-radius: 10px;
-  padding: 22px 18px 18px;
+  padding: 16px 14px 14px;
   display: flex;
   flex-direction: column;
   transition: all .25s;
   position: relative;
   overflow: hidden;
-  text-decoration: none;
 }
 .servicio-card::before {
   content: '';
@@ -150,89 +193,105 @@ const servicios = [
 }
 .servicio-card:hover {
   border-color: var(--verde-borde);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 36px rgba(0,0,0,.08);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0,0,0,.07);
 }
 .servicio-card:hover::before { transform: scaleX(1); }
+
 .sc-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 12px;
+  margin-bottom: 9px;
 }
-.sc-icon { font-size: 1.8rem; }
+.sc-icon { font-size: 1.5rem; line-height: 1; }
 .sc-badge {
   font-family: 'Montserrat', sans-serif;
-  font-size: .46rem;
+  font-size: .44rem;
   font-weight: 600;
   color: var(--verde-dark);
   background: var(--verde-light);
   border: 1px solid rgba(76,175,80,.2);
-  padding: 3px 7px;
+  padding: 2px 6px;
   border-radius: 3px;
-  letter-spacing: .5px;
+  letter-spacing: .4px;
   text-transform: uppercase;
   text-align: right;
   line-height: 1.5;
 }
 .sc-name {
   font-family: 'Montserrat', sans-serif;
-  font-size: 13px;
+  font-size: 11.5px;
   font-weight: 700;
-  letter-spacing: .5px;
+  letter-spacing: .4px;
   color: var(--gris-1);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   text-transform: uppercase;
+  line-height: 1.3;
 }
 .sc-desc {
-  font-size: 13px;
+  font-size: 11.5px;
   font-weight: 300;
   color: var(--gris-2);
-  line-height: 1.65;
-  margin-bottom: 14px;
+  line-height: 1.55;
+  margin-bottom: 10px;
 }
 .sc-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  margin-bottom: 16px;
+  gap: 4px;
+  margin-bottom: 10px;
   flex: 1;
 }
 .sc-list li {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 300;
   color: var(--gris-3);
-  padding-left: 14px;
+  padding-left: 13px;
   position: relative;
-  line-height: 1.4;
+  line-height: 1.35;
 }
 .sc-list li::before {
   content: '—';
   position: absolute;
   left: 0;
   color: var(--verde);
-  opacity: .6;
-  font-size: .6rem;
+  opacity: .55;
+  font-size: .58rem;
 }
 .sc-cta {
   font-family: 'Montserrat', sans-serif;
-  font-size: .58rem;
+  font-size: .54rem;
   font-weight: 700;
   color: var(--verde);
-  letter-spacing: .8px;
+  letter-spacing: .7px;
   text-decoration: none;
   text-transform: uppercase;
   border-top: 1px solid var(--borde);
-  padding-top: 12px;
+  padding-top: 10px;
   margin-top: auto;
   transition: all .2s;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
 }
-.sc-cta:hover { color: var(--verde-dark); gap: 9px; }
+.sc-cta:hover { color: var(--verde-dark); gap: 8px; }
 
-@media (max-width: 1100px) { .servicios-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 600px)  { .servicios-grid { grid-template-columns: 1fr; } }
+/* Responsive */
+@media (max-width: 1200px) {
+  .servicios-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(4, 1fr); }
+  .sv-main { align-items: flex-start; }
+  .sv-layout { min-height: auto; }
+  .sv-aside { height: auto; position: static; }
+}
+@media (max-width: 860px) {
+  .sv-layout { flex-direction: column; margin-top: 68px; }
+  .sv-aside { width: 100%; height: auto; position: static; padding: 28px 24px; }
+  .sv-main { padding: 20px 24px; }
+  .servicios-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
+}
+@media (max-width: 500px) {
+  .servicios-grid { grid-template-columns: 1fr; }
+}
 </style>
