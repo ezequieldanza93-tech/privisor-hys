@@ -8,11 +8,23 @@ function formatFecha(iso: string) {
   return `${parseInt(d)} ${meses[parseInt(m) - 1]} ${y}`;
 }
 
-const sectores = [
-  'Empresas Industriales',
-  'Construcción',
-  'Educativo y Recreativo',
-  'Comercial y Oficinas',
+const categoryGroups = [
+  {
+    label: 'Cumplimiento operativo',
+    categorias: ['Construcción y Obra', 'Mediciones', 'Capacitaciones'],
+  },
+  {
+    label: 'ISO 45001',
+    categorias: ['ISO 45001', 'Auditorías'],
+  },
+  {
+    label: 'Plataforma y tecnología',
+    categorias: ['Plataforma HyS'],
+  },
+  {
+    label: 'Medio Ambiente',
+    categorias: ['Medio Ambiente'],
+  },
 ];
 ---
 
@@ -27,7 +39,7 @@ const sectores = [
     </nav>
     <div class="page-hero-inner blog-hero-inner">
       <div class="blog-hero-left">
-        <div class="page-hero-badge">Normativa · EPP · Mediciones · Gestión</div>
+        <div class="page-hero-badge">Construcción · ISO 45001 · Mediciones · Capacitaciones</div>
         <h1>BLOG DE<br><em>H&amp;S LABORAL</em></h1>
       </div>
       <p class="blog-hero-desc">Artículos prácticos escritos por profesionales. Sin tecnicismos innecesarios — lo que necesitás saber para cumplir y proteger a tu equipo.</p>
@@ -52,11 +64,16 @@ const sectores = [
         <span class="blog-count" id="blog-count">{blogPosts.length} artículos</span>
       </div>
 
-      <!-- Filtros por sector -->
+      <!-- Filtros por categoría de servicio -->
       <div class="blog-filters" id="blog-filters">
-        <button class="blog-filter active" data-sector="todos">Todos</button>
-        {sectores.map(s => (
-          <button class="blog-filter" data-sector={s}>{s}</button>
+        <button class="blog-filter active" data-cat="todos">Todos</button>
+        {categoryGroups.map(group => (
+          <div class="filter-group">
+            <span class="filter-group-label">{group.label}</span>
+            {group.categorias.map(cat => (
+              <button class="blog-filter" data-cat={cat}>{cat}</button>
+            ))}
+          </div>
         ))}
       </div>
 
@@ -65,7 +82,7 @@ const sectores = [
         {blogPosts.map(post => (
           <article
             class="blog-card"
-            data-sectores={post.sectores.join('|')}
+            data-cat={post.categoria}
             data-text={`${post.titulo} ${post.resumen} ${post.categoria} ${post.tags.join(' ')}`.toLowerCase()}
           >
             <div class="blog-card-meta">
@@ -182,9 +199,29 @@ const sectores = [
 /* ---- Filtros ---- */
 .blog-filters {
   display: flex;
-  gap: 8px;
+  align-items: center;
+  gap: 6px;
   flex-wrap: wrap;
   margin-bottom: 28px;
+}
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+  border-left: 2px solid var(--borde);
+  padding-left: 10px;
+  margin-left: 4px;
+}
+.filter-group-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .46rem;
+  font-weight: 700;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  color: var(--gris-3);
+  white-space: nowrap;
+  padding-right: 2px;
 }
 .blog-filter {
   font-family: 'Montserrat', sans-serif;
@@ -211,6 +248,10 @@ const sectores = [
   background: var(--verde-light);
   border-color: var(--verde);
 }
+@media (max-width: 768px) {
+  .filter-group { border-left: none; padding-left: 0; margin-left: 0; }
+  .filter-group-label { width: 100%; margin-top: 6px; }
+}
 
 /* ---- Empty state ---- */
 .blog-empty {
@@ -234,16 +275,15 @@ const search  = document.getElementById('blog-search') as HTMLInputElement;
 const count   = document.getElementById('blog-count') as HTMLElement;
 const empty   = document.getElementById('blog-empty') as HTMLElement;
 
-let activeSector = 'todos';
-let searchVal    = '';
+let activeCat = 'todos';
+let searchVal = '';
 
 function update() {
   let visible = 0;
   cards.forEach(card => {
-    const sectores = (card.dataset.sectores ?? '').split('|');
-    const sectorMatch = activeSector === 'todos' || sectores.includes(activeSector);
-    const textMatch   = !searchVal || (card.dataset.text ?? '').includes(searchVal);
-    const show = sectorMatch && textMatch;
+    const catMatch  = activeCat === 'todos' || card.dataset.cat === activeCat;
+    const textMatch = !searchVal || (card.dataset.text ?? '').includes(searchVal);
+    const show = catMatch && textMatch;
     card.classList.toggle('hidden', !show);
     if (show) visible++;
   });
@@ -255,7 +295,7 @@ filters.forEach(btn => {
   btn.addEventListener('click', () => {
     filters.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    activeSector = btn.dataset.sector ?? 'todos';
+    activeCat = btn.dataset.cat ?? 'todos';
     update();
   });
 });
